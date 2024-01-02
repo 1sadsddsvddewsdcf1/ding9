@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE  tiles-definitions  PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+ "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<definition name="layout" path="/include/layout.jsp">
+		<put name="top" value="/include/top.jsp" />
+		<put name="left" value="/include/left.jsp" />
+		<put name="bottom" value="/include/bottom.jsp" />
+	</definition>
+
+	<definition name="search" path="/include/search.jsp">
+		<put name="top" value="/include/topforsearch.jsp" />
+		<put name="searchtop" value="/include/searchtop.jsp" />
+		<put name="bottom" value="/include/bottom.jsp" />
+	</definition>
+</tiles-definitions>

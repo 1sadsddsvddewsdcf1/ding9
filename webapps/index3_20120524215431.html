@@ -1,0 +1,1513 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>比较购物/购物搜索/购物返现/-顶九比价购物搜索引擎</title>
+
+<meta name="description" content="顶九网是中国最好的比较购物搜索-引擎和导购信息平台，从互联网数千商家搜索数百万件商品和最详尽购物信息,如商品信息,商家信息,用户评论,产品评测,专家评论,折扣,促销及返现信息,为消费者提供全方位的导购服务。同时还提供用户评论,促销折扣信息,电子优惠券发布等功能。"/>
+<meta name="keywords" content="比较购物,比价购物,购物搜索,名品导购,购物返现"/>
+<meta name='Author' content='guide.ding9.com'/>
+<meta name='Copyright' content='guide.ding9.com,ding9.com'/>
+
+<link href="cssindex/gy.css" rel="stylesheet" type="text/css" />
+<link href="cssindex/indexfont.css" rel="stylesheet" type="text/css" />
+<link href="cssindex/indexstyle.css" rel="stylesheet" type="text/css" />
+<link href="cssindex/css.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" src="jsindex/lanrentuku_com.js"
+	type="text/javascript"></script>
+<script language="javascript" src="jsindex/tabs2.js"
+	type="text/javascript"></script>
+
+</head>
+<script language="javascript" for="document" event="onkeydown">
+   if (event.keyCode == 13)
+    {
+	   searchSubmit('product');	
+    }
+</script>
+
+<script>
+var moz = (typeof document.implementation != 'undefined') 
+&& (typeof document.implementation.createDocument != 'undefined');
+var ie = (typeof window.ActiveXObject != 'undefined');
+
+var g_speed = 50; // 渐变的频率
+var g_step = 10; // 渐变的步长
+
+var g_selectedCategory; // 选中的产品类别
+var g_selectedCategoryIndex; // 选中的产品类别的索引
+var g_selectedProduct;  // 选中的产品
+var g_selectedProductIndex;  // 选中的产品的索引
+
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function searchform_onsubmit(searchType){
+	var search_domain="http://search.ding9.com";
+	var searchkey = document.searchform.queryText.value;
+	if(trim(searchkey)=='' || searchkey=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+	if(searchType=="product"){
+		document.searchform.action=search_domain+"/dofindNew.jsp?";
+	}else if (searchType=="merchant"){
+		document.searchform.action=search_domain+"/dofindNew.jsp?type=merchant";
+	}
+	return true;
+}
+ 
+function searchSubmit(searchType){
+	if (searchform_onsubmit(searchType)==true){
+		document.searchform.submit();
+	} else {
+		return false;
+	}	
+}
+</script>
+<body>
+<center><!--头部开始-->
+<div id="top">您好,欢迎来顶九！&nbsp;&nbsp;[<a
+	href="http://user.ding9.com" class="co333">请登录</a> ]&nbsp;[<a
+	href="http://user.ding9.com/register/register.html" class="co333">用户注册</a>
+]&nbsp;&nbsp; <a href="http://merchant.ding9.com/login.html"
+	class=" co333">商家登录</a> &nbsp;/&nbsp;<a
+	href="http://merchant.ding9.com/register.html" class="co333">注册</a>
+&nbsp;&nbsp;<a href="http://guide.ding9.com/help.htm" class="co333">帮助</a></div>
+
+<div id="topsearch">
+<div id="topsearch_1"><a href="http://guide.ding9.com/"><img
+	src="images/logo_160x64.gif" width="160" height="70" border="0" /></a> <br />
+比较购物从顶九搜索开始</div>
+
+<!--topsearch_1-->
+<div id="topsearch_2">
+
+<div id="search">
+<form name="searchform" action="http://search.ding9.com/search.do"
+ method="post" target="_blank" onsubmit="searchform_onsubmit('product')">
+<div id="search_1">
+<input name="queryText" type="text"	class="searchclass" size="36" />
+</div>
+</form>
+<div id="search_2"><a href="#" onclick="searchSubmit('product');" class="cofff bold si14">顶九搜索</a></div>
+</div>
+<!--search-->
+<span class="bold">热门搜索:</span> 
+<a target='_blank' class='H1' href='http://search.ding9.com/mikbmnja-se/'><span class='H1'>手机</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/nbhhohjo-se/'><span class='H1'>笑脸</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/mgclkfaj-se/'><span class='H1'>情侣</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/lkchnikcpnob-se/'><span class='H1'>品牌鞋</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/MP3-se/'><span class='H1'>MP3</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/lpiapmjjogfdngedmcjklmmo-se/'><span class='H1'>太阳能热水器</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/pnepnikoljgl-se/'><span class='H1'>韩版包</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/mlngnoghnmfomnja-se/'><span class='H1'>数码相机</span></a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/N91-se/'><span class='H1'>N91</span></a> 
+&nbsp;&nbsp;
+<a target='_blank' class='H1' href='http://guide.ding9.com/leibie.htm'>更多...</a> 
+</div>
+
+<!--topsearch_2-->
+<div id="topsearch_3">
+<a href="#" onclick="searchSubmit('merchant');" class="co333">商家搜索</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://guide.ding9.com/help.htm" class="co333">搜索帮助</a></div>
+<!--topsearch_3--></div>
+<!--topsearch-->
+
+<div id="topmenu">
+<div id="topmenu_1"></div>
+<div id="topmenu_2">
+<div class="menu">
+<ul>
+	<li class="usebtn">首页</li>
+	<li><a href="http://mobile.ding9.com" class="cofff">手机通信</a></li>
+	<li><a href="http://digital.ding9.com" class="cofff">数码电子</a></li>
+	<li><a href="http://computer.ding9.com" class="cofff">电脑网络</a></li>
+	<li><a href="http://office.ding9.com" class="cofff">办公用品</a></li>
+	<li><a href="http://hea.ding9.com/index.htm" class="cofff">家用电器</a></li>
+	<li><a href="http://beauty.ding9.com/index.jsp" class="cofff">美容美体</a></li>
+	<li><a href="http://eshop.ding9.com" class="cofff">顶九商城</a></li>
+	<li><a href="http://search.ding9.com" class="cofff">搜索频道</a></li>
+	<li><a href="http://clothing.ding9.com" class="cofff">服装服饰 </a></li>
+	<li><a href="http://jingpin.ding9.com" class="cofff">精品饰品</a></li>
+</ul>
+
+</div>
+<!--menu--></div>
+<!--topmenu_2--></div>
+<!--topmenu--> <!--头部结束--> <!--正文开始-->
+<div id="ad">
+<a href="http://www.hwfushi.com/" target="_blank""><IMG src="http://img.ding9.com/ad/hwfushi.jpg" style="display:none;" id="div1" border="0"></a>
+<a href="http://www.sunglass4u.cn" target="_blank"><IMG src="http://guide.ding9.com/images/456.gif " style="display:none;" id="div3" border="0"></a>
+ <!--<a href='http://item.taobao.com/auction/item_detail.jhtml?item_id=47a3f9bcbc5ee4c909b726fc593e1f3f&x_id=0db1' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20100324143041.gif' border='0'  /></A>
+<a href="#"><img src="imgindex/ad/001.jpg" border="0" /></a>--></div>
+
+<DIV  style="position:absolute; left:920px;top:255px;"  align="center"><font size="4" color="#FFBE7D"><A href="javascript:show(1)" style="background-color:#666666;" id="1">1</A>&nbsp;<A href="javascript:show(2)" id="2">2</A>&nbsp;<A href="javascript:show(3)" id="3">3</A></font>
+</DIV>
+<div id="main1">
+<div id="main1_1">
+<div id="newpro">
+<div class="title bold">新品速递</div>
+
+<div id="newpro_1"><a href=/null-0/prod-3424730.htm><img src=http://img.ding9.com/picdata/common/recommend/3934.jpg width="120" height="120" border="0" /></a><br/><br/><a href=/null-0/prod-3424730.htm class="co333 bold">儿童节礼物</a><br/><span class="cored">￥279起</span></div><div id="newpro_2"><a href=/null-0/prod-3432590.htm><img src=http://img.ding9.com/picdata/common/recommend/3928.jpg width="60" height="60" border="0" /></a><br/><a href=/null-0/prod-3432590.htm class="co333 bold">正品笛莎。。。</a><br/><br/><a href=/null-0/prod-1666451.htm><img src=http://img.ding9.com/picdata/common/recommend/3915.jpg width="60" height="60" border="0" /></a><br/><a href=/null-0/prod-1666451.htm class="co333 bold">NARIS UP。。。</a></div>
+<!--<div id="newpro_1"><a href=/null-0/prod-3424730.htm><img src=http://img.ding9.com/picdata/common/recommend/3934.jpg width="120" height="120" border="0" /></a><br/><br/><a href=/null-0/prod-3424730.htm class="co333 bold">儿童节礼物</a><br/><span class="cored">￥279起</span></div><div id="newpro_2"><a href=/null-0/prod-3432590.htm><img src=http://img.ding9.com/picdata/common/recommend/3928.jpg width="60" height="60" border="0" /></a><br/><a href=/null-0/prod-3432590.htm class="co333 bold">正品笛莎。。。</a><br/><br/><a href=/null-0/prod-1666451.htm><img src=http://img.ding9.com/picdata/common/recommend/3915.jpg width="60" height="60" border="0" /></a><br/><a href=/null-0/prod-1666451.htm class="co333 bold">NARIS UP。。。</a></div>-->
+</div>
+<!--newpro-->
+
+<div id="info">
+<div class="title bold">最新情报</div>
+<ul>
+	
+		
+			
+				<li><a id="nowrap" target="_blank"
+					href="http://promotion.ding9.com/promotion-0/news/info-
+14990/"
+					class="H1">供应- 上海LED筒灯应急电</a>
+				</li>
+			
+				<li><a id="nowrap" target="_blank"
+					href="http://promotion.ding9.com/promotion-0/news/info-
+14989/"
+					class="H1">YAMAHA雅玛哈 专业调音台M</a>
+				</li>
+			
+				<li><a id="nowrap" target="_blank"
+					href="http://promotion.ding9.com/promotion-0/news/info-
+19135/"
+					class="H1">小朋友的节日</a>
+				</li>
+			
+				<li><a id="nowrap" target="_blank"
+					href="http://promotion.ding9.com/promotion-0/news/info-
+4456/"
+					class="H1">优势力牌小型台式超声波清</a>
+				</li>
+			
+				<li><a id="nowrap" target="_blank"
+					href="http://promotion.ding9.com/promotion-0/news/info-
+4457/"
+					class="H1">手动给皂液机 SP 100</a>
+				</li>
+			
+				<li><a id="nowrap" target="_blank"
+					href="http://promotion.ding9.com/promotion-0/news/info-
+4982/"
+					class="H1">优惠促销！！立象OS-214TT</a>
+				</li>
+			
+		
+		
+	
+</ul>
+</div>
+</div>
+<!--main1_1-->
+<div id="main1_2">
+<div class="rxtit si14 bold">热销排行</div>
+
+<!--首页特效开始-->
+<div id="c0201_l">
+<script type="text/javascript"
+	language="javascript">
+function isIE(){ //ie?
+	if (window.navigator.userAgent.toLowerCase().indexOf("msie")>=1)
+	    return true;
+	else
+	    return false;
+} 
+
+var Category="";
+
+function MoveOut(outObj){
+	var m_Td = outObj.parentNode.parentNode;
+	m_Td.className =  "CategoryOut";
+}
+
+function Fun_Movement(SEQ,overObj){
+	if (!isIE()){
+		Fun_MovementFireFox(SEQ,overObj);
+		return;
+	}
+	
+	Category = SEQ;
+	var m_Td = overObj.parentNode.parentNode;
+	if (m_Td != g_selectedCategory)	{
+		if (typeof(g_selectedCategory) != "undefined"){
+			g_selectedCategory.className = "CategoryOut";
+		}
+	}
+
+	m_Td.className =  "CategoryOver";
+	
+	if (document.all.AdsTitle.style.display==""){
+		document.all.AdsTitle.style.display="none";
+		document.all.CategoryTitle.style.display="";
+	}
+	var RECOMMEND_PRODUCT_DIV="RECOMMEND_PRODUCT_"+SEQ;
+	
+	var RECOMMEND_PRODUCT = null;
+	if(isIE())
+		 RECOMMEND_PRODUCT = document.all(RECOMMEND_PRODUCT_DIV).innerText;
+	else
+		RECOMMEND_PRODUCT = document.all(RECOMMEND_PRODUCT_DIV).textContent;
+	
+	if (RECOMMEND_PRODUCT!=""){
+		var RECOMMEND_PRODUCT_ARRAY=RECOMMEND_PRODUCT.split("[]");
+		var IMG0=RECOMMEND_PRODUCT_ARRAY[0];
+		if (IMG0!=""){
+			var ARR0=IMG0.split("{}");
+			document.all.pic0.src="http://img.ding9.com"+ARR0[7];
+		}
+		var IMG1=RECOMMEND_PRODUCT_ARRAY[1];
+		if (IMG1!=""){
+			var ARR1=IMG1.split("{}");
+			document.all.pic1.src="http://img.ding9.com"+ARR1[7];
+		}
+		var IMG2=RECOMMEND_PRODUCT_ARRAY[2];
+		if (IMG2!=""){
+			var ARR2=IMG2.split("{}");
+			document.all.pic2.src="http://img.ding9.com"+ARR2[7];
+		}
+		var IMG3=RECOMMEND_PRODUCT_ARRAY[3];
+		if (IMG3!=""){
+			var ARR3=IMG3.split("{}");
+			document.all.pic3.src="http://img.ding9.com"+ARR3[7];
+		}
+		var IMG4=RECOMMEND_PRODUCT_ARRAY[4];
+		if (IMG4!=""){
+			var ARR4=IMG4.split("{}");
+			document.all.pic4.src="http://img.ding9.com"+ARR4[7];
+		}
+	}
+	document.all.CategoryName.innerHTML = document.all("SortNameDiv"+SEQ).innerHTML;
+}
+
+function Fun_MovementFireFox(SEQ,overObj){
+	Category = SEQ;
+	var m_Td = overObj.parentNode.parentNode;
+	if (m_Td != g_selectedCategory)	{
+		if (typeof(g_selectedCategory) != "undefined"){
+			g_selectedCategory.className = "CategoryOut";
+		}
+	}
+ 
+	m_Td.className =  "CategoryOver";
+	if (document.getElementById("AdsTitle").style.display==""){
+		document.getElementById("AdsTitle").style.display="none";
+		document.getElementById("CategoryTitle").style.display="";
+	}
+	var RECOMMEND_PRODUCT_DIV="RECOMMEND_PRODUCT_"+SEQ;
+	
+	var RECOMMEND_PRODUCT = null;
+	RECOMMEND_PRODUCT = document.getElementById(RECOMMEND_PRODUCT_DIV).textContent;
+	
+	if (RECOMMEND_PRODUCT!=""){
+		var RECOMMEND_PRODUCT_ARRAY=RECOMMEND_PRODUCT.split("[]");
+		var IMG0=RECOMMEND_PRODUCT_ARRAY[0];
+		if (IMG0!=""){
+			var ARR0=IMG0.split("{}");
+			document.getElementById("pic0").src="http://img.ding9.com/"+ARR0[7];
+		}
+		var IMG1=RECOMMEND_PRODUCT_ARRAY[1];
+		if (IMG1!=""){
+			var ARR1=IMG1.split("{}");
+			document.getElementById("pic1").src="http://img.ding9.com/"+ARR1[7];
+		}
+		var IMG2=RECOMMEND_PRODUCT_ARRAY[2];
+		if (IMG2!=""){
+			var ARR2=IMG2.split("{}");
+			document.getElementById("pic2").src="http://img.ding9.com/"+ARR2[7];
+		}
+		var IMG3=RECOMMEND_PRODUCT_ARRAY[3];
+		if (IMG3!=""){
+			var ARR3=IMG3.split("{}");
+			document.getElementById("pic3").src="http://img.ding9.com/"+ARR3[7];
+		}
+		var IMG4=RECOMMEND_PRODUCT_ARRAY[4];
+		if (IMG4!=""){
+			var ARR4=IMG4.split("{}");
+			document.getElementById("pic4").src="http://img.ding9.com/"+ARR4[7];
+		}
+	}
+	document.getElementById('CategoryName').innerHTML = document.getElementById("SortNameDiv"+SEQ).innerHTML;
+}
+
+
+
+function SmallProduct(SEQ){
+	if (!isIE()){
+		SmallProductFireFox(SEQ);
+		return;
+	}
+	
+	var RECOMMEND_PRODUCT_DIV="RECOMMEND_PRODUCT_"+Category;
+	var RECOMMEND_PRODUCT = null;
+	if(isIE())
+		 RECOMMEND_PRODUCT = document.all(RECOMMEND_PRODUCT_DIV).innerText;
+	else
+		RECOMMEND_PRODUCT = document.all(RECOMMEND_PRODUCT_DIV).textContent;
+		
+	var comment=document.all(RECOMMEND_PRODUCT_DIV).innerHTML;
+	if (RECOMMEND_PRODUCT!=""){
+		var RECOMMEND_PRODUCT_ARRAY=RECOMMEND_PRODUCT.split("[]");
+		var comment_arr=comment.split("[]");
+		var IMG=RECOMMEND_PRODUCT_ARRAY[SEQ-1];
+		var img2=comment_arr[SEQ-1];
+		if (IMG!=""){
+			var ARR=IMG.split("{}");
+			var prso_id_one=ARR[4];
+			var prma_name='<a target="_blank" class="STYLE12" href="'+ARR[11]+'">'+ARR[8]+'</a>';
+			document.all.PrmaName.innerHTML=prma_name;
+			document.all.ImgPic.innerHTML='<a target="_blank" href="'+ARR[11]+'"><IMG height=140 width=140 border=0 src="'+'http://img.ding9.com'+ARR[7]+'"></a>';
+			document.all.MerchantCount.innerHTML='<a target="_blank" class=H2 href="'+ARR[12]+'#remark">'+ARR[1]+'';
+			document.all.MinPrice.innerHTML="￥"+ARR[6]+"起";
+			document.all.PrmaRemark.innerHTML=ARR[9];
+			var arr2=img2.split("{}");
+			document.all.CommentOnProductCount.innerHTML=arr2[3];
+			var temp = ARR[11];
+			temp = temp.replace("-comment","");
+			if (parseInt(ARR[1])>1){
+				document.all.LblGo.innerHTML='<a target="_blank" class="rx003" href="'+temp+'"><img src="/images/ckxq.gif" border="0"/></a>';
+			}else{
+				document.all.LblGo.innerHTML='<a target="_blank" class="rx003" href="'+temp+'"><img src="/images/ckxq.gif" border="0"/></a>';
+			}
+		}
+	}
+	var picIndex = 'pic'+ (SEQ -1);
+	var picTd = document.getElementById(picIndex).parentNode;
+	picTd.className = "ProductOver";
+	if (SEQ !=1){
+		var picTd = document.getElementById('pic0').parentNode;
+		picTd.className = "ProductOut";		
+	}
+}
+
+function SmallProductFireFox(SEQ){
+	var RECOMMEND_PRODUCT_DIV="RECOMMEND_PRODUCT_" + Category;
+	var RECOMMEND_PRODUCT = null;
+	RECOMMEND_PRODUCT = document.getElementById(RECOMMEND_PRODUCT_DIV).textContent;		
+	var comment = document.getElementById(RECOMMEND_PRODUCT_DIV).textContent;
+	
+	if (RECOMMEND_PRODUCT!=""){
+		var RECOMMEND_PRODUCT_ARRAY=RECOMMEND_PRODUCT.split("[]");
+		var comment_arr=comment.split("[]");
+		var IMG=RECOMMEND_PRODUCT_ARRAY[SEQ-1];
+		var img2=comment_arr[SEQ-1];
+		if (IMG!=""){
+			var ARR=IMG.split("{}");
+			var prso_id_one=ARR[4];
+			var prma_name='<a target="_blank" class="STYLE12" href="'+ARR[11]+'">'+ARR[8]+'</a>';
+			document.getElementById("PrmaName").innerHTML = prma_name;
+			document.getElementById("ImgPic").innerHTML='<a target="_blank" href="'+ARR[11]+'"><IMG height=140 width=140 border=0 src="'+'http://img.ding9.com/'+ARR[7]+'"></a>';
+			document.getElementById("MerchantCount").innerHTML='<a target="_blank" class=H2 href="'+ARR[12]+'#remark">'+ARR[1]+'';
+			document.getElementById("MinPrice").innerHTML="￥"+ARR[6]+"起";
+			document.getElementById("PrmaRemark").innerHTML=ARR[9];
+			var arr2=img2.split("{}");
+			document.getElementById("CommentOnProductCount").innerHTML = arr2[3];
+			var temp = ARR[11];
+			temp = temp.replace("-comment","");
+			if (parseInt(ARR[1])>1){
+				document.getElementById("LblGo").innerHTML='<a target="_blank" class="rx003" href="'+temp+'"><img src="/images/ckxq.gif" border="0"/></a>';
+			}else{
+				document.getElementById("LblGo").innerHTML='<a target="_blank" class="rx003" href="'+temp+'"><img src="/images/ckxq.gif" border="0"/></a>';
+			}
+		}
+	}
+	var picIndex = 'pic'+ (SEQ -1);
+	var picTd = document.getElementById(picIndex).parentNode;
+	picTd.className = "ProductOver";
+	if (SEQ !=1){
+		var picTd = document.getElementById('pic0').parentNode;
+		picTd.className = "ProductOut";		
+	}
+}
+
+function SmallProductOut(SEQ){
+	var picIndex = 'pic'+ (SEQ -1);
+	var picTd = document.getElementById(picIndex).parentNode;
+	picTd.className = "ProductOut";
+}
+</script>
+<TABLE cellSpacing="0" cellPadding="0" width="100%">
+	<TBODY>
+		<TR>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://www.jjlg.com.cn/goods.php?id=1485&amp;u=33352"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('ONE',this);SmallProduct(1);"
+				onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100520085438.jpg" /></a>
+				<br/>
+				<span class="rx003">营养保健</span>
+			<div id="SortNameDivONE" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://www.jjlg.com.cn/goods.php?id=1485&amp;u=33352">营养保健</a></div>
+			</TD>
+			<TD width="2" bgColor="#cccccc" rowSpan="7"></TD>
+			<TD id="AdsTitle" align="middle" width="300" height="350" rowSpan="7">
+				<a href='http://guide.ding9.com/click/adv-click.do?adad_id=632&adv_url=http://www.sunglass4u.cn/' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20100330102943.jpg' border='0'  /></A>
+			</TD>
+			<TD id="CategoryTitle"
+				style="DISPLAY: none; FILTER: alpha(opacity =   100); moz-opacity: 1"
+				vAlign="top" align="middle" width="300" rowSpan="7">
+			<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TBODY>
+					<TR>
+						<TD width="300" height="350" valign="top" id="productTd"
+							style="FILTER: alpha(opacity =   100); moz-opacity: 1">
+						<TABLE cellSpacing="0" cellPadding="0" width="100%">
+							<TBODY>
+								<TR>
+									<TD align="center" background="/images/center_bg003.gif"
+										height="37"><SPAN class="rx001" id="CategoryName"></SPAN></TD>
+								</TR>
+							</TBODY>
+						</TABLE>
+						<TABLE cellSpacing="0" cellPadding="0" width="100%">
+							<TBODY>
+								<TR>
+									<TD align="middle">
+									<TABLE cellSpacing="0" cellPadding="0" width="60%">
+										<TBODY>
+											<TR>
+												<TD bgColor="#cccccc" height="1"></TD>
+											</TR>
+										</TBODY>
+									</TABLE>
+									</TD>
+								</TR>
+								<TR>
+									<TD align="center" height="28"><SPAN class="rx002"
+										id="PrmaName"></SPAN></TD>
+								</TR>
+							</TBODY>
+						</TABLE>
+						<TABLE cellSpacing="0" cellPadding="0" width="100%">
+							<TBODY>
+								<TR>
+									<TD width="186" height="150" rowSpan="5" align="middle"
+										valign="top"><SPAN id="ImgPic"></SPAN></TD>
+									<TD width="148">&nbsp;</TD>
+								</TR>
+								<TR>
+									<TD class="H1" align="left" height="22"><SPAN class="H2"
+										id="MinPrice"></SPAN></TD>
+								</TR>
+								<TR>
+									<TD class="rx003" align="left" height="22">来自<SPAN class="rx004"
+										id="MerchantCount"></SPAN>个商家</TD>
+								</TR>
+								<TR>
+									<TD class="rx003" align="left" height="22">商品评论（<SPAN
+										class="H2" id="CommentOnProductCount"></SPAN>）</TD>
+								</TR>
+								<TR>
+									<TD height="70" align="left"><SPAN id="LblGo"></SPAN>
+									<br/></TD>
+								</TR>
+								<tr><td height="25">&nbsp;</td> </tr>
+							</TBODY>
+						</TABLE>
+						<TABLE cellSpacing="0" cellPadding="0" width="100%">
+							<TBODY>
+								<TR>
+									<TD class="H1" vAlign="top" align="right" width="23%"
+										height="35">商品描述：</TD>
+									<TD vAlign="top" align="left" width="77%"><SPAN class="H1"
+										id="PrmaRemark"></SPAN>
+										<br/>
+										</TD>
+								</TR>
+								 <tr><td height="35">&nbsp;</td> </tr>
+								
+							</TBODY>
+						</TABLE>
+						<TABLE cellSpacing="0" cellPadding="0" width="100%">
+							<TBODY>
+								<TR>
+									<TD height="99">
+									<TABLE height="86" cellSpacing="0" cellPadding="0" width="100%">
+										<TBODY>
+											<TR>
+												<TD background="/images/center009.jpg" height="80">
+												<TABLE width="300" height="85" cellSpacing="0" cellPadding='0'>
+													<TBODY>
+														<TR>
+															<TD height="71">&nbsp;</TD>
+															<TD class="ProductOut" width="56" align="center" valign="middle"><IMG
+																id="pic0" onMouseOver="SmallProduct(1)" onMouseOut="SmallProductOut(1)" height="50"
+																width="50" border="0" /><BR />
+															<SPAN class="H1c">No.1</SPAN></TD>
+															<TD class="ProductOut" width="56" align="center" valign="middle"><IMG
+																id="pic1" onMouseOver="SmallProduct(2)" onMouseOut="SmallProductOut(2)" height="50"
+																width="50" border="0" /><BR />
+															<SPAN class="H1c">No.2</SPAN></TD>
+															<TD class="ProductOut" width="56" align="center" valign="middle"><IMG
+																id="pic2" onMouseOver="SmallProduct(3)" onMouseOut="SmallProductOut(3)" height="50"
+																width="50" border="0" /><BR />
+															<SPAN class="H1c">No.3</SPAN></TD>
+															<TD class="ProductOut" width="56" align="center" valign="middle"><IMG
+																id="pic3" onMouseOver="SmallProduct(4)"  onMouseOut="SmallProductOut(4)" height="50"
+																width="50" border="0" /><BR />
+															<SPAN class="H1c">No.4</SPAN></TD>
+															<TD class="ProductOut" width="56" align="center" valign="middle"><IMG
+																id="pic4" onMouseOver="SmallProduct(5)" onMouseOut="SmallProductOut(5)" height="50"
+																width="50" border="0" /><BR />
+															<SPAN class="H1c">No.5</SPAN></TD>
+															<TD>&nbsp;</TD>
+														</TR>
+													</TBODY>
+												</TABLE>
+												</TD>
+											</TR>
+										</TBODY>
+									</TABLE>
+									</TD>
+								</TR>
+							</TBODY>
+						</TABLE>
+						</TD>
+					</TR>
+				</TBODY>
+			</TABLE>
+			</TD>
+			<TD width="2" bgColor="#cccccc" rowSpan="7"></TD>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://db1.adpower.cn/ana/click.php?w=1369&amp;c_id=674&amp;http=http%3A%2F%2Fwww.yesmytea.com%2Fmarketing%2Fnewuser%2Fpresent-to-new.jsp%3Fordersource%3Dding9"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('TWO',this);SmallProduct(1);" onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100322081808.jpg" /></a>
+				<br/><span class="rx003" >茶叶精品</span>
+			<div id="SortNameDivTWO" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://db1.adpower.cn/ana/click.php?w=1369&amp;c_id=674&amp;http=http%3A%2F%2Fwww.yesmytea.com%2Fmarketing%2Fnewuser%2Fpresent-to-new.jsp%3Fordersource%3Dding9">茶叶精品</a></div>
+			</TD>
+			<TD width="8" background="/images/center005.gif" rowSpan="7"></TD>
+		</TR>
+		<TR>
+			<TD vAlign="center" align="middle" bgColor="#cccccc"></TD>
+			<TD vAlign="center" align="middle" bgColor="#cccccc"></TD>
+		</TR>
+		<TR>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://guide.ding9.com/null-0/prod-4097588.htm"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('THREE',this);SmallProduct(1);" onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100520085626.jpg" /></a>
+				<br/><span class="rx003">电脑网络</span>
+			<div id="SortNameDivTHREE" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://guide.ding9.com/null-0/prod-4097588.htm">电脑网络</a></div>
+			</TD>
+			<TD class="CategoryOut" vAlign="middle" align="center">
+				
+				
+				
+			 <a target="_blank" href="http://guide.ding9.com/null-0/prod-3251484-comment.htm">
+			<img height="80" width="80"  class="imgclass"
+				ONMOUSEOVER="Fun_Movement('FOUR',this);SmallProduct(1);" onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100427092301.jpg" /></a>
+				<br/><span class="rx003">办公用品</span>
+			<div id="SortNameDivFOUR" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://guide.ding9.com/null-0/prod-3251484-comment.htm">办公用品</a></div>
+			</TD>
+		</TR>
+		<TR>
+			<TD vAlign="center" align="middle" bgColor="#cccccc"></TD>
+			<TD vAlign="center" align="middle" bgColor="#cccccc"></TD>
+		</TR>
+		<TR>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://www.shihui.cn/goods.php?id=1463&amp;shihui_tag=ding9"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('FIVE',this);SmallProduct(1);"  onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100520094026.jpg" /></a>
+				<br/><span class="rx003">家用电器</span>
+			<div id="SortNameDivFIVE" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://www.shihui.cn/goods.php?id=1463&amp;shihui_tag=ding9">家用电器</a></div>
+			</TD>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://guide.ding9.com/null-0/prod-2220612-comment.htm"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('SIX',this);SmallProduct(1);"  onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100427091252.jpg" /></a>
+				<br/><span class="rx003">服装服饰</span>
+			<div id="SortNameDivSIX" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://guide.ding9.com/null-0/prod-2220612-comment.htm">服装服饰</a></div>
+			</TD>
+		</TR>
+		<TR>
+			<TD valign="center" align="middle" bgColor="#cccccc"></TD>
+			<TD vAlign="center" align="middle" bgColor="#cccccc"></TD>
+		</TR>
+		<TR>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://guide.ding9.com/Jewelry-9/prod-1996856.htm"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('SERVEN',this);SmallProduct(1);"
+				border="0" onMouseOut="MoveOut(this);"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100520090703.jpg" /></a>
+				<br/><span class="rx003">精品饰品</span>
+			<div id="SortNameDivSERVEN" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://guide.ding9.com/Jewelry-9/prod-1996856.htm">精品饰品</a></div>
+			</TD>
+			<TD class="CategoryOut" vAlign="middle" align="center"><a
+				target="_blank" href="http://guide.ding9.com/null-0/prod-171943-comment.htm"> <img
+				height="80" width="80" class="imgclass"
+				ONMOUSEOVER="Fun_Movement('EIGHT',this);SmallProduct(1);" onMouseOut="MoveOut(this);" border="0"
+				src="http://img.ding9.com/picdata/common/recommend/sort/20100520090122.jpg" /></a>
+				<br/><span class="rx003">美容美体</span>
+			<div id="SortNameDivEIGHT" style="display: none"><a
+				target="_blank" class="H1cl"
+				href="http://guide.ding9.com/null-0/prod-171943-comment.htm">美容美体</a></div>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+	<div id="RECOMMEND_PRODUCT_ONE" style="display:none">3914{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4438552-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}799.0{}/picdata/common/recommend/3914.jpg{}灵芝孢子纯粉胶囊8瓶套装{}...{}0{}/null-0/prod-4438552-comment.htm{}/null-0/prod-4438552-comment-1.htm[] 3913{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4359952-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}59.0{}/picdata/common/recommend/3913.jpg{}抚宝牌人参茶{}...{}0{}/null-0/prod-4359952-comment.htm{}/null-0/prod-4359952-comment-1.htm[] 3912{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4438529-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}280.0{}/picdata/common/recommend/3912.jpg{}天然VE辅酶Q10软胶囊{}...{}0{}/null-0/prod-4438529-comment.htm{}/null-0/prod-4438529-comment-1.htm[] 3796{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3298955-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}69.0{}/photo/crawl/7/3/2/2929b072a03c66aa47acc680dc8e9424_0_200.jpg{}喜瑞/喜瑞亮晶晶胶囊350mg*60粒{}...{}0{}/null-0/prod-3298955-comment.htm{}/null-0/prod-3298955-comment-1.htm[] 3795{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4438532-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}232.0{}/photo/crawl/0/0/6/7f586d72e3e45bf132db6bd6d757ce90_0_200.jpg{}老山蜂王浆冻干粉胶囊4袋套装{}【配 料 表】蜂王浆 硬胶囊[明胶、着色剂(011、005)]　 【产品规格】250mg&...{}0{}/null-0/prod-4438532-comment.htm{}/null-0/prod-4438532-comment-1.htm[] 3794{}0{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4359800-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}200.0{}/photo/crawl/8/0/4/b1e1f1c8c2d2ee67ae5b307d7e4a6522_0_200.jpg{}给尔新纳米氨基酸螯合钙120粒*11瓶{}...{}0{}/null-0/prod-4359800-comment.htm{}/null-0/prod-4359800-comment-1.htm[] 3792{}0{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4359707-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}55{}20.0{}/photo/crawl/9/2/6/87b99b9b3bdaf64502839a397205054d_0_200.jpg{}给尔新天然破壁松花粉（60片）{}【产品规格】500mg×60片 【生产厂家】北京三联制药有限公司 【主要成...{}0{}/null-0/prod-4359707-comment.htm{}/null-0/prod-4359707-comment-1.htm[] 3786{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4359844-comment.htm#viewc'><font color="#0066cc">1</font></a>{}0{}55{}28.0{}/photo/crawl/6/5/5/110c377861c6776657894f172d649f3a_0_200.jpg{}北京蜂胶软胶囊(60粒){}...{}1{}/null-0/prod-4359844-comment.htm{}/null-0/prod-4359844-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_TWO" style="display:none">3927{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4001099-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}56{}120.0{}/picdata/common/recommend/3927.jpg{}09春茶新上市、一级茶叶、精品铁观音、高档茶叶礼盒{}...{}0{}/null-0/prod-4001099-comment.htm{}/null-0/prod-4001099-comment-1.htm[] 3893{}3{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3531603-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}56{}30.0{}/picdata/common/recommend/3893.jpg{}西湖龙井茶{}...{}0{}/null-0/prod-3531603-comment.htm{}/null-0/prod-3531603-comment-1.htm[] 3861{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4407165-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}56{}850.0{}/picdata/common/recommend/3861.jpg{}“凤山”牌浓香铁观音NT2000   250克/盒{}...{}0{}/null-0/prod-4407165-comment.htm{}/null-0/prod-4407165-comment-1.htm[] 3854{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3388294-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}56{}36.0{}/picdata/common/recommend/3854.jpg{}信阳毛尖(中国名优茶){}...{}0{}/null-0/prod-3388294-comment.htm{}/null-0/prod-3388294-comment-1.htm[] 3767{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3975462-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}56{}309.0{}/photo/crawl/8/8/4/356d93d99b2b8370d681acbf5bf15dc4_0_200.jpg{}春江花月夜（绿茶） 明前碧螺春（空盒）{}...{}0{}/null-0/prod-3975462-comment.htm{}/null-0/prod-3975462-comment-1.htm[] 3766{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4168817-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}56{}265.0{}/photo/crawl/9/6/8/7b87cf2484b0b528630438cb023bc2e8_0_200.jpg{}礼品茶 中秋特供 洞庭碧螺春 茶韵清风 放心品质 防伪辨真{}...{}0{}/null-0/prod-4168817-comment.htm{}/null-0/prod-4168817-comment-1.htm[] 3690{}2{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2162953-comment.htm#viewc'><font color="#0066cc">1</font></a>{}0{}56{}550.0{}/photo/crawl/8/9/8/1dcdcd6d67856ba4c056b39ebb8802b5_0_200.jpg{}一枕茶园茉莉花茶香枕(对枕){}产品四大特点（1）中医理论：一枕茶园茶枕以“凉头热脚”和“闻香...{}1{}/null-0/prod-2162953-comment.htm{}/null-0/prod-2162953-comment-1.htm[] 3689{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2863372-comment.htm#viewc'><font color="#0066cc">1</font></a>{}0{}56{}158.0{}/photo/crawl/5/7/3/281d74612fbfc3019256b4ac47f9d37c_0_200.jpg{}茉莉花茶香枕{}茉莉花茶香枕系原生态健康睡眠产品，茶枕根据中医“凉头热脚 ”理论和“...{}1{}/null-0/prod-2863372-comment.htm{}/null-0/prod-2863372-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_THREE" style="display:none">3919{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3177810-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}7828.0{}/photo/crawl/1/4/1/8e63feac7b3e42f7a5841391426a5e36_0_200.jpg{}索尼笔记本电脑CR33/B{}...{}0{}/null-0/prod-3177810-comment.htm{}/null-0/prod-3177810-comment-1.htm[] 3918{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3179009-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}16648.0{}/photo/crawl/3/7/7/7e96feac3486edf7f64718865aadce21_0_200.jpg{}索尼笔记本电脑FZ38{}...{}0{}/null-0/prod-3179009-comment.htm{}/null-0/prod-3179009-comment-1.htm[] 3917{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3179670-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}5868.0{}/photo/crawl/6/0/5/8dd9f3c8df5a620b886003788fa7abd0_0_200.jpg{}索尼笔记本电脑NR23H{}...{}0{}/null-0/prod-3179670-comment.htm{}/null-0/prod-3179670-comment-1.htm[] 3916{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3179671-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}12728.0{}/photo/crawl/4/4/5/fb68f80747b675cb74dfedd7cf96b8e3_0_200.jpg{}索尼笔记本电脑LB25{}...{}0{}/null-0/prod-3179671-comment.htm{}/null-0/prod-3179671-comment-1.htm[] 3885{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1067284-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}5900.0{}/picdata/common/recommend/3885.jpg{}联想 旭日125C1500370X4256040BXbL{}1.5GHz...{}0{}/null-0/prod-1067284-comment.htm{}/null-0/prod-1067284-comment-1.htm[] 3884{}0{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1046575-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}4398.0{}/photo/crawl/6/5/1/9f97fba621fad05910818b9960d5be91_0_200_r1.jpg{}联想 家悦D1000E(XP)家用电脑{}CPU ...{}0{}/null-0/prod-1046575-comment.htm{}/null-0/prod-1046575-comment-1.htm[] 3850{}0{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-55891-comment.htm#viewc'><font color="#0066cc">1</font></a>{}0{}57{}12800.0{}/picdata/common/recommend/3850.jpg{}索尼 VGN-UX17C笔记本{}VAIO VGN-UX17C特别适用于执行需要移动的重要任务，因为它具有轻薄、小巧和...{}1{}/null-0/prod-55891-comment.htm{}/null-0/prod-55891-comment-1.htm[] 3849{}0{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2201327-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}57{}530.0{}/picdata/common/recommend/3849.jpg{}智慧宝早教机IT-830学生电脑{}智慧宝早教机IT-830学生电脑：神州少年” 同步学生电脑，自身内容丰富，又...{}0{}/null-0/prod-2201327-comment.htm{}/null-0/prod-2201327-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_FOUR" style="display:none">3931{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2077808-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}408.0{}/picdata/common/recommend/3931.jpg{}紫檀木镂空雕缠枝莲办公二件套A套{}【商品说明】:包装规格:26.6cm*16.3cm*5.2cm?xml:namespace prefix = ...{}0{}/null-0/prod-2077808-comment.htm{}/null-0/prod-2077808-comment-1.htm[] 3902{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4612768-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}1350.0{}/photo/crawl/5/5/6/ad0f613721c2617a1f34859643ff7cbc_0_200.jpg{}惠普（HP） OfficeJet J4660 彩色喷墨一体机{}OfficejetJ4660彩色传真一体机正是这种应运时世的全能型“人才”。它...{}0{}/null-0/prod-4612768-comment.htm{}/null-0/prod-4612768-comment-1.htm[] 3824{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2060416-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}390.0{}/photo/crawl/9/6/2/023c7f24dd2279ad18f13ad76328085e_0_200_r1.jpg{}紫檀木嵌骨瓷办公三件套{}【商品说明】：笔筒规格:10.3*11.8cm名片座规格:9*4*5cm镇纸规...{}0{}/null-0/prod-2060416-comment.htm{}/null-0/prod-2060416-comment-1.htm[] 3763{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1165212-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}5583.0{}/picdata/common/recommend/3763.jpg{}万宝龙波希米亚圆形红榴石水晶签字笔{}...{}0{}/null-0/prod-1165212-comment.htm{}/null-0/prod-1165212-comment-1.htm[] 3635{}6{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1651250-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}2400.0{}/picdata/common/recommend/3635.jpg{}商用电脑{}CPU: 赛扬2.5A 显示屏: 15寸彩色显示器 内存: 256M DDR 硬盘: 40G ...{}0{}/null-0/prod-1651250-comment.htm{}/null-0/prod-1651250-comment-1.htm[] 3634{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-179206-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}1800.0{}/picdata/common/recommend/3634.jpg{}三星喷墨多功能一体机{}新建网页 2 功能类型 打印||复印||扫描 适用平台 PC 打印方式 黑白喷墨打印...{}0{}/null-0/prod-179206-comment.htm{}/null-0/prod-179206-comment-1.htm[] 3341{}0{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4378981-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}320.0{}/photo/crawl/4/2/4/44289c0a1395a5aa9046f4acdad6aa95_0_200.jpg{}Panasonic 松下 打印机墨粉 KX-FAT94CN{}适用机型：松下KX-MB228CN/KX-MB778CN一体机。...{}0{}/null-0/prod-4378981-comment.htm{}/null-0/prod-4378981-comment-1.htm[] 2707{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1651417-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}58{}218.0{}/picdata/common/recommend/2707.jpg{}惠普墨盒（彩色）{}...{}0{}/null-0/prod-1651417-comment.htm{}/null-0/prod-1651417-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_FIVE" style="display:none">3930{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1001087-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}212.0{}/picdata/common/recommend/3930.jpg{}ACA电烤箱VTO-9F{}美国ACA电烤箱VTO9F特点:·不锈钢材质，表面拉丝·本体为不锈钢管...{}0{}/null-0/prod-1001087-comment.htm{}/null-0/prod-1001087-comment-1.htm[] 3929{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3430417-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}255.0{}/photo/crawl/7/6/5/670a85786012992082d6ec9d672c6a93_0_200.jpg{}电蒸笼DL-100B2{}...{}0{}/null-0/prod-3430417-comment.htm{}/null-0/prod-3430417-comment-1.htm[] 3890{}3{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1598870-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}350.0{}/picdata/common/recommend/3890.jpg{}飞利浦烤面包机HD2623{}{}0{}/null-0/prod-1598870-comment.htm{}/null-0/prod-1598870-comment-1.htm[] 3889{}5{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2183212-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}148.0{}/photo/crawl/5/2/1/c28f04665d7905d90b0133e993b9e36d_0_200.jpg{}富士宝电磁炉IH{}系列：电磁炉型号：IH-P206C参数：风靡全国的富特晶透面板，特...{}0{}/null-0/prod-2183212-comment.htm{}/null-0/prod-2183212-comment-1.htm[] 3851{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1090165-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}2499.0{}/picdata/common/recommend/3851.jpg{}海尔彩电29F9K-PY{}...{}0{}/null-0/prod-1090165-comment.htm{}/null-0/prod-1090165-comment-1.htm[] 3797{}3{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2187086-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}325.0{}/photo/crawl/6/3/7/3632256fe8ba4d00df0ee098cc3d66da_0_200.jpg{}尚朋堂电饭煲/电脑煲SC{}额定功率：1000W 额定容量：5.0L防溢保湿蒸气阀设计，有效防止水份的流...{}0{}/null-0/prod-2187086-comment.htm{}/null-0/prod-2187086-comment-1.htm[] 3777{}2{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3138269-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}888.0{}/photo/crawl/3/3/6/838d4e80fcbaeb570ca018887ae3f75f_0_200.jpg{}海尔吸尘器ZL1500-2{}...{}0{}/null-0/prod-3138269-comment.htm{}/null-0/prod-3138269-comment-1.htm[] 3261{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1321059-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}59{}5152.0{}/picdata/common/recommend/3261.jpg{}美的洗碗机WQP12-9319{}...{}0{}/null-0/prod-1321059-comment.htm{}/null-0/prod-1321059-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_SIX" style="display:none">3926{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3452808-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}318.0{}/picdata/common/recommend/3926.jpg{}韩国 with mocha 连帽T恤+短裤(超值2件套组合){}...{}0{}/null-0/prod-3452808-comment.htm{}/null-0/prod-3452808-comment-1.htm[] 3896{}0{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2423147-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}96.0{}/photo/crawl/8/2/1/914f867e7ca8cbe330d7d82e4ec3efa6_0_200.jpg{}K041802 ESPRIT彩花腰带夏装九分裤(湖蓝){}ESPRIT高仿，标、牌齐全，面料凉爽透气,做工质地好。颜色清爽，适合搭配。...{}0{}/null-0/prod-2423147-comment.htm{}/null-0/prod-2423147-comment-1.htm[] 3863{}2{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2219901-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}229.0{}/photo/crawl/2/2/1/4dd22fcdf8db0fca47d282c6cc970969_0_200.jpg{}珍藏版SUNNYCLOUDS儿童内藏叶子图案的牛仔裤{}表里同样精彩。 这一款儿童版彩色牛仔裤，布料织造采用驼色经线、原色纬线...{}0{}/null-0/prod-2219901-comment.htm{}/null-0/prod-2219901-comment-1.htm[] 3808{}0{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3135508-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}102.0{}/photo/crawl/8/6/9/e652d8735e7d553dacd4b1b830373a23_0_200.jpg{}GUCCI简单帅气经典五兜设计直筒牛仔裤{}...{}0{}/null-0/prod-3135508-comment.htm{}/null-0/prod-3135508-comment-1.htm[] 3805{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2139679-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}164.0{}/picdata/common/recommend/3805.jpg{}VERSACE品牌！时尚休闲牛仔裤{}【名称】VERSACE品牌！时尚休闲牛仔裤30码参考尺寸:【裤长】...{}0{}/null-0/prod-2139679-comment.htm{}/null-0/prod-2139679-comment-1.htm[] 3804{}2{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3445998-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}98.0{}/photo/crawl/1/4/7/d5ba7ff90a4f1c25ced2b83d3034eb4a_0_200.jpg{}白鸟花子 时尚收腰 五分可折袖 长款衬衣{}...{}0{}/null-0/prod-3445998-comment.htm{}/null-0/prod-3445998-comment-1.htm[] 3803{}2{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3438301-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}128.0{}/photo/crawl/8/0/8/ac4bc5ee8b769106ae6500a11ddb7ff2_0_200.jpg{}TOPWIND 高品质修身款休闲短袖衬衣{}...{}0{}/null-0/prod-3438301-comment.htm{}/null-0/prod-3438301-comment-1.htm[] 3779{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3022430-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}60{}245.0{}/photo/crawl/0/9/7/36794283d00db93189115c18e6a6c4ea_0_200.jpg{}GUCCI皮带{}GUCCI原版序列号,说明书,塑料袋包装,皮带包装盒...{}0{}/null-0/prod-3022430-comment.htm{}/null-0/prod-3022430-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_SERVEN" style="display:none">3923{}1{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1994809-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}61{}160.0{}/picdata/common/recommend/3923.jpg{}紫水晶勾玉吊飾{}勾玉約16*11*7M 含繩吊飾總長約8公分...{}0{}/null-0/prod-1994809-comment.htm{}/null-0/prod-1994809-comment-1.htm[] 3922{}0{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3058832-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}61{}240.0{}/picdata/common/recommend/3922.jpg{}玉籽石-和田玉项链{}和田玉...{}0{}/null-0/prod-3058832-comment.htm{}/null-0/prod-3058832-comment-1.htm[] 3921{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3073896-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}61{}299.0{}/picdata/common/recommend/3921.jpg{}99.99%纯钛纯锗镶磁石玉叶款手链{}...{}0{}/null-0/prod-3073896-comment.htm{}/null-0/prod-3073896-comment-1.htm[] 3903{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-4461903-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}61{}450.0{}/photo/crawl/3/9/7/9b02f9ebb12f6bc856cd3cc4d6588234_0_200.jpg{}welina珠宝    财富之神-925银纯手工艺雕刻手镯{}...{}0{}/null-0/prod-4461903-comment.htm{}/null-0/prod-4461903-comment-1.htm[] 3892{}2{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-2227417-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}61{}3818.0{}/picdata/common/recommend/3892.jpg{}RALPH LAUREN 拉夫.劳伦银色蓝镶边花纹合金手镯{}RALPH LAUREN 拉夫.劳伦银色蓝镶边花纹合金手镯的商品信息 ...{}0{}/null-0/prod-2227417-comment.htm{}/null-0/prod-2227417-comment-1.htm[] </div>
+ 
+	<div id="RECOMMEND_PRODUCT_EIGHT" style="display:none">3925{}7{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-223750-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}62{}105.0{}/picdata/common/recommend/3925.jpg{}高丝冬虫夏草保湿面霜 50G{}2003最新出品的冬虫夏草保湿面霜，天然植物性保湿成份及去角质有效成份，可...{}0{}/null-0/prod-223750-comment.htm{}/null-0/prod-223750-comment-1.htm[] 3924{}11{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-422928-comment.htm#viewc'><font color="#0066cc">5</font></a>{}0{}62{}100.0{}/picdata/common/recommend/3924.jpg{}玉兰油多效修护防晒霜 50g{}蕴含OLAY特有的维他纳新(即维他命B3、维他命原B5、维他命E)玉兰油高效保湿...{}5{}/null-0/prod-422928-comment.htm{}/null-0/prod-422928-comment-1.htm[] 3907{}18{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-140021-comment.htm#viewc'><font color="#0066cc">21</font></a>{}0{}62{}96.0{}/picdata/common/recommend/3907.jpg{}玉兰油美容焕采面膜 5片{}每片玉兰油净白莹采美容焕采面膜含有24ml净白精华乳液，蕴含维它命B3，维它...{}21{}/null-0/prod-140021-comment.htm{}/null-0/prod-140021-comment-1.htm[] 3891{}3{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1350853-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}62{}375.0{}/picdata/common/recommend/3891.gif{}LOREAL欧莱雅清润保湿六件套（中性及干性）礼盒装{}...{}0{}/null-0/prod-1350853-comment.htm{}/null-0/prod-1350853-comment-1.htm[] 3771{}0{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-3338691-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}62{}25.0{}/picdata/common/recommend/3771.jpg{}化蝶秀 全身白洗沙沙500ml(甜美果香){}...{}0{}/null-0/prod-3338691-comment.htm{}/null-0/prod-3338691-comment-1.htm[] 3769{}1{}0{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1151214-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}62{}75.0{}/photo/crawl/9/2/5/e0d25109d15360ba6e6a6ce706ee193d_0_200_r1.jpg{}雅顿 显效控油爽肤水 200ML{}植物配方,是油性/混合性偏油性肌肤最理想的化妆水，可以控制油脂分泌、...{}0{}/null-0/prod-1151214-comment.htm{}/null-0/prod-1151214-comment-1.htm[] 3768{}5{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1149885-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}62{}240.0{}/picdata/common/recommend/3768.jpg{}雅顿 葡萄籽面膜三件套{}葡萄籽面膜50ml＋高效抗氧保湿防护乳15ml＋晚安舒眠霜7g此套...{}0{}/null-0/prod-1149885-comment.htm{}/null-0/prod-1149885-comment-1.htm[] 3632{}0{}1{}<a target='_blank' class='H1' href='http://guide.ding9.com/null-0/prod-1626055-comment.htm#AddContent'><font color="#0066cc">发表评论</font></a>{}0{}62{}330.0{}/picdata/common/recommend/3632.jpg{}再清椿协作化妆品{}...{}0{}/null-0/prod-1626055-comment.htm{}/null-0/prod-1626055-comment-1.htm[] </div>
+</div>
+<!--首页特效结束--></div>
+
+<!--main1_2-->
+<div id="main1_3">
+<div id="enro">
+<div id="enro_1"><a href="http://user.ding9.com/"
+	class="cogreen si14 bold">用户登录</a></div>
+<div id="enro_2"><a href="http://merchant.ding9.com/login.html"
+	class="cogreen si14 bold">商家登录</a></div>
+<div id="enro_3">共收集商家<br />
+ 	6,576家</div>
+<div id="enro_4">共收集商品<br />
+	2,782,042个</div>
+</div>
+<!--enro-->
+
+<div id="news">
+<div class="title bold">商讯速递</div>
+<ul>
+	
+		
+			<li class="co333">[手机/通讯]  
+			  <a
+				target="_blank"
+				href="http://mobile.ding9.com/Mobile-6/news/article-9284/"
+				class="H1"> 低价高质 千元内超</a></li>
+		
+			<li class="co333">[数码/电子]  
+			  <a
+				target="_blank"
+				href="http://digital.ding9.com/Digital-1/news/article-9285/"
+				class="H1"> 上市前抢先看 即将</a></li>
+		
+			<li class="co333">[办公用品]  
+			  <a
+				target="_blank"
+				href="http://office.ding9.com/Office-15/news/article-9287/"
+				class="H1"> 创业不用愁不足千元</a></li>
+		
+			<li class="co333">[电脑/网络]  
+			  <a
+				target="_blank"
+				href="http://computer.ding9.com/Computer-7/news/article-9286/"
+				class="H1"> 有钱人的玩具SSD硬</a></li>
+		
+			<li class="co333">[数码/电子]  
+			  <a
+				target="_blank"
+				href="http://digital.ding9.com/Digital-1/news/article-9289/"
+				class="H1"> 拒绝耍酷 六款实用</a></li>
+		
+			<li class="co333">[家用电器]  
+			  <a
+				target="_blank"
+				href="http://hea.ding9.com/Hea-12/news/article-9290/"
+				class="H1"> 尽显价格优势超值42</a></li>
+		
+			<li class="co333">[美容美体]  
+			  <a
+				target="_blank"
+				href="http://beauty.ding9.com/Beauty-8/news/article-9282/"
+				class="H1"> 强力推荐熬夜女保持</a></li>
+		
+			<li class="co333">[手机/通讯]  
+			  <a
+				target="_blank"
+				href="http://mobile.ding9.com/Mobile-6/news/article-8937/"
+				class="H1"> 个性好选择 近期上</a></li>
+		
+			<li class="co333">[数码/电子]  
+			  <a
+				target="_blank"
+				href="http://digital.ding9.com/Digital-1/news/article-8938/"
+				class="H1"> 看长江七号拍电影 </a></li>
+		
+			<li class="co333">[办公用品]  
+			  <a
+				target="_blank"
+				href="http://office.ding9.com/Office-15/news/article-8940/"
+				class="H1"> 新年热销 A3+幅商用</a></li>
+		
+	
+</ul>
+</div>
+<div>
+<a name=d91 id=d91 href='http://guide.ding9.com/click/adv-click.do?adad_id=711&adv_url=http://eshop.ding9.com/?product-98.html' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20100112131053.gif' border='0'  /></A>	
+</div>
+</div>
+<!--main1_3--></div>
+<!--main1 第一行div结束-->
+
+<div id="main2">
+<div id="main2_1"><!--小九九导购开始--> <!--Start of the Tabmenu 2 -->
+<div class="menu2">
+<ul>
+	<li><a href="#" onMouseOver="easytabs('2', '1');"
+		onfocus="easytabs('2', '1');" onClick="return false;" title=""
+		id="anotherlink1">新年特卖</a></li>
+	<li><a href="#" onMouseOver="easytabs('2', '2');"
+		onfocus="easytabs('2', '2');" onClick="return false;" title=""
+		id="anotherlink2">最IN冬装</a></li>
+	<li><a href="#" onMouseOver="easytabs('2', '3');"
+		onfocus="easytabs('2', '3');" onClick="return false;" title=""
+		id="anotherlink3">魅力彩妆</a></li>
+	<li><a href="#" onMouseOver="easytabs('2', '4');"
+		onfocus="easytabs('2', '4');" onClick="return false;" title=""
+		id="anotherlink4">轻松瘦身</a></li>
+	<li><a href="#" onMouseOver="easytabs('2', '5');"
+		onfocus="easytabs('2', '5');" onClick="return false;" title=""
+		id="anotherlink5">运动户外</a></li>
+</ul>
+</div>
+<!--End of the Tabmenu 2 --> <!--Start Tabcontent 1 -->
+<div id="anothercontent1">
+<div class="indexpro">
+	<ul><li><div class="indexproK"><a href="/null-0/prod-3022401.htm"><img src="http://img.ding9.com/picdata/common/recommend/3876.jpg" alt="LV大方格包包&nbsp;&nbsp;&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3022401.htm">LV大方格包包&nbsp;&nbsp;&nbsp;&nbsp;<br /></a><span class="cored">￥685起</span></div><br/><div class="probutton"><a href="/null-0/prod-3022401.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3073065.htm"><img src="http://img.ding9.com/picdata/common/recommend/3875.jpg" alt="新光/新光施华洛士奇－发..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3073065.htm">新光/新光施华洛士奇－发...<br /></a><span class="cored">￥49起</span></div><br/><div class="probutton"><a href="/null-0/prod-3073065.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3105375.htm"><img src="http://img.ding9.com/picdata/common/recommend/3874.jpg" alt="康佳臻贵手机&nbsp;&nbsp;&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3105375.htm">康佳臻贵手机&nbsp;&nbsp;&nbsp;&nbsp;<br /></a><span class="cored">￥1180起</span></div><br/><div class="probutton"><a href="/null-0/prod-3105375.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2196274.htm"><img src="http://img.ding9.com/picdata/common/recommend/3873.jpg" alt="联想数码照相机V30C&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2196274.htm">联想数码照相机V30C&nbsp;&nbsp;<br /></a><span class="cored">￥936起</span></div><br/><div class="probutton"><a href="/null-0/prod-2196274.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2228528.htm"><img src="http://img.ding9.com/picdata/common/recommend/3871.jpg" alt="飞利浦声波震动牙刷HX..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2228528.htm">飞利浦声波震动牙刷HX...<br /></a><span class="cored">￥594起</span></div><br/><div class="probutton"><a href="/null-0/prod-2228528.htm">比较价格</a></div></li></ul>
+
+<div class="protext"><a href="http://eshop.ding9.com" 
+		class="co333">新年快乐——顶9给你最大的放心和实惠</a></div>
+</div>
+<!--indexpro--></div>
+<!--End Tabcontent 1--> <!--Start Tabcontent 2-->
+<div id="anothercontent2">
+<div class="indexpro">
+	<ul><li><div class="indexproK"><a href="/null-0/prod-3450914.htm"><img src="http://img.ding9.com/picdata/common/recommend/3933.jpg" alt="【韩国·oshare】时尚条..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3450914.htm">【韩国·oshare】时尚条...<br /></a><span class="cored">￥529起</span></div><br/><div class="probutton"><a href="/null-0/prod-3450914.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2219860.htm"><img src="http://img.ding9.com/picdata/common/recommend/3886.jpg" alt="9-1女式塑身七分裤&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2219860.htm">9-1女式塑身七分裤&nbsp;&nbsp;<br /></a><span class="cored">￥279起</span></div><br/><div class="probutton"><a href="/null-0/prod-2219860.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3148216.htm"><img src="http://img.ding9.com/picdata/common/recommend/3864.jpg" alt="时尚OL柔美百搭短袖薄外..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3148216.htm">时尚OL柔美百搭短袖薄外...<br /></a><span class="cored">￥69起</span></div><br/><div class="probutton"><a href="/null-0/prod-3148216.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3462662.htm"><img src="http://img.ding9.com/photo/crawl/9/1/2/9fd0efd798b492342eb1ca16fcc3628c_0_200.jpg" alt="韩国 TOM HOUSE MEN's 男..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3462662.htm">韩国 TOM HOUSE MEN's 男...<br /></a><span class="cored">￥188起</span></div><br/><div class="probutton"><a href="/null-0/prod-3462662.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2053945.htm"><img src="http://img.ding9.com/picdata/common/recommend/3735.jpg" alt="长袖翻领荷叶边衬衣&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2053945.htm">长袖翻领荷叶边衬衣&nbsp;&nbsp;<br /></a><span class="cored">￥201起</span></div><br/><div class="probutton"><a href="/null-0/prod-2053945.htm">比较价格</a></div></li></ul>
+
+<div class="protext"><a href="http://guide.ding9.com/null-0/prod-2206956.htm" 
+	class="co333">手织妩媚蜘蛛衫——打造冬季的甜美 </a></div>
+</div>
+<!--indexpro--></div>
+<!--End Tabcontent 2 --> <!--Start Tabcontent 3-->
+<div id="anothercontent3">
+<div class="indexpro">
+	<ul><li><div class="indexproK"><a href="/null-0/prod-1090926.htm"><img src="http://img.ding9.com/photo/crawl/6/5/5/d370839db8a80f62bf6a430a5020d656_0_200.jpg" alt="雅诗兰黛瞬彩丰盈睫毛膏..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-1090926.htm">雅诗兰黛瞬彩丰盈睫毛膏...<br /></a><span class="cored">￥30起</span></div><br/><div class="probutton"><a href="/null-0/prod-1090926.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-289260.htm"><img src="http://img.ding9.com/picdata/common/recommend/3858.gif" alt="玉兰油焦点皙白保湿醒肤..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-289260.htm">玉兰油焦点皙白保湿醒肤...<br /></a><span class="cored">￥133起</span></div><br/><div class="probutton"><a href="/null-0/prod-289260.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2162196.htm"><img src="http://img.ding9.com/photo/crawl/4/5/8/83a90d2db4f18e4d9292492eb547b227_0_200.jpg" alt="Chanel 香奈儿邂逅清新淡..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2162196.htm">Chanel 香奈儿邂逅清新淡...<br /></a><span class="cored">￥700起</span></div><br/><div class="probutton"><a href="/null-0/prod-2162196.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-1349107.htm"><img src="http://img.ding9.com/picdata/common/recommend/3745.jpg" alt="丁家宜祛斑精华霜50g&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-1349107.htm">丁家宜祛斑精华霜50g&nbsp;&nbsp;<br /></a><span class="cored">￥39起</span></div><br/><div class="probutton"><a href="/null-0/prod-1349107.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2833716.htm"><img src="http://img.ding9.com/picdata/common/recommend/3744.jpg" alt="隆力奇蛇胆不紧绷洗面奶..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2833716.htm">隆力奇蛇胆不紧绷洗面奶...<br /></a><span class="cored">￥14起</span></div><br/><div class="probutton"><a href="/null-0/prod-2833716.htm">比较价格</a></div></li></ul>
+
+<div class="protext"><a href="http://guide.ding9.com/null-0/prod-2260050.htm" class="co333">
+		打造真正的异域风情——西西里魅惑限量彩妆</a></div>
+</div>
+<!--indexpro--></div>
+<!--End Tabcontent 3--> <!--Start Tabcontent 4-->
+<div id="anothercontent4">
+<div class="indexpro">
+	<ul><li><div class="indexproK"><a href="/null-0/prod-3222095.htm"><img src="http://img.ding9.com/photo/crawl/9/3/5/a4dfcfa7551b2bb17d710c8905f6f3e9_0_200.jpg" alt="LF完美塑身系列-消脂纤体..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3222095.htm">LF完美塑身系列-消脂纤体...<br /></a><span class="cored">￥248起</span></div><br/><div class="probutton"><a href="/null-0/prod-3222095.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3222257.htm"><img src="http://img.ding9.com/photo/crawl/4/8/7/f97bc3bb3d67d7bc0e0824a1b219e1c9_0_200.jpg" alt="泰国宝贝神奇减肥膏泵装..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3222257.htm">泰国宝贝神奇减肥膏泵装...<br /></a><span class="cored">￥199起</span></div><br/><div class="probutton"><a href="/null-0/prod-3222257.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-203909.htm"><img src="http://img.ding9.com/photo/crawl/1/8/2/5a3bb49d72d30028a70b854d0541fd41_0_200_r1.gif" alt="兰芝双重隔离防晒霜 S..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-203909.htm">兰芝双重隔离防晒霜 S...<br /></a><span class="cored">￥95起</span></div><br/><div class="probutton"><a href="/null-0/prod-203909.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3070620.htm"><img src="http://img.ding9.com/photo/crawl/9/5/8/f9272276c54d87c1adb77d7aa3aed816_0_200.jpg" alt="碧生源/碧生源常润茶2...." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3070620.htm">碧生源/碧生源常润茶2....<br /></a><span class="cored">￥52起</span></div><br/><div class="probutton"><a href="/null-0/prod-3070620.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-302368.htm"><img src="http://img.ding9.com/picdata/common/recommend/3743.jpg" alt="瘦儿减肥鞋&nbsp;&nbsp;&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-302368.htm">瘦儿减肥鞋&nbsp;&nbsp;&nbsp;&nbsp;<br /></a><span class="cored">￥438起</span></div><br/><div class="probutton"><a href="/null-0/prod-302368.htm">比较价格</a></div></li></ul>
+
+<div class="protext"><a href="http://guide.ding9.com/null-0/prod-3820462.htm" 
+	class="co333">瘦身任我行——神奇26天就变瘦 </a></div>
+</div>
+<!--indexpro--></div>
+<!--End Tabcontent 4--> <!--Start Tabcontent 5-->
+<div id="anothercontent5">
+<div class="indexpro">
+	<ul><li><div class="indexproK"><a href="/null-0/prod-1194812.htm"><img src="http://img.ding9.com/picdata/common/recommend/3932.jpg" alt="大本营防水防紫外线帐篷&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-1194812.htm">大本营防水防紫外线帐篷&nbsp;&nbsp;<br /></a><span class="cored">￥225起</span></div><br/><div class="probutton"><a href="/null-0/prod-1194812.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-4403949.htm"><img src="http://img.ding9.com/photo/crawl/2/5/4/f1edc879fc8e619fd915d1907be45d6a_0_200.jpeg" alt="正品李宁 男经典款 足球..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-4403949.htm">正品李宁 男经典款 足球...<br /></a><span class="cored">￥109起</span></div><br/><div class="probutton"><a href="/null-0/prod-4403949.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-339646.htm"><img src="http://img.ding9.com/picdata/common/recommend/3826.jpg" alt="健健美多功能助长运动机&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-339646.htm">健健美多功能助长运动机&nbsp;&nbsp;<br /></a><span class="cored">￥1817起</span></div><br/><div class="probutton"><a href="/null-0/prod-339646.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-3453288.htm"><img src="http://img.ding9.com/photo/crawl/2/6/4/69e1382d6f455a95f5944dd8da973c04_0_200.jpg" alt="【李宁】校园文化运动包..." width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-3453288.htm">【李宁】校园文化运动包...<br /></a><span class="cored">￥95起</span></div><br/><div class="probutton"><a href="/null-0/prod-3453288.htm">比较价格</a></div></li><li><div class="indexproK"><a href="/null-0/prod-2192251.htm"><img src="http://img.ding9.com/photo/crawl/7/4/6/8b50a14d6d6adfdbcba99a0873e71e15_0_200.jpg" alt="世爵表运动系列-23181&nbsp;&nbsp;" width="120"height="120" border="0" /></a></div><br/><div height='50px' ><a href="/null-0/prod-2192251.htm">世爵表运动系列-23181&nbsp;&nbsp;<br /></a><span class="cored">￥788起</span></div><br/><div class="probutton"><a href="/null-0/prod-2192251.htm">比较价格</a></div></li></ul>
+
+<div class="protext"><a href="http://guide.ding9.com/null-13/prod-3710553- ppara.htm#remark" 
+	class="co333">轻盈舒适——超级耐磨防水运动凉鞋</a></div>
+</div>
+<!--indexopro--></div>
+<!--End Tabcontent 5--> <!--小九九导购结束--> <!--商家导航开始-->
+<a name="d9" id="d9"></a>
+<div id="merc">
+<div id="merc_1"><a href="#" class="cofff bold"> <br />
+商<br />
+家<br />
+导<br />
+航</a></div>
+<div id="merc_2"><!--Start of the Tabmenu3 -->
+<div class="menu3">
+<ul>
+	<li><a href="#" onMouseOver="easytabs('1', '1');"
+		onfocus="easytabs('1', '1');" onClick="return false;" title=""
+		id="linkthree1">精品饰品</a></li>
+	<li><a href="#" onMouseOver="easytabs('1', '2');"
+		onfocus="easytabs('1', '2');" onClick="return false;" title=""
+		id="linkthree2">家用电器</a></li>
+	<li><a href="#" onMouseOver="easytabs('1', '3');"
+		onfocus="easytabs('1', '3');" onClick="return false;" title=""
+		id="linkthree3">手机通讯</a></li>
+	<li><a href="#" onMouseOver="easytabs('1', '4');"
+		onfocus="easytabs('1', '4');" onClick="return false;" title=""
+		id="linkthree4">数码电子</a></li>
+	<li><a href="#" onMouseOver="easytabs('1', '5');"
+		onfocus="easytabs('1', '5');" onClick="return false;" title=""
+		id="linkthree5">美容美体</a></li>
+</ul>
+</div>
+<!--End of the Tabmenu3 --> <!--Start Tabcontent 1 -->
+<div id="contentthree1">
+<div class="merctext">
+<ul>
+	<li><a class="H1" target="_blank" href="http://merchant.ding9.com/merchant-92355/"><span class="H2">奥迅运动城</span>－－运动装备正品网上专卖店，假一赔十！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw2MTg5NA==.htm"><span class="H2">艾玛饰品批发网</span>－－做自己的风格,引领潮流!</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw5MTE1Mw==.htm"><span class="H2">爱上手表网</span>－－I3WATCH支付宝信任商家!</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw2MTg2OA==.htm"><span class="H2">大自然水晶网</span>－－购物有保障,不满意7天可退款!</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw2MTg2Ng==.htm"><span class="H2">cale2u时尚饰品网</span>－－品牌饰品专业批发网</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw2MTkwNA==.htm"><span class="H2">心艺珍珠饰品网</span>－－打造浙江诸暨山下湖珍珠</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw2MTkwMg==.htm"><span class="H2">531饰品批发网</span>－－531,专业饰品的批发商！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant--LS0tLSw2MTg3Nw==.htm"><span class="H2">手表批发网</span>－－全力打造业界名优品牌</a> </li>
+</ul>
+</div>
+
+</div>
+<!--End Tabcontent 1--> <!--Start Tabcontent 2-->
+<div id="contentthree2">
+<div class="merctext">
+<ul>
+	<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58398.htm"><span class="H2">永乐家电网</span>－全新改版,倾力打造中国首选家电购物网</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44877.htm"><span class="H2">中华电器网</span>－更多产品，更多新闻，更低价格</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59500.htm"><span class="H2">新世纪家电网</span>－爱我所爱，选我所选，买家电到新世纪</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44865.htm"><span class="H2">中国申网</span>－韩国乐扣指定经销商，批量购买价格更好</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44876.htm"><span class="H2">小电器网上购物商城</span>－丰富的产品、优质低价</a></li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59618.htm"><span class="H2">百思特商城</span>－百思特精彩购物，数万商品任你选购</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44874.htm"><span class="H2">小家电网上购物商城</span>－最安全方式、最低配送成本</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44903.htm"><span class="H2">海尔网上商城</span>－庆海尔七周年，真情回馈新老客户</a> </li>
+</ul>
+</div>
+
+</div>
+<!--End Tabcontent 2 --> <!--Start Tabcontent 3-->
+<div id="contentthree3">
+<div class="merctext">
+<ul>
+	<li><a class="H1" target="_blank" href="http://mobile.pconline.com.cn/"><span class="H2">太平洋手机</span>－－手机信息最全最多最丰富</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,56570.htm"><span class="H2">天空手机网</span>－－双网双待，特价专场</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58426.htm"><span class="H2">138手机网</span>－－&quot;138手机网&quot;精品手机快乐搜</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58785.htm"><span class="H2">中关村手机之家</span>－－50家主流IT网站手机推荐经销商</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44861.htm"><span class="H2">18900手机网</span>－－只售正品行货，享受全国联保</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,56579.htm"><span class="H2">蓝牙移动购物网</span>－－轻松购机，零首期，分期付款</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44855.htm"><span class="H2">鸿信通手机网</span>－－济南鸿信通,开业大促销</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59507.htm"><span class="H2">138手机网</span>－－十年发展历史的通讯企业</a> </li>
+</ul>
+</div>
+
+</div>
+<!--End Tabcontent 3--> <!--Start Tabcontent 4-->
+<div id="contentthree4">
+<div class="merctext">
+<ul>
+	<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44835.htm"><span class="H2">8IT数码商城</span>－－上百类、数千种数码产品选择!</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58591.htm"><span class="H2">乐趣数码</span>－－购物满500元免运费，享受两年质保</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44870.htm"><span class="H2">e800网上商城</span>－－迪士尼手机首家网上特约经销商！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59558.htm"><span class="H2">逸日数码</span>－－一流的一站式数码专业代购站</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58647.htm"><span class="H2">可购数码商城</span>－－全国范围免EMS特快专递费！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58909.htm"><span class="H2">北迈数码</span>－－北迈数码荣获网上销售服务第一品牌</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,58625.htm"><span class="H2">赛格电子</span>－－赛格授权独家品牌专卖</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,56608.htm"><span class="H2">北恒数码商城</span>－－让用户充分享受摄影乐趣！</a> </li>
+</ul>
+</div>
+
+</div>
+<!--End Tabcontent 4 --> <!--Start Tabcontent 5-->
+<div id="contentthree5">
+<div class="merctext">
+<ul>
+	<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59512.htm"><span class="H2">no5时尚广场</span>－－被评为&ldquo;消费者最喜爱的网站&rdquo;！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,56597.htm"><span class="H2">果皮网</span>－－面向全国的美容专业网站</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,44873.htm"><span class="H2">天天购物网</span>－－热烈庆祝欧、亚21大新品牌入住！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,47826.htm"><span class="H2">三芬网</span>－－专业进口化妆品批发销售网站</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59509.htm"><span class="H2">名流e时尚</span>－－专业选择 优良品质 过名流生活</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59521.htm"><span class="H2">拉拉化妆品网上购物</span>－－2000多个产品低至3折起！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59585.htm"><span class="H2">易美网</span>－－中国最大的健康保健品网上超市！</a> </li>
+<li><a class="H1" target="_blank" href="http://merchant.ding9.com/member/merchant----,59621.htm"><span class="H2">818名牌购物网</span>－－818九月强力促销</a></li>
+</ul>
+</div>
+
+</div>
+<!--End Tabcontent 5--></div>
+</div>
+<!--商家导航结束-->
+
+<div id="main3">
+<div id="main3_1">
+<div class="title3 bold si14 coblue">本周最惠商品推荐 <img
+	src="images/hui.jpg" width="17" height="20" /></div>
+<!-- 第一个商品 -->
+
+<div id="sapro_1">
+<a href=/null-0/prod-3744002.htm><img src=http://img.ding9.com/photo/crawl/7/1/7/698124d8e04944bedbc8fadbc4b9088b_0_200.jpg width="180" height="160" border="0" /></a><div id="huinews"> <ul><li><a href=/null-0/prod-3744002.htm class="co333">惟有爱 时尚项链水晶之恋</a></li></ul></div>
+<!--<a href=/null-0/prod-3744002.htm><img src=http://img.ding9.com/photo/crawl/7/1/7/698124d8e04944bedbc8fadbc4b9088b_0_200.jpg width="180" height="160" border="0" /></a><div id="huinews"> <ul><li><a href=/null-0/prod-3744002.htm class="co333">惟有爱 时尚项链水晶之恋</a></li></ul></div>-->
+ 
+</div>
+ 
+<!-- 2-4产品 -->
+<div id="sapro_2">
+<div class="huipro">
+<ul>
+	<li><a href=/null-0/prod-9513.htm><img src=http://img.ding9.com/picdata/common/recommend/2960.jpg width="68" height="68" border="0" /></a><br/><a href=/null-0/prod-9513.htm class="co333">爱国者 V66</a></li>
+	<li><a href=/null-0/prod-68914.htm><img src=http://img.ding9.com/picdata/common/recommend/2959.gif width="68" height="68" border="0" /></a><br/><a href=/null-0/prod-68914.htm class="co333">纽曼 精音王N05 1G</a></li>
+	<li><a href=/null-0/prod-1095952.htm><img src=http://img.ding9.com/picdata/common/recommend/2949.jpg width="68" height="68" border="0" /></a><br/><a href=/null-0/prod-1095952.htm class="co333">好记星手写全能王E8000</a></li>
+	<li><a href=/null-0/prod-3058966.htm><img src=http://img.ding9.com/picdata/common/recommend/2947.jpg width="68" height="68" border="0" /></a><br/><a href=/null-0/prod-3058966.htm class="co333">彩之耀K金戒指</a></li>
+</ul>
+</div>
+</div>
+
+<!--sapro_2--></div>
+<!--main3_1-->
+<div id="main3_2">
+<div class="title4 bold si14 cored">本周最HOT商家</div>
+<div id="hotme_1">
+	<a href='http://guide.ding9.com/click/adv-click.do?adad_id=742&adv_url=http://www.sunglass4u.cn/' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20100415131003.jpg' border='0'  /></A>
+</div>
+<div id="hotme_2">
+	<a href='http://guide.ding9.com/click/adv-click.do?adad_id=743&adv_url=http://merchant.ding9.com/merchant-92485/' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20091118133135.jpg' border='0'  /></A>
+ 
+
+<div class="huipro">
+<ul>
+	<li><br/>
+		<a href='http://guide.ding9.com/click/adv-click.do?adad_id=744&adv_url=www.onlylove.hk' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20091021141917.jpg' border='0'  /></A>
+	</li>
+	<li><br/>
+		<a href='http://guide.ding9.com/click/adv-click.do?adad_id=745&adv_url=http://clothing.ding9.com/index.htm' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20091110152730.jpg' border='0'  /></A>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+<!--main3_1--></div>
+<!--main3--> 
+<a href='http://guide.ding9.com/click/adv-click.do?adad_id=746&adv_url=http://eshop.ding9.com/' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20091217163840.jpg' border='0'  /></A>
+
+<div class="navK">
+<div class="nav_out" onMouseOver="this.className='nav_over'"
+	onmouseout="this.className='nav_out'">
+ 
+<div id="nav1">
+<div id="nav1_1">精 英 数 码</div>
+<div id="nav_2">
+<span class="bold si14">
+<a href="http://mobile.ding9.com"	class="coblue">手机通讯</a>   
+</span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/MobilePhone-31/>
+	<font color="#ff0000">手机</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/Battery-45/>手机电池</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/CordedPhones-63/>普通电话</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/CordlessPhones-64/>子母电话</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/WalkieTalkie-75/>对讲机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/PhoneHeadsets-2144/>手机耳机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/Phoneauxiliary-2157/>手机附件</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/PhoneAccessories-2180/>手机配件</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/PDAPhones-2206/>PDA手机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Mobile-6/category/grouptelephone-2245/>集团电话</a>
+</div>
+ 
+<div id="nav_2">
+<span class="bold si14">
+<a href="http://digital.ding9.com/"	class="coblue">数码电子 </a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/MonitoringSystem-2200/>监控系统</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/DigitalCameras-122/>数码相机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/Camcorders-128/>数码摄像机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/CameraLens-133/>数码摄像头</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/MP3Players-154/>MP3随身听</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/MP4Players-157/>MP4随身听</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/Headphones-169/>耳机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/VoiceRecorders-172/>数码录音笔</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Digital-1/category/PocketPC-239/>
+	<font color="#ff0000">掌上电脑</font></a>
+</div>
+ 
+<div id="nav_2">
+<span class="bold si14">
+<a href="http://computer.ding9.com/"	class="coblue">电脑网络</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/Notebook-423/>笔记本电脑</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/NotebookAccessories-426/>笔记本配件</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/Notebookperipheral-429/>笔记本周边</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/CPU-436/>CPU</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/Motherboard-443/>
+	<font color="#ff0000">主板</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/GraphicsCards-445/>显卡</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/CDandDVDDrive-454/>CD/DVD光驱</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/HardDisk-458/>硬盘</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/Memory-462/>内存</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Computer-7/category/CRTMonitors-466/>CRT显示器</a>
+</div>
+ 
+<div id="nav_2">
+<span class="bold si14">
+<a href="http://office.ding9.com/"	class="coblue">办公用品</a>
+</span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/FaxMachines-600/>传真机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/InkjetPrinters-563/>喷墨打印机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/LaserPrinters-567/>
+	<font color="#ff0000">激光打印机</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/InkjetSupplies-588/>喷墨耗材</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/LaserSupplies-592/>激打耗材</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/MatrixSupplies-594/>针打耗材</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/OtherSupplies-597/>其他耗材</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/Scanner-603/>扫描仪</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Office-15/category/Copier-604/>复印机</a>
+			
+</div>
+ 
+<div id="nav_2"><span class="bold si14">
+<a href="http://hea.ding9.com/" class="coblue">家用电器</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/Television-740/>
+	<font color="#ff0000">电视机</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/washingmachine-744/>洗衣机/干衣机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/Refrigerator-747/>冰箱/冷柜</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/AirConditioning-750/>空调</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/VacuumCleaners-753/>吸尘器/扫地机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/AirPurifiers-755/>空气净化/氧吧</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/Irons-757/>熨斗/蒸汽刷</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/fanner-758/>电风扇</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Hea-12/category/HomeTheaterSystems-766/>家庭影院</a>
+</div>
+ 
+<div id="nav_2"><span class="bold si14">
+<a href="http://search.ding9.com/mcndofmm-se/" class="coblue">汽车</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/Car-1659/>
+	<font color="#ff0000">轿车类</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/CarKeyRing-1679/>钥匙扣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/SeatCushions-1714/>坐垫/凉垫</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/CarInteriorDecoration-1726/>车内装饰</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/Carouteriordecoration-1727/>车外装饰</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/CarPerfume-1729/>车用香水</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/CarDetailingSupplies-1732/>汽车清洁护理用品</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/paintingpen-1736/>补漆笔</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Car-2/category/VehicleModel-1770/>汽车模型</a>
+ </div>
+ 
+</div>
+</div>
+ 
+<div class="nav_out" onMouseOver="this.className='nav_over'"
+	onmouseout="this.className='nav_out'">
+<div id="nav2">
+<div id="nav2_1">白 领 时 尚</div>
+<div id="nav_3">
+  <p><span class="bold si14"><a href="http://beauty.ding9.com/" class="coblue">美容美体</a></span>
+      <br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/RemoveMakeup-25/>卸妆</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/FaceCleaningProducts-26/>洁面</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/MakeupWater-27/>化妆水</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/Spray-30/>喷雾</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/distillate-33/>精华</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/Emulsion-35/>乳液/面霜</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/Exfoliation-36/>磨砂/去角质</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/Mask-38/>
+	<font color="#ff0000">面膜</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/Sunscreen-39/>防晒霜</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/IsolationCream-42/>隔离霜</a>
+
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/AcneTreatment-44/>粉刺/抗痘</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/GiftBoxes-50/>礼盒套件</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/Others-60/>其它面部护理产品</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/EyeCream-69/>眼霜</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Beauty-8/category/EyeMasks-76/>眼膜</a>
+
+</div>
+ 
+<div id="nav_3">
+  <p><span class="bold si14"><a href="http://jingpin.ding9.com/index.htm"
+	class="coblue">精品饰品</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Pearl-794/>珍珠</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Kufaglass-861/>古法琉璃</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/KoreanStyle-874/>韩风</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Others-876/>其它风格/品牌饰品</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/FashionEarrings-886/>时尚耳环</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Packing-907/>包装</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Casio-921/>Casio/卡西欧</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Citizen-922/>Citizen/西铁城</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Longines-924/>Longines/浪琴</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Omega-927/>
+	<font color="#ff0000">Omega/欧米茄</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Jewelry-9/category/Seiko-938/>Seiko/精工</a>
+
+</div>
+ 
+<div id="nav_3"><span class="bold si14">
+<a href="http://clothing.ding9.com/index.htm" class="coblue">服装服饰</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/LongSleevedSweater-827/>女长袖毛衣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/ShortSleevedSweaters-845/>女短袖针织衫</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/OtherSweaters-851/>女其它针织衫</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/FemaleJeans-888/>女牛仔裤</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/Bra-931/>文胸</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/WrapChest-937/>裹胸/抹胸</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/bellyband-939/>女士肚兜</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/Underwear-940/>内裤</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/underskirt-942/>内衣套装</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/BodyShaperUnderwear-944/>塑身内衣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/ThermalUnderwear-946/>保暖内衣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/PajamasandBathrobe-948/>睡衣/浴衣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/FunUnderwear-950/>情趣内衣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/HomeClothing-952/>家居服</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/Stockings-954/>丝袜</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/Vest-974/>
+	<font color="#ff0000">马甲</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Clothing-5/category/SmallSuit-985/>小西装</a>
+ 
+ </div>
+ 
+ <div id="nav_3">
+   <p><span class="bold si14">
+     <a href="http://search.ding9.com/kfljogbinliolkch-se/" class="coblue">体育用品</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/CampaignTrousers-1536/>运动长裤</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/LongSleevedT-Shirt-1538/>长袖上衣</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/SportT-shirt-1539/>运动T恤</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/OutdoorClothing-1540/>户外服装</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/YogaClothing-1542/>瑜伽服</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/FootballShoes-1544/>
+	<font color="#ff0000">足球鞋</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/BasketballShoes-1545/>篮球鞋</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/BasketballShoes-1546/>网球鞋</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/SportSandals-1548/>运动凉鞋</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/JoggingShoes-1549/>休闲慢跑鞋</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/Climbingshoes-1550/>登山鞋</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/TableTennis-1552/>乒乓球</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/Badminton-1553/>羽毛球</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/Tennis-1554/>网球</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/Basketball-1558/>篮球</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/Treadmills-1564/>跑步机</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/FitnessCar-1565/>健身车</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/Yoga-1568/>瑜伽</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Sports-13/category/LeisureSportsBag-1595/>休闲运动包</a>
+ </div>
+
+<div id="nav_3"><span class="bold si14">
+<a href="http://search.ding9.com/okillhnbkfddlgml-se/" class="coblue">营养保健</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/GrapeSeed-1017/>葡萄籽/银杏精</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/VitaminE-1033/>
+<font color="#ff0000">维生素E</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/SheepPlacenta-1035/>羊胎素</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/RaiseImmunity-1046/>提高免疫力</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/BrainHealth-1052/>补脑健忆类</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/CardiovascularHealth-1060/>心血管保健</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/EyeCare-1064/>护眼明目类</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/LiverHealth-1072/>养肝护肝类</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/ProtectSkin-1123/>养颜滋补类</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/BodyCare-1125/>美体瘦身</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/FemaleSexualHeal-1134/>女性性保健</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/AminoAcidNutrition-1153/>营养氨基酸</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/Minerals-1160/>各类矿物质</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/Vitamin-1162/>各类维他命</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Health-17/category/CaSeries-1166/>补钙系列</a>
+
+</div>
+
+<div id="nav_3"><span class="bold si14">
+<a href="http://search.ding9.com/kemm-se/" class="coblue">书</a></span><br />
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Military-301006/>军事</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Biography-302003/>传记</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Animation-302005/>
+	<font color="#ff0000">动漫</font></a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Literature-302009/>文学</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Art-302010/>艺术</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Location-302011/>摄影</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Family-303005/>家庭</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Health-303006/>健康</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Health-303009/>保健</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Philosophy-304001/>哲学</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/SocialScience-304004/>社科</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Political-304005/>政治</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Legal-304007/>法律</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/SocialScience-304009/>社会科学</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Success-305005/>成功</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/FairyTale-306004/>童话</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Englishreading-307021/>英语阅读</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Otherlanguages-307035/>其他语种</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Generalindustrial-308015/>一般工业技术</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/TV-313020/>电视</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/GeneralScience-314001/>自然科学总论</a>
+<a class='navlink' target='_blank' href=http://guide.ding9.com/Books-3/category/Mechanics-314010/>力学</a>
+
+</div>
+
+</div>
+</div>
+ 
+</div>
+<!--navK--></div>
+
+<!--main2_1-->
+<div id="main2_2"><!-- 商品排行榜 开始-->
+<div class="hotShop sort1 block yspace" id="DivShopPaiHang_Food">
+<div class="title2 bold">本周热门搜索商品</div>
+<div class="txt" id="DivShopPaiHang_Flag1_Content" style="DISPLAY: none"></div>
+<div class="txt" id="DivShopPaiHang_Flag2_Content" style="DISPLAY: none"></div>
+<div class="txt" id="DivShopPaiHang_Flag3_Content" style="DISPLAY: none"></div>
+<div class="txt" id="DivShopPaiHang_ShowPanel" style="HEIGHT: 280px">
+
+<div class="txt11">
+<ul>
+	<li class="more" id="DivShopPaiHangFlag1_B1" style="DISPLAY: none">"<p class="numBig l"><span>1</span></p><p class="productImg l"><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-9276/" class="H1"><img id=Img_DivShopPaiHangFlag1_1 height=50 alt=摆脱纯像素攀比LG旗舰机KE998拍摄评测  width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-9276/" class="H1">摆脱纯像素攀比LG旗舰机KE9</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_1" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100204140132.jpg</div><span class="cf"></span></li><li class="num1 listHeight" id="DivShopPaiHangFlag1_S1" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','1')"><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-9276/" class="H1">摆脱纯像素攀比LG旗舰机KE9</a></li><li class="more" id="DivShopPaiHangFlag1_B2" style="DISPLAY: none">"<p class="numBig l"><span>2</span></p><p class="productImg l"><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-9277/" class="H1"><img id=Img_DivShopPaiHangFlag1_2 height=50 alt=富士旗舰机种FinePixS100FS性能评测 width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-9277/" class="H1">富士旗舰机种FinePixS100FS</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_2" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100204140103.jpg</div><span class="cf"></span></li><li class="num2 listHeight" id="DivShopPaiHangFlag1_S2" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','2')"><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-9277/" class="H1">富士旗舰机种FinePixS100FS</a></li><li class="more" id="DivShopPaiHangFlag1_B3" style="DISPLAY: none">"<p class="numBig l"><span>3</span></p><p class="productImg l"><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-9283/" class="H1"><img id=Img_DivShopPaiHangFlag1_3 height=50 alt=复古风情新生长虹008-III完全评测 width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-9283/" class="H1">复古风情新生长虹008-III完</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_3" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100415115528.jpg</div><span class="cf"></span></li><li class="num3 listHeight" id="DivShopPaiHangFlag1_S3" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','3')"><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-9283/" class="H1">复古风情新生长虹008-III完</a></li><li class="more" id="DivShopPaiHangFlag1_B4" style="DISPLAY: none">"<p class="numBig l"><span>4</span></p><p class="productImg l"><a target="_blank" href="http://computer.ding9.com/Computer-7/news/article-9278/" class="H1"><img id=Img_DivShopPaiHangFlag1_4 height=50 alt=游戏性能惊人 索尼FZ35大屏独显本评测 width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://computer.ding9.com/Computer-7/news/article-9278/" class="H1">游戏性能惊人 索尼FZ35大屏</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_4" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100415091836.jpg</div><span class="cf"></span></li><li class="num4 listHeight" id="DivShopPaiHangFlag1_S4" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','4')"><a target="_blank" href="http://computer.ding9.com/Computer-7/news/article-9278/" class="H1">游戏性能惊人 索尼FZ35大屏</a></li><li class="more" id="DivShopPaiHangFlag1_B5" style="DISPLAY: none">"<p class="numBig l"><span>5</span></p><p class="productImg l"><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-9033/" class="H1"><img id=Img_DivShopPaiHangFlag1_5 height=50 alt=世界最小高清DV 三星VP-HMX10C评测 width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-9033/" class="H1">世界最小高清DV 三星VP-HMX</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_5" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100415120832.jpg</div><span class="cf"></span></li><li class="num5 listHeight" id="DivShopPaiHangFlag1_S5" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','5')"><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-9033/" class="H1">世界最小高清DV 三星VP-HMX</a></li><li class="more" id="DivShopPaiHangFlag1_B6" style="DISPLAY: none">"<p class="numBig l"><span>6</span></p><p class="productImg l"><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-8929/" class="H1"><img id=Img_DivShopPaiHangFlag1_6 height=50 alt=限量发行 索爱K850i长江七号试用  width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-8929/" class="H1">限量发行 索爱K850i长江七</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_6" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100415120751.jpg</div><span class="cf"></span></li><li class="num6 listHeight" id="DivShopPaiHangFlag1_S6" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','6')"><a target="_blank" href="http://mobile.ding9.com/Mobile-6/news/article-8929/" class="H1">限量发行 索爱K850i长江七</a></li><li class="more" id="DivShopPaiHangFlag1_B7" style="DISPLAY: none">"<p class="numBig l"><span>7</span></p><p class="productImg l"><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-8930/" class="H1"><img id=Img_DivShopPaiHangFlag1_7 height=50 alt=铸造经典成就辉煌理光GRDII评测 width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-8930/" class="H1">铸造经典成就辉煌理光GRDII</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_7" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100521092616.jpg</div><span class="cf"></span></li><li class="num7 listHeight" id="DivShopPaiHangFlag1_S7" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','7')"><a target="_blank" href="http://digital.ding9.com/Digital-1/news/article-8930/" class="H1">铸造经典成就辉煌理光GRDII</a></li><li class="more" id="DivShopPaiHangFlag1_B8" style="DISPLAY: none">"<p class="numBig l"><span>8</span></p><p class="productImg l"><a target="_blank" href="http://computer.ding9.com/Computer-7/news/article-8931/" class="H1"><img id=Img_DivShopPaiHangFlag1_8 height=50 alt=苹果--MacBook Air详尽测试及拆解 width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://computer.ding9.com/Computer-7/news/article-8931/" class="H1">苹果--MacBook Air详尽测试</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_8" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100521092543.jpg</div><span class="cf"></span></li><li class="num8 listHeight" id="DivShopPaiHangFlag1_S8" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','8')"><a target="_blank" href="http://computer.ding9.com/Computer-7/news/article-8931/" class="H1">苹果--MacBook Air详尽测试</a></li><li class="more" id="DivShopPaiHangFlag1_B9" style="DISPLAY: none">"<p class="numBig l"><span>9</span></p><p class="productImg l"><a target="_blank" href="http://beauty.ding9.com/Beauty-8/news/article-8934/" class="H1"><img id=Img_DivShopPaiHangFlag1_9 height=50 alt=时下热门的美容品塑造水果美肌[图] width=50></a></p><div class="productInfo"><h3><a target="_blank" href="http://beauty.ding9.com/Beauty-8/news/article-8934/" class="H1">时下热门的美容品塑造水果</a></h3></div><div id="ImgSrc_DivShopPaiHangFlag1_9" style="DISPLAY: none">http://img.ding9.com/picdata/common/article/20100521092510.jpg</div><span class="cf"></span></li><li class="num9 listHeight" id="DivShopPaiHangFlag1_S9" onMouseOver="SwapPaiHangShopDiv('DivShopPaiHangFlag1','9')"><a target="_blank" href="http://beauty.ding9.com/Beauty-8/news/article-8934/" class="H1">时下热门的美容品塑造水果</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<SCRIPT type="text/javascript">
+	if(9>=1){
+	SwapPaiHangShopDiv('DivShopPaiHangFlag1','1');
+}
+ </SCRIPT> <!--  商品排行榜 结束 --> <!-- 广告 --> 
+	<a href='http://guide.ding9.com/click/adv-click.do?adad_id=714&adv_url=www.sunglass4u.com' TARGET='_blank'>	<IMG SRC='http://img.ding9.com/Updata/Advertisement/20100129094559.jpg' border='0'  /></A>
+
+
+<div class="commK">
+<div class="title2 bold">用户评论</div>
+
+	
+		<div id="commC">   
+			
+		
+		<div id="commC_1"><a target="_blank"
+			href="/default-6/prod-2028226-comment.htm#viewc">
+			<img
+				src="http://img.ding9.com/photo/crawl/0/7/2/bd411c5a460ba3761605eb90f8e22919_0_200.jpg"
+				alt="日本友利电数字无绳来电显示电话DC861（新款上市）（银色）"
+				width="50" height="50" border="0" />
+		</a></div>
+		<div id="commC_2"><a target="_blank" class="H1c"
+			href="/default-6/prod-2028226-comment.htm#viewc"
+			title="日本友利电数字无绳来电显示电话DC861（新款上市）（银色）">日本友利电数字...</a><br />
+		<a target="_blank"
+			href="/default-6/prod-2028226-comment.htm#viewc"
+			class="H1"> 我是南京的用户 ，南京的维修点在哪儿。</a></div>
+		</div>
+	
+		<div id="commC">   
+			
+		
+		<div id="commC_1"><a target="_blank"
+			href="/default-16/prod-2173432-comment.htm#viewc">
+			<img
+				src="http://img.ding9.com/photo/crawl/9/6/5/122994ef411e668e3bcf672f0bd700ba_0_200.jpg"
+				alt="苏泊尔电压力锅CYSB60YD2-110"
+				width="50" height="50" border="0" />
+		</a></div>
+		<div id="commC_2"><a target="_blank" class="H1c"
+			href="/default-16/prod-2173432-comment.htm#viewc"
+			title="苏泊尔电压力锅CYSB60YD2-110">苏泊尔电压力锅C...</a><br />
+		<a target="_blank"
+			href="/default-16/prod-2173432-comment.htm#viewc"
+			class="H1"> 那个锅盖怎么都打不开，售后服务电话是空号</a></div>
+		</div>
+	
+		<div id="commC">   
+			
+		
+		<div id="commC_1"><a target="_blank"
+			href="/default-5/prod-1010130-comment.htm#viewc">
+			<img
+				src="http://img.ding9.com/photo/crawl/8/9/7/cd1c04085d6d1817f8eac464d7c8fbc4_0_200.jpeg"
+				alt="Playboy花花公子男牛仔裤2811742（兰色）"
+				width="50" height="50" border="0" />
+		</a></div>
+		<div id="commC_2"><a target="_blank" class="H1c"
+			href="/default-5/prod-1010130-comment.htm#viewc"
+			title="Playboy花花公子男牛仔裤2811742（兰色）">Playboy花花公子...</a><br />
+		<a target="_blank"
+			href="/default-5/prod-1010130-comment.htm#viewc"
+			class="H1"> 这条花花公子的牛仔裤价格有一点高，能否少点钱？</a></div>
+		</div>
+	
+		<div id="commC">   
+			
+		
+		<div id="commC_1"><a target="_blank"
+			href="/default-1/prod-216175-comment.htm#viewc">
+			<img
+				src="http://img.ding9.com/ProductPic/Images_20061027053427_377/Pic_20061029024123_290/MTA5NTE=_187.gif"
+				alt="倍夺分 VS3350英语数码学习机"
+				width="50" height="50" border="0" />
+		</a></div>
+		<div id="commC_2"><a target="_blank" class="H1c"
+			href="/default-1/prod-216175-comment.htm#viewc"
+			title="倍夺分 VS3350英语数码学习机">倍夺分 VS3350英...</a><br />
+		<a target="_blank"
+			href="/default-1/prod-216175-comment.htm#viewc"
+			class="H1"> 你好，我想要购买康美福的决明子荷叶胶囊，我的体重65kg，身</a></div>
+		</div>
+	
+		<div id="commC">   
+			
+		
+		<div id="commC_1"><a target="_blank"
+			href="/default-16/prod-2174122-comment.htm#viewc">
+			<img
+				src="http://img.ding9.com/photo/crawl/8/2/3/013fc36b3bb0c5e4155eec5c120256b3_0_200.jpg"
+				alt="苏泊尔电压力锅CYSB40YD2-90"
+				width="50" height="50" border="0" />
+		</a></div>
+		<div id="commC_2"><a target="_blank" class="H1c"
+			href="/default-16/prod-2174122-comment.htm#viewc"
+			title="苏泊尔电压力锅CYSB40YD2-90">苏泊尔电压力锅C...</a><br />
+		<a target="_blank"
+			href="/default-16/prod-2174122-comment.htm#viewc"
+			class="H1"> 苏泊尔的质量不行啊，才买回来36天它就坏了,我想讲述下它坏</a></div>
+		</div>
+	
+ <!--commC--></div>
+<!--commK-->
+
+<div id="d9news">
+<div class="title bold">聚焦顶九</div>
+<ul>
+	
+		<li><a target="_blank"
+			href="/comment-1150.htm"
+			class="H1"> 太阳眼镜网上市啦</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-1100.htm"
+			class="H1"> 顶九与娱周刊合作共贺新春</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-550.htm"
+			class="H1"> 网媒传媒齐携手， 共建商</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-450.htm"
+			class="H1"> B2C--南派电子商务的未来</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-400.htm"
+			class="H1"> 顶九网“3.15消费者最放心</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-300.htm"
+			class="H1"> 顶九网商品数量超过300万</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-251.htm"
+			class="H1"> 顶九精品饰品频道闪亮登场</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-115.htm"
+			class="H1"> 顶九网新版购物搜索引擎问</a></li>
+	
+		<li><a target="_blank"
+			href="/comment-114.htm"
+			class="H1"> 广州国美与顶九网携手打造</a></li>
+	
+</ul>
+
+</div>
+
+
+</div>
+<!--main2_2--></div>
+<!--main2-->
+
+<div id="coll">
+<div id="coll_1">友情链接 --</div>
+<div id="coll_2">
+	<a href="http://www.avonshop.cn/" target='_blank' class="navlink">雅芳</a>
+	<a href="http://www.buy007.com/" target='_blank' class="navlink">正品</a>
+	<a href="http://www.ccnf.com/" target='_blank' class="navlink">中国展览交易网</a> <a
+	href="http://www.128uu.com/" target='_blank' class="navlink">酒店预订</a> <a
+	href="http://www.zglysp.com/" target='_blank'  class="navlink">网上购物</a> <a
+	href="http://www.tlx.com.cn/" target='_blank' class="navlink">天路行购物吧</a> 
+	 <a	href="http://hotel.mapbar.com/" target='_blank' class="navlink">mapbar酒店地图</a> <a
+	href="http://www.onlylove.hk/"  target='_blank' class="navlink">惟有爱情感礼品</a> <a
+	href="http://www.epclean.com/" target='_blank' class="navlink">环保清洗网</a> <br />
+	<a href="http://www.1m1m.com/" target='_blank' class="navlink">1m1m健康网 </a> 
+	<a href="http://www.yide.com/" target='_blank' class="navlink">亦得代购 </a>  
+	<a href="http://www.92dp.com/ " target='_blank' class="navlink">就爱点评网 </a>  
+	<a href="http://www.suobao8.com/ " target='_blank' class="navlink">玩具商城 </a>  
+	<a href="http://www.59165.com/ " target='_blank' class="navlink">发表论文 </a>
+	<a href="http://www.ejia.com/ " target='_blank' class="navlink">E家女性购物网 </a>
+	<a href="http://www.outlets365.com/ " target='_blank' class="navlink">品牌男装折扣 </a>
+	<a href="http://www.xzuan.com/ " target='_blank' class="navlink">钻石珠宝 </a>
+	<a href="http://www.velo.com.cn/ " target='_blank' class="navlink">维络城 </a>
+	<a href="http://www.xiaoyuanfeng.com/ " target='_blank' class="navlink">大学同校购物 </a>
+	<a href="http://www.baguidadi.com/ " target='_blank' class="navlink">八桂大地网 </a>
+	<a href="http://www.yogou.cn/ " target='_blank' class="navlink">安利 </a>
+	<a href="http://www.72ec.com/ " target='_blank' class="navlink">亿禧网 </a>
+	<a href="http://www.pgbao.com/ " target='_blank' class="navlink">平购宝商城 </a>
+	<a href="http://www.8fenku.com/ " target='_blank' class="navlink">买家定价网 </a>
+	<a href="http://www.cycbiz.com.cn/ " target='_blank' class="navlink">中国瀛商网 </a>
+	<a href="http://pc.yesky.com/ " target='_blank' class="navlink">天极台式机 </a>
+	<a href="http://www.gou3618.com/ " target='_blank' class="navlink">广购网 </a>
+	<a href="http://www.tongzhuo100.com/ " target='_blank' class="navlink">同桌100 </a>
+	<a href="http://www.gouxie.com/ " target='_blank' class="navlink">网上买鞋 </a>
+	<a href="http://www.guuoo.com/ " target='_blank' class="navlink">时尚购物网 </a>
+</div>
+</div>
+
+<!--正文结束--> <!--底部开始-->
+<div class="bold" id="bottom1"><a
+	href="http://guide.ding9.com/aboutus.htm" target='_blank' class="co333">关于我们</a> | <a
+	href="http://guide.ding9.com/help.htm" target='_blank' class="co333">使用帮助</a> | <a
+	href="http://guide.ding9.com/service.htm" target='_blank' class="co333">服务条款</a> | <a
+	href="http://guide.ding9.com/technique.htm" target='_blank' class="co333">招贤纳士</a> | <a
+	href="http://guide.ding9.com/contact.htm" target='_blank' class="co333">联系我们</a> | <a
+	href="http://guide.ding9.com/merchant.htm" target='_blank' class="co333">商家加盟</a> | <a
+	href="http://guide.ding9.com/comethod.htm" target='_blank' class="co333">网站合作</a> | <a
+	href="http://guide.ding9.com/search.htm" target='_blank' class="co333">搜索竞价</a> |
+<a href="http://eshop.ding9.com" target="_blank" class="co333">顶九商城</a> | 
+	<a href="http://guide.ding9.com/sitemap.htm" target="_blank" class="co333">网站地图</a> </div>
+
+<div id="bottom2">
+<div id="bottom2_1"></div>
+<div id="bottom2_2">顶九网是购物搜索引擎，从互联网搜索商家、商品、资讯、促销等信息，为用户提供全方位导购服务，所有信息以来源网站为准。<BR/>
+Copyright &copy; 2005-2010 版权所有 <a href="http://guide.ding9.com/"
+	class="coblue">Ding9.com</a> <a href="http://www.miibeian.gov.cn/"
+	target="_blank" class="co333">粤ICP备06067490号</a></div>
+
+<div id="bottom2_3"><a
+	href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318"
+	target="_blank"><img src="images/jing.gif" width="40" height="53"
+	border="0"/></a></div>
+</div>
+
+
+<!--底部结束--></center>
+</body>
+</html>
+<script language="javascript" src="http://count47.51yes.com/click.aspx?id=476604651&logo=1"></script>
+<script language='javascript' src="http://cn.tag.btnibbler.com/btnibbler_tagcn.js"></script>

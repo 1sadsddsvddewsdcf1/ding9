@@ -1,0 +1,56 @@
+.si12 {
+	font-size: 12px;
+	text-decoration: none;
+
+}
+.co333{
+	color: #333333;
+	text-decoration: none;
+}
+.cored{
+	color: #CC0000;
+	text-decoration: none;
+}
+.cogreen{
+	color: #588B29;
+	text-decoration: none;
+}
+.coblue{
+	color: #3577B3;
+	text-decoration: none;
+}
+.si14 {
+	font-size: 14px;
+	text-decoration: none;
+
+}
+.cofff{
+	color: #ffffff;
+	text-decoration: none;
+}
+.bold{
+	font-weight: bold;
+	text-decoration: none;
+}
+.searchclass{
+	font-size: 16px;
+	border: 1px solid #FFFFFF;
+}
+
+
+.rx001 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+	line-height: 20px;
+}
+.rx003 {
+	font-size: 12px;
+	color: #003399;
+	text-decoration: none;
+}
+.rx004 {
+	font-size: 14px;
+	color: #CC0000;
+}

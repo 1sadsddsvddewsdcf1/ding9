@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<head>
+<title>顶九网: 购物搜索,一个顶九! 顶九购物搜索信息平台  guide.ding9.com</title> <META NAME="description" CONTENT="首页关键内容中国最好、最强、产品最多的比较购物平台，让您享受省时、省力、省钱、省心的购物环境，真正做到货比多家，购买到最好、最便宜的商品，体验比较购物的无限乐趣。"> <META NAME="keywords" CONTENT="首页关键词比较 购物 网站 价格 商家 商品 产品 品牌 购物网站 比较购物 在线购物 比较价格 商家比较  产品评价 商家评价 ding9.com 计算机 数码电子 办公设备 通讯 汽车 成人用品 家用电器 化妆品 音像"><META NAME="Author" CONTENT="顶九网"> <META NAME="Subject" CONTENT="顶九网 ding9网 ding9 顶九 ding9wang  比较 购物 省钱 便宜 商家 指南"><META NAME="Robots" CONTENT="all"><META NAME="copyright" CONTENT="ding9.com">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css3.0/tefont.css" rel="stylesheet" type="text/css">
+<link href="css3.0/te.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/tecomment.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+<script language="javascript">
+var show_word="输入关键字进行搜索";
+function showSearch(obj,type){
+	if(type){
+		if(obj.value=="")
+			obj.value=show_word;
+		obj.style.color='gray';
+	}else{		
+		if(obj.value==show_word)
+			obj.value="";
+		obj.style.color='#000000';
+	}
+}
+
+function searchformover_onsubmit() 
+{
+	if(document.searchFormover.key.value=='' || document.searchFormover.key.value=="输入关键字进行搜索"){
+		alert('请输入查询关键字');
+		return false;
+	}
+	
+	var sel_prso_id_one = document.searchFormover.sel_prso_id_one.value;
+	if (sel_prso_id_one == "") {	//所有类别
+		document.searchFormover.action="http://search.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "1") {	//数码电子
+		document.searchFormover.action="http://digital.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "4") {	//成人用品
+		document.searchFormover.action="http://love.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "6") {	//手机/通讯
+		document.searchFormover.action="http://mobile.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "7") {	//电脑/网络
+		document.searchFormover.action="http://computer.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "8") {	//美容美体
+		document.searchFormover.action="http://beauty.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "12") {	//家用电器
+		document.searchFormover.action="http://hea.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "15") {	//办公用品
+		document.searchFormover.action="http://office.ding9.com/search.do";
+	}
+	return true;
+}
+//-->
+</script>
+<center>
+<FORM id=searchForm name=searchFormover method=post  onsubmit="return searchformover_onsubmit()" action="http://search.ding9.com/search.do" target=_blank>    
+<div id="end001">
+ <select name="select" class="teH1">
+    <option>搜索商品</option>
+    </select>
+    <INPUT class="teH4" size="54" type="text" id=KeyWord onblur=showSearch(this,1) onfocus=showSearch(this) value=输入关键字进行搜索 name=key>
+		
+			
+			<select name="sel_prso_id_one" class="teH1">
+			  <option selected> 所有类别</option>
+			  <option value="1" >数码/电子</option>			                                          
+			  <option value="4">成人用品</option>
+			  <option value="6">手机/通讯</option>
+			  <option value="7">电脑/网络</option>
+			  <option value="8">美容美体</option>
+			  <option value="12">家用电器</option>
+			  <option value="15">办公用品</option>
+			</select>
+		<label>		 
+			<input name="Submit" type="submit" class="teH1" value="搜 索">   
+  </label>
+</div>
+<!--c04-->
+<div class="con900_2">
+
+<div class="teH1c">
+<a href="http://guide.ding9.com/switch----,resume.htm" target="_blank" class="teH1c">关于我们</a> | 
+		<a href="http://guide.ding9.com/switch----,help.htm" target="_blank" class="teH1c">使用帮助</a> | 
+		<a href="http://guide.ding9.com/switch----,service.htm" target="_blank" class="teH1c">服务条款</a> | 
+		<a href="http://guide.ding9.com/switch----,technique.htm" target="_blank" class="teH1c">招贤纳士</a> | 
+		<a href="http://guide.ding9.com/switch----,contact.htm" target="_blank" class="teH1c">联系我们</a> | 
+		<a href="http://guide.ding9.com/switch----,merchant.htm" target="_blank" class="teH1c">商家加盟</a> | 
+		<a href="http://guide.ding9.com/switch----,comethod.htm" target="_blank" class="teH1c">网站合作</a> | 
+		<a href="http://guide.ding9.com/switch----,search.htm" target="_blank" class="teH1c">搜索竞价</a>
+</div>
+</div>
+<div id="end002">
+<div id="end002_l"></div>
+<div id="end002_m">
+  <DIV align="left" class="teH1">顶九网是购物搜索引擎，从互联网搜索商家、商品、资讯、促销等信息，为用户提供全方位导购服务，所有信息以来源网站为准。<BR>
+    Copyright &copy; 2005-2007 版权所有 <a href="http://guide.ding9.com/" class="teH1c">Ding9.com</a> <a href="http://www.miibeian.gov.cn/" target="_blank" class="teH1">粤ICP备06067490号</a> </DIV>
+</div>
+<div id="end002_r"><a href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318" target="_blank"><img src="teimages/jing.gif" width="40" height="53" border="0"></a></div>
+
+</div>
+</center>

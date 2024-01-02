@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>顶九网：购物搜索，一个顶九！顶九购物搜索信息平台 guide.ding9.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<META NAME="description" CONTENT="顶九网: 购物搜索,一个顶九! 顶九购物搜索信息平台  guide.ding9.com">
+<META NAME="keywords" CONTENT="比较 购物 网站 价格 商家 商品 产品 品牌 购物网站 比较购物 在线购物 比较价格 商家比较  产品评价 商家评价 ding9.com 计算机 数码电子 办公设备 通讯 汽车 成人用品 家用电器 化妆品 音像 书 杂志 汽车用品 体育用品 服装 母婴用品 笔记本电脑 台式机 服务器 液晶显示器 数码相机 MP3 掌上电脑 存储卡 读卡器 激光打印机 扫描仪 传真机 办公文仪 GSM手机 CDMA手机 小灵通 对讲机 汽车整车 汽车租赁 导航系统 户外车系列 口服助情 外用避孕 口服速勃 SM用品 电视机 空调机 卫浴电器 厨房电器 日用洗护 护肤类 塑身美体 香水类 音乐 电视剧 电影 戏剧 文学 经管社科 生活 工具书 车载电器 驾车安全用品 养车维修 车内装饰 运动服 健身器械 户外运动 护具 女装 男装 童装 服装配饰 母婴食品 保健品 生活用品 喂哺用品 顶九注册 登陆 会员 顶九服务 关于我们 站点地图 意见反馈 法律声明 服务条款 隐私声明 网络联盟 联系我们 积分制度 使用帮助">
+<link href="css/coop_search.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.h31 {	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+}
+-->
+</style>
+</head>
+
+<body leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<table width="220" height="20" border="0" cellpadding="0" cellspacing="0">
+<form onsubmit="if(this.key.value=='搜索性价比最好的宝贝'){alert('请输入查询关键字');return false;} if(this.key.value==''){alert('请输入查询关键字');return false;}" target="_blank" name="form1" method="post" action="http://search.ding9.com/search.do" target="ding9_window">
+  <input type="hidden" name="uano_id" value="您的顶九联盟编号" />
+  <tr>
+    <td height="20" colspan="2" align="center" background="images/search005.gif"><input name="key"  type="text" class="h1" value="搜索性价比最好的宝贝" size="20" onmouseover="this.focus()" onblur="if (this.value =='') this.value='搜索性价比最好的宝贝'" onfocus="this.select()" onclick="if (this.value=='搜索性价比最好的宝贝') this.value=''"/>
+      <input name="Submit22222" type="submit" class="h1" value="购物搜索" /></td>
+  </tr>
+   </form>
+</table>
+</body>
+</html>
+<script language="JavaScript">
+	var str,parastr,tempstr1;
+	str = window.location.href;
+
+	tempstr1 = str.split("uano_id=");
+	if(tempstr1.length>0){
+		parastr = tempstr1[1];
+		document.form1.uano_id.value=parastr;
+	}
+</script>

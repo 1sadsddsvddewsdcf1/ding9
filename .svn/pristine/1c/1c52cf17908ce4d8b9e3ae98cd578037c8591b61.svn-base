@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="/cssindex/gy.css" rel="stylesheet" type="text/css" />
+<link href="/cssindex/indexfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../jsindex/weather.js"></script>
+</head>
+<body>
+<script>
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function searchform_onsubmit(searchType){
+	var search_domain="http://search.ding9.com";
+	var searchkey = document.searchform.queryText.value;
+	if(trim(searchkey)=='' || searchkey=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+	if(searchType=="product"){
+		document.searchform.action=search_domain+"/dofindNew.jsp?";
+	}else if (searchType=="merchant"){
+		document.searchform.action=search_domain+"/dofindNew.jsp?type=merchant";
+	}
+	return true;
+}
+ 
+function searchSubmit(searchType){
+	if (searchform_onsubmit(searchType)==true){
+		document.searchform.submit();
+	} else {
+		return false;
+	}	
+}
+</script>
+<center>
+<div id="top" style="width:890px">
+您好,欢迎来顶九！
+&nbsp;&nbsp;[<a href="http://user.ding9.com" target="_blank" class="co333">请登录</a> ]
+&nbsp;&nbsp;[<a href="http://user.ding9.com/register/register.html" target="_blank" class="co333">用户注册</a>]
+&nbsp;&nbsp; <a href="http://merchant.ding9.com/login.html"	target="_blank" class=" co333">商家登录</a> 
+&nbsp;/&nbsp;<a	href="http://merchant.ding9.com/register.html" target="_blank" class="co333">注册</a>
+&nbsp;&nbsp;<a href="http://guide.ding9.com/help.htm" target="_blank" class="co333">帮助</a>
+</div>
+ 
+<div id="topsearch">
+<div id="topsearch_1"><a href="http://guide.ding9.com/">
+<img src="../images/logo_160x64.gif" width="160" height="70" border="0" /></a>
+<br /> 比较购物从顶九搜索开始</div>
+ 
+<!--topsearch_1-->
+<div id="topsearch_2">
+ 
+<div id="search">
+<form name="searchform" action="http://search.ding9.com/search.do"
+ method="post" target="_blank" onsubmit="searchform_onsubmit('product');">
+<div id="search_1">
+<input name="queryText" type="text"	class="searchclass" size="40" />
+</div>
+</form>
+<div id="search_2"><a href="#" onclick="searchSubmit('product');" class="cofff  bold si14">顶九搜索</a></div>
+</div>
+<!--search-->
+<div>
+<span style="font-weight:bold">热门搜索:</span> 
+<a target='_top' class='H1' href='http://search.ding9.com/kfignnhfmnja-se/'><span class='H1'>传真机</span></a> 
+<a target='_top' class='H1' href='http://search.ding9.com/kfnjogfd-se/'><span class='H1'>佳能</span></a> 
+<a target='_top' class='H1' href='http://search.ding9.com/mgegmmme-se/'><span class='H1'>惠普</span></a>
+ <a target='_top' class='H1' href='http://search.ding9.com/lhkklfhf-se/'><span class='H1'>兄弟</span></a>
+  <a target='_top' class='H1' href='http://search.ding9.com/mnnekegb-se/'><span class='H1'>松下</span></a> 
+  <a target='_top' class='H1' href='http://search.ding9.com/nijhmmmenlhf-se/'><span class='H1'>爱普生</span></a>
+&nbsp;&nbsp;
+<a target='_blank' class='H1' href='http://guide.ding9.com/leibie.htm'>更多...</a> 
+</div>
+</div>
+ 
+<!--topsearch_2-->
+<div id="topsearch_3">
+<a href="#" onclick="searchSubmit('merchant');" class="co333">商家搜索</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://guide.ding9.com/help.htm" target="_blank" class="co333">搜索帮助</a></div>
+<!--topsearch_3-->
+</div>
+
+</center>
+
+</body>
+</html>

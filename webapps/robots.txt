@@ -1,0 +1,46 @@
+
+#robots.txt for http://guide.ding9.com/
+
+User-agent: baiduspider
+allow: /
+
+User-agent: TencentTraveler
+allow: / 
+
+User-agent: MSIECrawler 
+Disallow: /
+
+User-agent: Googlebot 
+allow: / 
+
+User-agent: Google AdSense 
+allow: / 
+
+User-agent: MSNBot 
+allow: / 
+
+User-agent: Yahoo! Slurp China
+allow: / 
+
+User-agent: Yahoo! Slurp
+allow: / 
+
+User-agent: Alexa (IA Archiver) 
+allow: / 
+
+User-agent: YoudaoBot
+allow: / 
+
+User-agent: sogou spider
+allow: / 
+
+User-agent: bingbot
+allow: / 
+
+User-agent: 360Spider 
+allow: / 
+
+User-agent: *
+Disallow: / 
+
+Sitemap:http://guide.ding9.com/site.txt

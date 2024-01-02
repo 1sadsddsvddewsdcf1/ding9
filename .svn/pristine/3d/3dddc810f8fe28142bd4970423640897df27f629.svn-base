@@ -1,0 +1,20 @@
+@charset "gb2312";
+/* CSS Document */
+
+#oyjBobAd
+{
+	margin-left:-26px;
+}
+
+#oyjH8c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #0087B3;
+	text-decoration: none;
+}
+#oyjH5 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #076787;
+	text-decoration: none;
+}

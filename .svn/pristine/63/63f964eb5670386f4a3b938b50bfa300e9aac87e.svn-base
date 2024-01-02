@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>顶九网 搜索购物 一个顶九</title>
+
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="css/tw.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="15"><img src="images/bottom_index_01.gif" width="15" height="47" /></td>
+    <td width="870" valign="bottom" background="images/bottom_index_02.gif"><table width="100%" height="31" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="31" align="center" class="tw03"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<SCRIPT language=javascript>
+function searchform_onsubmit_buttom() 
+{
+	if(document.searchform2.key.value==''){
+		alert('请输入查询关键字');
+		return false;
+	}
+	var sel_prso_id_one = document.searchform2.sel_prso_id_one.value;
+	if (sel_prso_id_one == "") {	//所有类别
+		document.searchform2.action="http://search.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "1") {	//数码电子
+		document.searchform2.action="http://digital.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "4") {	//成人用品
+		document.searchform2.action="http://love.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "6") {	//手机/通讯
+		document.searchform2.action="http://mobile.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "7") {	//电脑/网络
+		document.searchform2.action="http://computer.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "8") {	//美容美体
+		document.searchform2.action="http://beauty.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "12") {	//家用电器
+		document.searchform2.action="http://hea.ding9.com/search.do";
+	}
+	if (sel_prso_id_one == "15") {	//办公用品
+		document.searchform2.action="http://office.ding9.com/search.do";
+	}
+	return true;
+}
+</SCRIPT>
+              <FORM name="searchform2" onsubmit="return searchform_onsubmit_buttom()" action="http://search.ding9.com/search.do" method="post" target="_blank">
+                <tr> 
+                  <td width="12%" height="21">&nbsp;</td>
+                  <td width="13%" class="tw1">您要找什么商品</td>
+                  <td width="21%" align="left"><input name="key" type="text" size="26" id="key3"/></td>
+                  <td width="4%" align="center" class="tw1">在</td>
+                  <td width="22%" align="left"> <select name="sel_prso_id_one" id="sel_prso_id_one" >
+                      <option selected>&lt; -所有类别- &gt;</option>
+                      <option value="1">数码/电子</option>
+                      <option value="2">汽车/用品</option>
+                      <option value="4">成人用品</option>
+                      <option value="6">手机/通讯</option>
+                      <option value="7">电脑/网络</option>
+                      <option value="8">美容美体</option>
+                      <option value="12">家用电器</option>
+                      <option value="15">办公用品</option>
+                    </select> </td>
+                  <td width="9%" align="left"> <INPUT onclick="" type=image height=21 width=49 src="images/button/search.gif" name=image> 
+                  <td width="18%" align="left"><a href="http://guide.ding9.com/help.php" target="_blank" class="tw1">使用帮助</a></td>
+                  <td width="1%">&nbsp;</td>
+                </tr>
+              </form>
+            </table></td>
+        </tr>
+      </table></td>
+    <td width="15" align="right"><img src="images/bottom_index_03.gif" width="15" height="47" /></td>
+  </tr>
+</table>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td height="31" align="center" bgcolor="F6F5F5"><span class="tw03"><a href="http://guide.ding9.com/aboutUs.php" target="_blank" class="tw03">关于我们</a> 
+      | <a href="http://guide.ding9.com/merchantJoin.php" target="_blank" class="tw03">商家加盟</a> 
+      | <a href="http://guide.ding9.com/ditu.php" target="_blank" class="tw03">站点地图</a> 
+      | <a href="http://guide.ding9.com/help.php" target="_blank" class="tw03">使用帮助</a> 
+      | <a href="http://guide.ding9.com/serverOne.php" target="_blank" class="tw03">服务条款</a> 
+      | <a href="http://guide.ding9.com/ping.php" target="_blank" class="tw04">招贤纳士</a> 
+      | <a href="http://guide.ding9.com/hezuo.php" target="_blank" class="tw03">网站合作</a> 
+      | <a href="http://guide.ding9.com/contact.php" target="_blank" class="tw03">联系我们</a></span></td>
+  </tr>
+</table>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="164" height="70">&nbsp;</td>
+    <td width="421"><div align="center" class="tw1"> 
+        <div align="left">顶九网是购物搜索引擎，从互联网搜索商家、商品、资讯、促销等信息，<br />
+          为用户提供全方位导购服务，所有信息以来源网站为准。<br />
+          Copyright　<font 
+                  color="#333333">&copy;</font> 2005-2007 版权所有 <strong>Ding9</strong>.com 
+          &nbsp;粤ICP备06067490号 </div>
+      </div></td>
+    <td width="175"><a href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318" target="_blank"><img src="images/button/jing.gif" width="40" height="53" border="0" /></a></td>
+  </tr>
+</table>
+</body>
+</html>
+

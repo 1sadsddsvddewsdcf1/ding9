@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.0.dtd">
+<!--
+    Configuration file for UrlRewriteFilter
+    http://tuckey.org/urlrewrite/
+-->
+<urlrewrite>
+  <!-- /index.htm -->
+  <rule>
+    <from>/index.html</from>
+    <to>/index.do</to>
+  </rule>
+  <outbound-rule>
+    <from>^/index.do$</from>
+    <to>/index.html</to>
+  </outbound-rule>
+
+  <!--
+       /product/product-info.do?prma_id=98365
+       /prso_name_one_en-1/prod-98365.htm
+   -->  
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+).htm</from>
+    <to>/product/product-info.do?prma_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1</to>
+  </rule>
+ 
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)$</from>
+    <to>/$3-$2/prod-$1.htm</to>
+  </outbound-rule>
+
+  <!--/product/product-info.do?prma_id=98365&type=comment -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+)-([a-zA-Z]+).htm</from>
+    <to>/product/product-info.do?prma_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;type=$4</to>
+  </rule>
+
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;type=([a-zA-Z]+)$</from>
+    <to>/$3-$2/prod-$1-$4.htm</to>
+  </outbound-rule>
+
+  <!--/product/product-info.do?prma_id=98365&type=comment&all=1-->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+)-([a-zA-Z]+)-([0-9]+).htm</from>
+    <to>/product/product-info.do?prma_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;type=$4&amp;all=$5</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;type=([a-zA-Z]+)&amp;all=([0-9]+)$</from>
+    <to>/$3-$2/prod-$1-$4-$5.htm</to>
+  </outbound-rule>
+  
+
+  <!-- /product/product-info.do?prma_id=98365&type=merchant&sort=203&pageSize= -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+)/([a-zA-Z]+)-([0-9]+)-([0-9]+).htm</from>
+    <to>/product/product-info.do?prma_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;type=$4&amp;sort=$5&amp;pageSize=$6</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;type=([a-zA-Z]+)&amp;sort=([0-9]+)&amp;pageSize=([0-9]+)$</from>
+    <to>/$3-$2/prod-$1/$4-$5-$6.htm</to>
+  </outbound-rule>
+
+  <!-- /product/product-info.do?prma_id=98365&type=merchant&sort=203 -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+)-([a-zA-Z]+)-([0-9]+).htm</from>
+    <to>/product/product-info.do?prma_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;type=$4&amp;sort=$5</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;type=([a-zA-Z]+)&amp;sort=([0-9]+)$</from>
+    <to>/$3-$2/prod-$1-$4-$5.htm</to>
+  </outbound-rule>
+
+  <!-- /product/product-info.do?prma_id=33790&type=comment&current_page= -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+)-([a-zA-Z]+)-([0-9]+).htm</from>
+    <to>/product/product-info.do?prma_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;type=$4&amp;current_page=$5</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;type=([a-zA-Z]+)&amp;current_page=([0-9]+)$</from>
+    <to>/$3-$2/prod-$1-$4-$5.htm</to>
+  </outbound-rule>
+
+  <!--
+      /product/product-type.do?prso_id_three=&page_size=&current_page=1&order_asc_desc=&prbr_id=
+      to: /gift-1010/category/glasses-13/brand-55/
+   -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/category/([a-zA-Z0-9_]+)-([0-9]+)/brand-([0-9]+)/</from>
+    <to>/product/product-type.do?prbr_id=$5&amp;prso_id_three=$4&amp;prso_name_three_en=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-type.do\?prbr_id=([0-9]+)&amp;prso_id_three=([0-9]+)&amp;prso_name_three_en=([a-zA-Z0-9_]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)$</from>
+    <to>/$5-$4/category/$3-$2/brand-$1/</to>
+  </outbound-rule>
+
+  <!-- /product/product-type.do?prso_id_three=&prbr_id=&key=&type=&page_size=&current_page=1&order_asc_desc= -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/category/([a-zA-Z0-9_]+)-([0-9]+)/brand-([0-9]+)-key-([a-zA-Z0-9]+)-vt-([0-9]+)-sortby-([0-9]+)-([0-9]+)-page([0-9]+)/</from>
+    <to>/product/product-type.do?prso_id_three=$4&amp;prso_name_three_en=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;prbr_id=$5&amp;key=$6&amp;type=$7&amp;page_size=$9&amp;current_page=$10&amp;order_asc_desc=$8</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-type.do\?prso_id_three=([0-9]+)&amp;prso_name_three_en=([a-zA-Z0-9_]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;prbr_id=([0-9]+)&amp;key=([a-zA-Z0-9]+)&amp;type=([0-9]+)&amp;page_size=([0-9]+)&amp;current_page=([0-9]+)&amp;order_asc_desc=([0-9]+)$</from>
+    <to>/$4-$3/category/$2-$1/brand-$5-key-$6-vt-$7-sortby-$10-$8-page$9/</to>
+  </outbound-rule>
+
+  <!--
+      /product/product-type.do?prso_id_three=
+      to: /gift-1010/category/glasses-13/
+   -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/category/([a-zA-Z0-9_]+)-([0-9]+)/</from>
+    <to>/product/product-type.do?prso_id_three=$4&amp;prso_name_three_en=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-type.do\?prso_id_three=([0-9]+)&amp;prso_name_three_en=([a-zA-Z0-9_]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)$</from>
+    <to>/$4-$3/category/$2-$1/</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/pinglun.htm</from>
+    <to>/pinglun.do</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /pinglun.do --></note>
+    <from>^/pinglun.do$</from>
+    <to>/pinglun.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/pinglun/([0-9]+).htm</from>
+    <to>/pinglun.do?current_page=$1</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /pinglun.do?current_page=2 --></note>
+    <from>^/pinglun.do\?current_page=([0-9]+)$</from>
+    <to>/pinglun/$1.htm</to>
+  </outbound-rule>
+
+  <!--
+      /click/merchant-click.do?prma_id=396095&merc_id=&url=aHR0cDovL3d3dy4zd2NkbWEuY29tL2xpc3QuYXNwP2lkPTEzNDU=
+      /merchant-([0-9]+)/prod-([0-9]+)/(.*)/
+   -->
+  <rule>
+    <from>/merchant-([0-9]+)/prod-([0-9]+)/(.*)/</from>
+    <to>/click/merchant-click.do?prma_id=$2&amp;merc_id=$1&amp;url=$3</to>
+  </rule>
+  <outbound-rule>
+    <from>^/click/merchant-click.do\?prma_id=([0-9]+)&amp;merc_id=([0-9]+)&amp;url=(.*)$</from>
+    <to>/merchant-$2/prod-$1/$3/</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/focus.htm</from>
+    <to>/focus.do</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /focus.do --></note>
+    <from>^/focus.do$</from>
+    <to>/focus.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/focus-([0-9]+)-([0-9]+)-([0-9]+).htm</from>
+    <to>/focus.do?synt_id=$1&amp;page_size=$2&amp;current_page=$3</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /focus.do?synt_id=2&page_size=20&current_page=2 --></note>
+    <from>^/focus.do\?synt_id=([0-9]+)&amp;page_size=([0-9]+)&amp;current_page=([0-9]+)$</from>
+    <to>/focus-$1-$2-$3.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/comment-([0-9]+).htm</from>
+    <to>/comment.do?syne_id=$1</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /comment.do?syne_id= --></note>
+    <from>^/comment.do\?syne_id=([0-9]+)$</from>
+    <to>/comment-$1.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/event.htm</from>
+    <to>/event.do</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /event.do --></note>
+    <from>^/event.do$</from>
+    <to>/event.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/event-([0-9]+)-([0-9]+)-([0-9]+).htm</from>
+    <to>/event.do?synt_id=$1&amp;page_size=$2&amp;current_page=$3</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /event.do?synt_id=4&page_size=10&current_page=2 --></note>
+    <from>^/event.do\?synt_id=([0-9]+)&amp;page_size=([0-9]+)&amp;current_page=([0-9]+)$</from>
+    <to>/event-$1-$2-$3.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/media-([0-9]+)-([0-9]+)-([0-9]+).htm</from>
+    <to>/media.do?synt_id=$1&amp;page_size=$2&amp;current_page=$3</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /media.do?synt_id=4&page_size=10&current_page=2 --></note>
+    <from>^/media.do\?synt_id=([0-9]+)&amp;page_size=([0-9]+)&amp;current_page=([0-9]+)$</from>
+    <to>/media-$1-$2-$3.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/media-([0-9]+).htm</from>
+    <to>/media.do?synt_id=$1</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /media.do?synt_id=1 --></note>
+    <from>^/media.do\?synt_id=([0-9]+)$</from>
+    <to>/media-$1.htm</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/media.htm</from>
+    <to>/media.do</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /media.do?synt_id=1 --></note>
+    <from>^/media.do$</from>
+    <to>/media.htm</to>
+  </outbound-rule>
+
+  <!--
+      /news/news-info.do?article_id=
+      /<prso_name_one_en>-<prso_id_one>/news/article-([0-9]+)/
+   -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/news/article-([0-9]+)/</from>
+    <to>/news/news-info.do?article_id=$3&amp;prso_id_one=$2&amp;prso_name_one_en=$1</to>
+  </rule>
+  <outbound-rule>
+    <from>^/news/news-info.do\?article_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)$</from>
+    <to>/$3-$2/news/article-$1/</to>
+  </outbound-rule>
+
+  <rule>
+    <from>/([a-zA-Z]+).htm</from>
+    <to>/switch.do?msg=$1</to>
+  </rule>
+  <outbound-rule>
+    <from>^/switch.do\?msg=([a-zA-Z]+)$</from>
+    <to>/$1.htm</to>
+  </outbound-rule>
+
+  <!-- merchant.ding9.com start -->
+  <!--
+      /member/merchant-talk.do?merc_id=${merc_id}
+      /merchant-([0-9]+)/talk.htm
+   -->
+  <rule>
+    <from>/merchant-([0-9]+)/talk.htm</from>
+    <to>/member/merchant-talk.do?merc_id=$1</to>
+  </rule>
+  <outbound-rule>
+    <from>^/member/merchant-talk.do\?merc_id=([0-9]+)$</from>
+    <to>/merchant-$1/talk.htm</to>
+  </outbound-rule>
+
+  <!-- /member/merchant.do?merc_id=44866 -->
+  <rule>
+    <from>/merchant-([0-9]+)/</from>
+    <to>/member/merchant.do?merc_id=$1</to>
+  </rule>
+  <outbound-rule>
+    <from>^/member/merchant.do\?merc_id=([0-9]+)$</from>
+    <to>/merchant-$1/</to>
+  </outbound-rule>
+  <!-- merchant.ding9.com end -->
+
+  <!-- promotion.ding9.com start -->
+  <rule>
+    <from>/news-([0-9]+).htm</from>
+    <to>/news/news-info.do?info_id=$1</to>
+  </rule>
+  <outbound-rule>
+    <note><!-- /news/news-info.do?info_id= --></note>
+    <from>^/news/news-info.do\?info_id=([0-9]+)$</from>
+    <to>/news-$1.htm</to>
+  </outbound-rule>
+  <!-- promotion.ding9.com end -->
+
+  <!-- mobile.ding9.com start -->
+  <rule>
+    <from>/([a-zA-Z_]+)-([0-9]+)/prod-([0-9]+)-mesfag.htm</from>
+    <to>/product/product-info.do?prma_id=$1&amp;prso_id_one=$2&amp;prso_name_one_en=$1&amp;mesfag=true</to>
+  </rule>
+  <outbound-rule>
+    <from>^/product/product-info.do\?prma_id=([0-9]+)&amp;prso_id_one=([0-9]+)&amp;prso_name_one_en=([a-zA-Z_]+)&amp;mesfag=true$</from>
+    <to>/$3-$2/prod-$1-mesfag.htm</to>
+  </outbound-rule>
+  <!-- mobile.ding9.com end -->
+
+  <!-- gz.shoplocal.ding9.com start -->
+  <!--
+      /shop/coupon-detail.do?shopId=${shopid}&typeid=${typeid}&infoid=${infoid}
+      /shop-${shopid}/type-${typeid}/info-${infoid}/
+   -->
+  <rule>
+    <from>/shop-([0-9]+)/type-([0-9]+)/info-([0-9]+)/</from>
+    <to>/shop/coupon-detail.do?shopId=$1&amp;typeid=$2&amp;infoid=$3</to>
+  </rule>
+  <outbound-rule>
+    <from>^/shop/coupon-detail.do\?shopId=([0-9]+)&amp;typeid=([0-9]+)&amp;infoid=([0-9]+)$</from>
+    <to>/shop-$1/type-$2/info-$3/</to>
+  </outbound-rule>
+  <!-- gz.shoplocal.ding9.com end -->
+</urlrewrite>
+

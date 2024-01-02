@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Insert title here</title>
+<link href="/cssindex/gy.css" rel="stylesheet" type="text/css" />
+<link href="/cssindex/indexfont.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../jsindex/weather.js"></script>
+</head>
+<body>
+<script>
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function searchform_onsubmit(searchType){
+	var search_domain="http://search.ding9.com";
+	var searchkey = document.searchform.queryText.value;
+	if(trim(searchkey)=='' || searchkey=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+	if(searchType=="product"){
+		document.searchform.action=search_domain+"/dofindNew.jsp?";
+	}else if (searchType=="merchant"){
+		document.searchform.action=search_domain+"/dofindNew.jsp?type=merchant";
+	}
+	return true;
+}
+ 
+function searchSubmit(searchType){
+	if (searchform_onsubmit(searchType)==true){
+		document.searchform.submit();
+	} else {
+		return false;
+	}	
+}
+</script>
+<center>
+<div id="top">
+今日天气:
+<span id="Wealth">
+  <script type="text/javascript">    
+     MiniSite.Weather.print("Wealth");  
+  </script>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+您好,欢迎来顶九！
+&nbsp;&nbsp;[<a href="http://user.ding9.com" class="co333">请登录</a> ]
+&nbsp;&nbsp;[<a href="http://user.ding9.com/register/register.html" class="co333">用户注册</a>]
+&nbsp;&nbsp; <a href="http://merchant.ding9.com/login.html"	class=" co333">商家登录</a> 
+&nbsp;/&nbsp;<a	href="http://merchant.ding9.com/register.html" class="co333">注册</a>
+&nbsp;&nbsp;<a href="http://guide.ding9.com/help.htm" class="co333">帮助</a>
+</div>
+ 
+<div id="topsearch">
+<div id="topsearch_1"><a href="http://guide.ding9.com/">
+<img src="../images/guoqinglogo180-70.gif" width="160" height="70" border="0" /></a>
+<br /> 比较购物从顶九搜索开始</div>
+ 
+<!--topsearch_1-->
+<div id="topsearch_2">
+ 
+<div id="search">
+<form name="searchform" action="http://search.ding9.com/search.do"
+ method="post" target="_blank" onsubmit="return false;">
+<div id="search_1">
+<input name="queryText" type="text"	class="searchclass" size="40" />
+</div>
+</form>
+<div id="search_2"><a href="#" onclick="searchSubmit('product');" class="cofff1">顶九搜索</a></div>
+</div>
+<!--search-->
+<span style="font-weight:bold">热门搜索:</span> 
+<a target='_blank' class='H1'href='http://search.ding9.com/mikbmnja-se/'>手机</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/nbhhohjo-se/'>笑脸</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/mgclkfaj-se/'>情侣</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/lkchnikcpnob-se/'>品牌鞋</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/MP3-se/'>MP3</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/lpiapmjjogfdngedmcjklmmo-se/'>太阳能热水器</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/pnepnikoljgl-se/'>韩版包</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/mlngnoghnmfomnja-se/'>数码相机</a> 
+<a target='_blank' class='H1' href='http://search.ding9.com/N91-se/'>N91</a> 
+</div>
+ 
+<!--topsearch_2-->
+<div id="topsearch_3">
+<a href="#" onclick="searchSubmit('merchant');" class="co333">商家搜索</a> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://guide.ding9.com/help.htm" class="co333">搜索帮助</a></div>
+<!--topsearch_3-->
+</div>
+
+</center>
+
+</body>
+</html>

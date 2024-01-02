@@ -1,0 +1,103 @@
+body { 
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:hover {
+	color: #FF6633;
+}
+
+.fzH1 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+
+.fzH1c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+}
+.fzHc {
+	font-size: 12px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+
+.fzH2c {
+	font-size: 16px;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+}
+
+.fzH3c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+.fzH4 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+.fzH5 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #076787;
+	text-decoration: none;
+}
+.fzH5c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #076787;
+	text-decoration: none;
+}
+.fzH6 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #CC0000;
+	text-decoration: none;
+}
+.fzH6c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC0000;
+	text-decoration: none;
+}
+
+.fzH7c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #009933;
+	text-decoration: none;
+}
+
+.fzH8c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #0099FF;
+	text-decoration: none;
+}
+
+.fzH9c {
+	font-size: 16px;
+	font-weight: bold;
+	color: #669511;
+	text-decoration: none;
+}
+.H10c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #b442b2;
+	text-decoration: none;
+}

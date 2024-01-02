@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+    <form-beans>
+
+      <form-bean name="tagForm" type="com.ding9.action.collection.TagAF"></form-bean>
+
+      <form-bean name="collectionForm" type="com.ding9.action.collection.CollectionAF"></form-bean>
+
+
+    </form-beans>
+
+    <global-exceptions/>
+
+    <global-forwards>
+
+    </global-forwards>
+
+    <action-mappings>
+
+
+
+
+  <action path="/tag" type="com.ding9.action.collection.TagAction" name="tagForm"
+      parameter="method" scope="request">
+
+      <forward name="merchant" path="/tag_merchant.jsp"/>
+      <forward name="product" path="/tag_product.jsp"/>
+      <forward name="search" path="/tag_search.jsp"/>
+
+    </action>
+
+      <action path="/collection" type="com.ding9.action.collection.CollectionAction"  name="collectionForm"
+      parameter="method" scope="request">
+
+      <forward name="fail" path="/collection_fail.jsp"/>
+      <forward name="merchant" path="/collection_merchant.jsp"/>
+      <forward name="product" path="/collection_product.jsp"/>
+      <forward name="search" path="/collection_search.jsp"/>
+      <forward name="success" path="/collection_success.jsp"/>
+      <forward name="collection" path="/collection.jsp"/>
+
+    </action>
+
+    </action-mappings>
+
+    <message-resources parameter="MessageResources"/>
+
+</struts-config>

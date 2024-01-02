@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/guide_ding9_com.iml" filepath="$PROJECT_DIR$/guide_ding9_com.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user.ding9.com.iml" filepath="$PROJECT_DIR$/user.ding9.com.iml" />
+    </modules>
+  </component>
+</project>

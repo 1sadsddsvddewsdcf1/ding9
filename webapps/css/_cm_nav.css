@@ -1,0 +1,90 @@
+body { 
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.D91 {
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+
+.D96c {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC3300;
+	text-decoration: none;
+}
+.D99 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #008000;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.D93l {
+	font-size: 14px;
+	font-weight: normal;
+	color: #0066FF;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #FF6633;
+	text-decoration: underline;
+}
+
+.D9div2 {
+	float: left;
+	width: 100%;
+}
+.D9div2 ul {
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+.D9div2 li {
+	list-style-type: none;
+	margin-left: 5px;
+	text-align: left;
+}
+.D9div8 {
+	width: 700px;
+}
+.D9div8 ul{
+	margin: 0px;
+}
+.D9div8 li{
+	list-style-type: none;
+	float: left;
+	width: 33%;
+	font-weight: normal;
+	line-height: 25px;
+	padding-right: 20px;
+}
+
+
+.D9d001{
+	width:700px;
+	margin-top: 10px;
+}
+
+.D9d002{
+	width:100%;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.D9d003{
+	width:98%;
+	background-color: #F3F3F3;
+	height: 25px;
+	text-align: center;
+	padding-top: 5px;
+	margin-bottom: 10px;
+
+}

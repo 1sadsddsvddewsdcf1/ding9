@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="guide_ding9_com"
+  id="myeclipse.1391852840318"
+  context-root="/guide_ding9_com"
+  j2ee-spec="5.0"
+  archive="guide_ding9_com.war">
+  <attributes>
+    <attribute name="webrootdir" value="webapps" />
+  </attributes>
+</project-module>
+

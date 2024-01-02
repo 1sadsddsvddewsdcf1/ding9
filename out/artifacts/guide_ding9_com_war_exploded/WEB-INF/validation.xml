@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+	<formset>
+
+		<form name="deptaddForm">
+			<field property="deptName" depends="required,mask">
+				<arg0 key="部门名称为中文" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[^x00-xff ]*$</var-value>
+				</var>
+			</field>
+
+			<field property="deptNumber" depends="required,maxlength">
+				<arg0 key="部门编号" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+			</field>
+
+			<field property="presNumber" depends="required,integer,mask">
+				<arg0 key="定编人数" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^\+?[1-9][0-9]*$</var-value>
+				</var>
+			</field>
+
+			<field property="postCreatedDate" depends="date">
+				<arg0 key="时间,列如:1999.2.3或1999,2,4正确表示必须是1999-2-4" resource="false" />
+			</field>
+
+			<field property="contactPhone" depends="required,maxlength,mask">
+				<arg0 key="联系电话" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>\d{3}-\d{8}|\d{4}-\d{7}</var-value>
+				</var>
+			</field>
+
+			<field property="skillName" depends="required,mask,maxlength">
+				<arg0 key="技能名称" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>30</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[^x00-xff ]*$</var-value>
+				</var>
+			</field>
+
+			<field property="assessPersonnelNumber" depends="required,mask,maxlength">
+				<arg0 key="评定小组组长" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[A-Za-z0-9 ]+$</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+
+			<field property="time" depends="required,mask,maxlength">
+				<arg0 key="次数" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]*$</var-value>
+				</var>
+			</field>
+
+			<field property="idCardNumber" depends="required,mask,maxlength">
+				<arg0 key="身份证号码" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^(\(\d{3,4}-)|\d{3.4}-)?\d{7,8}$</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+
+			<field property="postalcode" depends="required,mask,maxlength">
+				<arg0 key="邮政编码" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>[1-9]\d{5}(?!\d)</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+
+			<field property="homePhone" depends="required,maxlength,mask">
+				<arg0 key="联系电话" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>\d{3}-\d{8}|\d{4}-\d{7}</var-value>
+				</var>
+			</field>
+
+			<field property="email" depends="required,mask,maxlength">
+				<arg0 key="E-mail地址" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+			</field>
+
+			<field property="noteEmpNumber" depends="required,maxlength,mask">
+				<arg0 key="记录人工号" resource="false" />
+				<arg1 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[A-Za-z0-9 ]+$</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>15</var-value>
+				</var>
+			</field>
+
+		</form>
+
+	</formset>
+</form-validation>

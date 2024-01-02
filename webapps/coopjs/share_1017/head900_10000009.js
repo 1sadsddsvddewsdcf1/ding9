@@ -1,0 +1,1 @@
+document.write ("<IFRAME name=top marginWidth=0 marginHeight=0 src='http://guide.ding9.com/coopjs/share/head900_10000009.html' frameBorder=0 width='100%' scrolling=no height='155'></IFRAME>");

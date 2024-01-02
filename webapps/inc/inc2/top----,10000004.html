@@ -1,0 +1,208 @@
+
+<link href="/css3.0/tefont.css" rel="stylesheet" type="text/css">
+<link href="/css3.0/font.css" rel="stylesheet" type="text/css">
+<link href="/css3.0/te.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/tecomment.js"></script>
+<script type="text/javascript" src="/js/public.js"></script>
+<script language="javascript" src="/js/area.js"></script>
+<script language="javascript">
+var show_word="输入关键字进行搜索";
+function showSearch(obj,type){
+	if(type){
+		if(obj.value=="")
+			obj.value=show_word;
+		obj.style.color='gray';
+	}else{		
+		if(obj.value==show_word)
+			obj.value="";
+		obj.style.color='#000000';
+	}
+}
+
+function searchform_onsubmit() {
+	if(trim(document.searchform.key.value)=='' || document.searchform.key.value=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+	return true;
+}
+
+
+function searchmerchant_onsubmit() {
+	if(trim(document.searchmerchant.key.value)=='' || document.searchmerchant.key.value=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+	document.searchmerchant.selectp.value=document.searchmerchant.province.value;
+	document.searchmerchant.action="http://search.ding9.com/merchant/merchant-info.do";
+	return true;
+}
+
+function other(obj,strtype)
+{
+	if(trim(obj.key.value)=='' || obj.key.value=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}	
+	url="http://search.ding9.com/" + strtype + ".do?q=" + obj.key.value;
+	if(strtype=='comment') url+='&cid='+obj.prso_id_one.value;
+	obj.action=url;
+	return true;
+}
+  </script>
+</head>
+
+<body>
+<center>
+<div id="top">
+<div id="top_1"><img src="/teimages/log03.gif" width="13" height="13"><a href="http://guide.ding9.com/switch----,help.htm"  target="_blank" class="teH1"> 帮助</a></div>
+<div id="top_2"><img src="/teimages/log02.gif" width="13" height="13"><span class="teH1"><a href="http://merchant.ding9.com/login.html" target="_blank" class="teH1"> 商家登录</a>/<a href="http://merchant.ding9.com/register.html" target="_blank" class="teH1">注册</a></span></div>
+</div><!--top-->
+
+<div id="top001">
+<div id="top001_l"><a href="http://guide.ding9.com" target="_top"><img src="/teimages/logo.gif" width="192" height="108" border="0"></a></div>
+<div id="top001_m1"><img src="/teimages/top001.gif" width="33" height="108"></div>
+<div id="top001_m2">
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+    <tr>
+      <td align="center"><table width="310" border="0" cellpadding="0" cellspacing="0" id="tesecTable1">
+        <tr>
+          <td width="50" class="tesel03" onClick="tesecBoard1(0)">商品</td>          
+          <td width="50" class="tesel04" onClick="tesecBoard1(1)">商家</td>          
+          <td width="50" class="tesel04" onClick="tesecBoard1(2)">优惠</td>          
+          <td width="50" class="tesel04" onClick="tesecBoard1(3)">促销</td>          
+          <td width="50" class="tesel04" onClick="tesecBoard1(4)">资讯</td>          
+          <td width="50" class="tesel04" onClick="tesecBoard1(5)">评论</td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+  <table width="85%" border="0" cellspacing="0" cellpadding="0" id="temainTable1">
+    <tbody  style="display:block;">
+	<tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <form name="searchform" action="http://search.ding9.com/search.do" method="get" target="_top"  onsubmit="return searchform_onsubmit()">
+        <tr>
+          <td width="82%" height="32"><input name="key" type="text" class="teH4" onblur=showSearch(this,1) onfocus=showSearch(this) value="输入关键字进行搜索" size="54">
+              <select name="prso_id_one"  class="teH1" >
+                      <option >所有类别</option>
+                      <option value="1" >数码/电子</option>
+                      <option value="4" >成人用品</option>
+                      <option value="6" >手机/通讯</option>
+                      <option value="7"  >电脑/网络</option>
+                      <option value="8" >美容美体</option>
+                      <option value="12" >家用电器</option>
+                      <option value="15" >办公用品</option>
+                  </select>        </td>
+          <td width="18%"><input type="image" src="/teimages/s001.gif" width="103" height="22" border="0"></td>
+        </tr>      
+        <tr>
+          <td height="19" colspan="2" class="teH1c">热门搜索:&nbsp;<a target='_top'  class='H1' href='http://search.ding9.com/search--LS0tLSzmiYvmnLotLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0s.htm'><span class='H1'>手机</span></a> <a target='_top'  class='H1' href='http://search.ding9.com/search--LS0tLSzmlbDnoIEtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0s.htm'><span class='H1'>数码</span></a> <a target='_top'  class='H1' href='http://search.ding9.com/search--LS0tLSzpppnmsLQtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0s.htm'><span class='H1'>香水</span></a> <a target='_top'  class='H1' href='http://search.ding9.com/search--LS0tLSznrJTorrDmnKwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0s.htm'><span class='H1'>笔记本</span></a> <a target='_top'  class='H1' href='http://search.ding9.com/search--LS0tLSzor7rln7rkupotLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0s.htm'><span class='H1'>诺基亚</span></a> <a target='_top'  class='H1' href='http://search.ding9.com/search--LS0tLSzlronlhajlpZctLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0sLS0tLSwtLS0tLC0tLS0s.htm'><span class='H1'>安全套</span></a> </td>
+          </tr>   </form> 
+      </table></td>
+    </tr></tbody>
+	
+	
+	 <tbody  style="display:none;">
+	<tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <form method=post name='searchmerchant' method="post" target="_top"  onsubmit="return searchmerchant_onsubmit()" >
+        <tr>
+          <td width="82%" height="32">
+          
+          <input name="key" type="text" class="teH4" onblur=showSearch(this,1) onfocus=showSearch(this) value="输入关键字进行搜索" size="36">
+								<input type="hidden" name="selectp">
+              <select name="province" id="province" class=teH1>
+</select>
+<select name="selectc" id="city" class=teH1>
+</select>
+<script language=javascript>
+InitCitySelect(document.searchmerchant.province,document.searchmerchant.selectc);
+</script></td>
+          <td width="18%"><input name="image" type="image" src="/teimages/s002.gif" width="103" height="22" border="0" onclick="return searchmerchant_onsubmit()"></td>
+        </tr>
+        <tr>
+          <td height="19" colspan="2" class="teH1c">热门搜索:&nbsp;<a target='_top' class='H1' href='http://search.ding9.com/merchant/merchant-info.do?key=时尚'><span class='H1'>时尚</span></a> <a target='_top' class='H1' href='http://search.ding9.com/merchant/merchant-info.do?key=便利网'><span class='H1'>便利网</span></a> <a target='_top' class='H1' href='http://search.ding9.com/merchant/merchant-info.do?key=购物网'><span class='H1'>购物网</span></a> <a target='_top' class='H1' href='http://search.ding9.com/merchant/merchant-info.do?key=名牌'><span class='H1'>名牌</span></a> <a target='_top' class='H1' href='http://search.ding9.com/merchant/merchant-info.do?key=办公'><span class='H1'>办公</span></a> <a target='_top' class='H1' href='http://search.ding9.com/merchant/merchant-info.do?key=网上商城'><span class='H1'>网上商城</span></a> </td>
+          </tr></form>
+      </table></td>
+    </tr></tbody>
+		 <tbody  style="display:none;">
+	<tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <form name="searchcheapcard" target="_top"  method="post" onsubmit="return other(this,'cheapcard')"  >
+        <tr>
+          <td width="82%" height="32"><input name="key" type="text" class="teH4" onblur=showSearch(this,1) onfocus=showSearch(this) value="输入关键字进行搜索" size="68"></td>
+          <td width="18%"><input type="image" src="/teimages/s003.gif" width="103" height="22" border="0"></td>
+        </tr>      
+        <tr>
+          <td height="19" colspan="2" class="teH1c">热门搜索:&nbsp;<a target='_top' class='H1' href='http://search.ding9.com/cheapcard.do?q=免费'><span class='H1'>免费</span></a> <a target='_top' class='H1' href='http://search.ding9.com/cheapcard.do?q=化妆'><span class='H1'>化妆</span></a> <a target='_top' class='H1' href='http://search.ding9.com/cheapcard.do?q=现金券'><span class='H1'>现金券</span></a> <a target='_top' class='H1' href='http://search.ding9.com/cheapcard.do?q=推荐'><span class='H1'>推荐</span></a> <a target='_top' class='H1' href='http://search.ding9.com/cheapcard.do?q=D1便利'><span class='H1'>D1便利</span></a> <a target='_top' class='H1' href='http://search.ding9.com/cheapcard.do?q=护理'><span class='H1'>护理</span></a> </td>
+          </tr>   </form> 
+      </table></td>
+    </tr></tbody>
+	
+	
+  	 <tbody  style="display:none;">
+	<tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <form name="searchpromotion"  method="post" target="_top"  onsubmit="return other(this,'promotion')"  >
+        <tr>
+          <td width="82%" height="32"><input name="key" type="text" class="teH4" onblur=showSearch(this,1) onfocus=showSearch(this) value="输入关键字进行搜索" size="68"></td>
+          <td width="18%"><input type="image" src="/teimages/s004.gif" width="103" height="22" border="0"></td>
+        </tr>      
+        <tr>
+          <td height="19" colspan="2" class="teH1c">热门搜索:&nbsp;<a target='_top' class='H1' href='http://search.ding9.com/promotion.do?q=便利'><span class='H1'>便利</span></a> <a target='_top' class='H1' href='http://search.ding9.com/promotion.do?q=优惠'><span class='H1'>优惠</span></a> <a target='_top' class='H1' href='http://search.ding9.com/promotion.do?q=特卖'><span class='H1'>特卖</span></a> <a target='_top' class='H1' href='http://search.ding9.com/promotion.do?q=打折'><span class='H1'>打折</span></a> <a target='_top' class='H1' href='http://search.ding9.com/promotion.do?q=打印机'><span class='H1'>打印机</span></a> <a target='_top' class='H1' href='http://search.ding9.com/promotion.do?q=索尼'><span class='H1'>索尼</span></a> </td>
+          </tr>   </form> 
+      </table></td>
+    </tr></tbody>
+	
+	
+  	 <tbody  style="display:none;">
+	<tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <form name="searcharticle" method="post" target="_top"  onsubmit="return other(this,'article')" >
+        <tr>
+          <td width="82%" height="32"><input name="key" type="text" class="teH4" onblur=showSearch(this,1) onfocus=showSearch(this) value="输入关键字进行搜索" size="68"></td>
+          <td width="18%"><input type="image" src="/teimages/s005.gif" width="103" height="22" border="0"></td>
+        </tr>      
+        <tr>
+          <td height="19" colspan="2" class="teH1c">热门搜索:&nbsp;<a target='_top' class='H1' href='http://search.ding9.com/article.do?q=三星'><span class='H1'>三星</span></a> <a target='_top' class='H1' href='http://search.ding9.com/article.do?q=打印机'><span class='H1'>打印机</span></a> <a target='_top' class='H1' href='http://search.ding9.com/article.do?q=最新'><span class='H1'>最新</span></a> <a target='_top' class='H1' href='http://search.ding9.com/article.do?q=促销'><span class='H1'>促销</span></a> <a target='_top' class='H1' href='http://search.ding9.com/article.do?q=折扣'><span class='H1'>折扣</span></a> <a target='_top' class='H1' href='http://search.ding9.com/article.do?q=相机'><span class='H1'>相机</span></a> </td>
+          </tr>   </form> 
+      </table></td>
+    </tr></tbody>
+	
+  	 <tbody  style="display:none;">
+	<tr>
+      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <form name="searchcomment" method="post" target="_top"  onsubmit="return other(this,'comment')"  >
+        <tr>
+          <td width="82%" height="32"><input name="key" type="text" class="teH4" onblur=showSearch(this,1) onfocus=showSearch(this) value="输入关键字进行搜索" size="54">
+              <select name="prso_id_one"  class="teH1" >
+                      <option >所有类别</option>
+                      <option value="1" >数码/电子</option>
+                      <option value="4" >成人用品</option>
+                      <option value="6" >手机/通讯</option>
+                      <option value="7"  >电脑/网络</option>
+                      <option value="8" >美容美体</option>
+                      <option value="12" >家用电器</option>
+                      <option value="15" >办公用品</option>
+                  </select>        </td>
+          <td width="18%"><input type="image" src="/teimages/s006.gif" width="103" height="22" border="0"></td>
+        </tr>      
+        <tr>
+          <td height="19" colspan="2" class="teH1c">热门搜索:&nbsp;<a target='_top' class='H1' href='http://search.ding9.com/comment.do?q=促销'><span class='H1'>促销</span></a> <a target='_top' class='H1' href='http://search.ding9.com/comment.do?q=办公'><span class='H1'>办公</span></a> <a target='_top' class='H1' href='http://search.ding9.com/comment.do?q=品牌'><span class='H1'>品牌</span></a> <a target='_top' class='H1' href='http://search.ding9.com/comment.do?q=最新'><span class='H1'>最新</span></a> <a target='_top' class='H1' href='http://search.ding9.com/comment.do?q=评论'><span class='H1'>评论</span></a> </td>
+          </tr>   </form> 
+      </table></td>
+    </tr></tbody>
+  </table>
+  </div>
+<!--top001m2-->
+<div id="top001_r"><img src="/teimages/top003.gif" width="49" height="108"></div>
+</div><!--top001-->
+
+<!--c02-->
+<div id="c03">
+  <!--c03_l-->
+  <!--c03_r-->
+</div>
+</center>

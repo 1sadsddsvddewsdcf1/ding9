@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="guide_ding9_com:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/guide_ding9_com_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="guide_ding9_com" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="commons-codec-1.3.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="commons-collections-2.1.1.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="commons-lang-2.3.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="commons-logging.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="lucene-core-2.4.1.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="seg.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="struts.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="urlrewrite-3.0.4.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="wsdl4j-1.6.1.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="xfire-all-1.2.4.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="commons-httpclient-3.0.jar" module-name="guide_ding9_com" />
+          <element id="library" level="module" name="dom4j-1.6.1.jar" module-name="guide_ding9_com" />
+        </element>
+      </element>
+      <element id="library" level="module" name="log4" module-name="guide_ding9_com" />
+      <element id="library" level="module" name="resin_servlet" module-name="guide_ding9_com" />
+      <element id="library" level="module" name="classes12" module-name="guide_ding9_com" />
+      <element id="javaee-facet-resources" facet="guide_ding9_com/web/Web" />
+    </root>
+  </artifact>
+</component>

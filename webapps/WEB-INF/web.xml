@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <welcome-file-list>
+<!--    <welcome-file>index.jsp</welcome-file>-->
+<!--	<welcome-file>index.htm</welcome-file>-->
+    <welcome-file>index3.html</welcome-file>
+<!--    <welcome-file>index.xhtml</welcome-file>    -->
+  </welcome-file-list>
+
+  <!-- ding9click filter configuration-->
+  <!-- filter>
+    <filter-name>/clickstatfilter</filter-name>
+    <filter-class>com.ding9.click.filter.ClickStatFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>/clickstatfilter</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping-->
+
+  <filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    <init-param>
+      <param-name>confPath</param-name>
+      <param-value>/WEB-INF/www-urlrewrite.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>logLevel</param-name>
+      <param-value>ERROR</param-value>
+    </init-param>
+    <init-param>
+        <param-name>statusPath</param-name>
+        <param-value>/urlrewrite-status</param-value>
+    </init-param>
+    <init-param>
+        <param-name>statusEnabled</param-name>
+        <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>statusEnabledOnHosts</param-name>
+      <param-value>localhost, *.ding9.com</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/urlrewrite-status</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>*.htm</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+   
+  
+
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>  
+
+	    <init-param>
+      <param-name>config/collection</param-name>
+      <param-value>/WEB-INF/xml/struts-config-collection.xml</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name> 
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>5</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+
+   
+
+  <!-- Dynamic File to Static File  Servlet Configuration -->
+  <servlet>
+    <servlet-name>GetDynamicFileToStaticFile</servlet-name>
+    <servlet-class>com.ding9.util.GetDynamicFileToStaticFile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetDynamicFileToStaticFile</servlet-name>
+    <url-pattern>/server/getdynamicfiletostaticfile</url-pattern>
+  </servlet-mapping>
+
+
+
+      <filter>
+    <filter-name>encodingfilter</filter-name>
+    <filter-class>com.filter.SetCharacterEncodingFilter</filter-class>
+  </filter>
+
+    <filter-mapping>
+    <filter-name>encodingfilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+
+
+    <servlet>
+    <servlet-name>Image</servlet-name>
+    <servlet-class>com.ding9.util.validate.Image</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>Image</servlet-name>
+    <url-pattern>/server/validateimage</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+ 
+ <!--    
+  <filter>
+    <filter-name>/rewritefilter</filter-name>
+    <filter-class>com.ding9.filter.RewriteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>/rewritefilter</filter-name>
+    <url-pattern>*.htm</url-pattern>
+  </filter-mapping>
+  -->
+   
+   
+  <servlet>
+    <servlet-name>HtmlCreatorServlet</servlet-name>
+    <servlet-class>com.ding9.tohtml.HtmlCreatorServlet</servlet-class>
+  </servlet>
+   
+
+  
+  <servlet-mapping>
+    <servlet-name>HtmlCreatorServlet</servlet-name>
+    <url-pattern>*.htm</url-pattern>
+  </servlet-mapping>
+   
+  
+  
+  <jsp-config>
+    <taglib>
+      <taglib-uri>struts-bean.tld</taglib-uri>
+      <taglib-location>struts-bean.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>struts-html.tld</taglib-uri>
+      <taglib-location>struts-html.tld</taglib-location>
+    </taglib>
+    <taglib>
+      <taglib-uri>struts-logic.tld</taglib-uri>
+      <taglib-location>struts-logic.tld</taglib-location>
+    </taglib>
+      <taglib>
+            <taglib-uri>c.tld</taglib-uri>
+            <taglib-location>c.tld</taglib-location>
+      </taglib>
+	  <taglib>   
+	          <taglib-uri>fmt.tld</taglib-uri>   
+	          <taglib-location>fmt.tld</taglib-location>   
+	  </taglib>      
+    </jsp-config>
+</web-app>
+
+
+

@@ -1,0 +1,2 @@
+<%@ page import="com.ding9.util.Environment"%>
+<iframe name="ding9bottomIframe"  src="<%=Environment.getChannelBeauty()%>/inc/bottom.jsp" frameborder="0" width="100%"  marginwidth="0" marginheight="0" height="130"  scrolling="no" ></iframe>

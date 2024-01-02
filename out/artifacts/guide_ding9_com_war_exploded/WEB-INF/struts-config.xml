@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <data-sources />
+  
+  <form-beans>
+    <form-bean name="focus.index" type="com.ding9.struts.form.focus.IndexForm" />
+    <form-bean name="media.index" type="com.ding9.struts.form.media.IndexForm" />
+    <form-bean name="event.index" type="com.ding9.struts.form.event.IndexForm" />
+    <form-bean name="labe.index" type="com.ding9.struts.form.labe.IndexForm" />
+    <form-bean name="contactForm" type="com.ding9.struts.action.contact.ContactForm" />
+    <form-bean name="pinglun.index" type="com.ding9.struts.form.pinglun.IndexForm" />
+    <form-bean name="productTypeForm" type="com.ding9.struts.action.product.ProductTypeForm" />
+    <form-bean name="productCompareForm" type="com.ding9.struts.action.product.ProductCompareForm" />
+	<form-bean name="merchantClickForm" type="com.ding9.struts.action.click.MerchantClickForm" />
+  	<form-bean name="advClickForm" type="com.ding9.struts.action.advclick.AdvClickForm" />
+    <form-bean name="pForm" type="com.ding9.struts.action.merchantcompare.ProductInfoAF" />
+
+  <!-- 评论信息 回复信息 by junren -->
+    <form-bean name="appraiseForm" type="com.ding9.struts.action.oder.AppraiseForm" />
+    <form-bean name="messageRestoreForm" type="com.ding9.struts.action.oder.MessageRestoreForm" />
+
+  <!-- 结束 -->
+  </form-beans>
+
+  <global-exceptions />
+
+  <global-forwards>
+  </global-forwards>
+
+  <action-mappings>
+  <!-- 评论信息 回复信息 by junren -->
+      <action path="/oder/appraise" type="com.ding9.struts.action.oder.AppraiseAction" scope="request"  parameter="method" input="/oder/appraise.jsp" name="appraiseForm">
+      <forward name="appraise" path="/oder/appraise.jsp"/>
+    </action>
+
+  <action path="/oder/restore" type="com.ding9.struts.action.oder.MessageRestoreAction" scope="request" input="/oder/appraise.jsp" name="messageRestoreForm">
+      <forward name="appraise" path="/oder/appraise.jsp"/>
+   </action>
+  <!-- 结束 -->
+
+   <action path="/product/product-info" name="pForm" type="com.ding9.struts.action.merchantcompare.ProductInfoAction">
+      <forward name="success" path="/merchantcompare/product-info.jsp" />
+      <forward name="error" path="/merchantcompare/error.jsp" />
+   </action>
+   
+   <action path="/product/product-infoNew" name="pForm" type="com.ding9.struts.action.merchantcompare.ProductInfoActionNew">
+      <forward name="success" path="/merchantcompare/productInfoNew.jsp" />
+      <forward name="error" path="/merchantcompare/error.jsp" />
+   </action>
+   
+
+    <action path="/index" type="com.ding9.struts.action.IndexAction">
+      <forward name="success" path="/default.jsp" />
+    </action>
+		<!-- new index -->
+		<action path="/defaultIndex" type="com.ding9.struts.action.index.DefaultAction">
+			<forward name="success" path="/index22.jsp" />
+		</action>
+
+	<action path="/click/merchant-click" type="com.ding9.struts.action.click.MerchantClickAction" scope="request"  input="/click/merchantclick.jsp" name="merchantClickForm">
+			<forward name="merchantclick" path="/click/merchantclick.jsp"/>
+		</action>
+  	<action path="/click/adv-click" type="com.ding9.struts.action.advclick.AdvClickAction" scope="request"  name="advClickForm">
+    </action> 
+
+    <action path="/focus" type="com.ding9.struts.action.focus.IndexAction" name="focus.index">
+      <forward name="success" path="/focus/index.jsp" />
+    </action>
+
+    <action path="/comment" type="com.ding9.struts.action.focus.Focuscomment" name="focus.index">
+      <forward name="success" path="/focus/c_comment.jsp" />
+    </action>
+
+    <action path="/focus/default" type="com.ding9.struts.action.focus.IndexAction" name="focus.index">
+      <forward name="success" path="/focus/default.jsp" />
+    </action>
+
+    <action path="/media" type="com.ding9.struts.action.media.IndexAction" name="media.index">
+      <forward name="success" path="/media/index.jsp" />
+    </action>
+
+    <action path="/media/default" type="com.ding9.struts.action.media.IndexAction" name="media.index">
+      <forward name="success" path="/media/default.jsp" />
+    </action>
+
+    <action path="/event" type="com.ding9.struts.action.event.IndexAction" name="event.index">
+      <forward name="success" path="/event/index.jsp" />
+    </action>
+
+    <action path="/event/default" type="com.ding9.struts.action.event.IndexAction" name="event.index">
+      <forward name="success" path="/event/default.jsp" />
+    </action>
+
+    <action path="/labe" type="com.ding9.struts.action.labe.IndexAction" name="labe.index">
+      <forward name="success" path="/labe/index.jsp" />
+    </action>
+
+    <action path="/labe/default" type="com.ding9.struts.action.labe.IndexAction" name="labe.index">
+      <forward name="success" path="/labe/default.jsp" />
+    </action>
+
+    <action path="/contact" type="com.ding9.struts.action.contact.ContactAction" name="contactForm"  parameter="method" />
+        <action path="/pinglun" type="com.ding9.struts.action.pinglun.IndexAction" name="pinglun.index">
+      <forward name="success" path="/pinglun/index.jsp" />
+    </action>
+
+    <action path="/switch" type="com.ding9.struts.action.SwitchAction">
+
+      <forward name="help" path="/help/index.jsp" />
+
+      <forward name="helpme" path="/help/mercindex.jsp" />
+
+      <forward name="leibie" path="/leibie/index.jsp" />
+
+      <forward name="aboutus" path="/resume/index.jsp" />
+
+      <forward name="service" path="/service/index.jsp" />
+
+      <forward name="technique" path="/technique/index.jsp" />
+
+      <forward name="contact" path="/contact/index.jsp" />
+
+      <forward name="merchant" path="/merchant/index.jsp" />
+
+      <forward name="comethod" path="/comethod/index.jsp" />
+
+      <forward name="search" path="/search/index.jsp" />
+
+      <forward name="question" path="/question/index.jsp" />
+
+      <forward name="law" path="/law/index.jsp" />
+
+      <forward name="declare" path="/declare/index.jsp" />
+
+      <forward name="promotion" path="/promotion/index.jsp" />
+
+      <forward name="technique" path="/technique/index.jsp" />
+
+      <forward name="sitemap" path="/business/index.jsp" />
+
+      <forward name="market" path="/market/index.jsp" />
+
+      <forward name="product" path="/product/index.jsp" />
+
+      <forward name="cooperate" path="/cooperate/index.jsp" />
+
+      <forward name="declare" path="/declare/index.jsp" />
+
+      <forward name="comethod" path="/comethod/index.jsp" />
+
+      <forward name="sservice" path="/search/service/index.jsp" />
+
+      <forward name="squestion" path="/search/question/index.jsp" />
+
+      <forward name="spricecenter" path="/search/pricecenter/index.jsp" />
+
+      <forward name="scontact" path="/search/contact/index.jsp" />
+
+      <forward name="spricequery" path="/search/pricequery/index.jsp" />
+
+      <forward name="youqing" path="/cooperate/youqingindex.jsp" />
+
+      <forward name="cooperatemore" path="/cooperate/moreindex.jsp" />
+
+      <forward name="partnermore" path="/cooperate/partnerindex.jsp" />
+
+      <forward name="index" path="/index.do" />
+      
+      <forward name="oyj" path="/oyj/index.jsp" />
+
+    </action>
+
+    <action path="/product/product-compare" type="com.ding9.struts.action.product.ProductCompareAction" scope="request"  input="/product/productcompare.jsp" name="productCompareForm">
+      <forward name="productcompare" path="/product/productcompare.jsp"/>
+    </action>
+
+    <action path="/product/product-type" type="com.ding9.struts.action.product.ProductTypeAction" scope="request" input="/product/producttype.jsp" name="productTypeForm">
+      <forward name="list" path="/product/productlist.jsp"/>
+    </action>
+
+    <action        path="/logon"        type="com.ding9.action.logon.LogonAction">
+     </action>
+
+    <action      path="/logout"     type="com.ding9.action.logon.LogoutAction">
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.resource.ApplicationResources" />
+
+  <!--plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+
+
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+
+
+  </plug-in-->
+
+
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+    <set-property property="definitions-parser-validate" value="true" />
+  </plug-in>
+
+</struts-config>
+
+

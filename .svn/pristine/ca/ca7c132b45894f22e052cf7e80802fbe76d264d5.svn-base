@@ -1,0 +1,566 @@
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>顶九网 - 宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰</title>
+<META NAME="description" CONTENT="顶九网提供宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰最低价格,在顶九网你可以同时查询到多家宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰网上商家的报价进行比较,你也可以查看更多关于宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰详细信息、用户评论,最新促销信息等."/>
+<META NAME="keywords" CONTENT="宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰价格"/>
+<META NAME='Author' CONTENT='null'/><META NAME='Subject' CONTENT='null'/><META NAME='Robots' CONTENT='null'/><META NAME='Copyright' CONTENT='null'/><META NAME='Distribution' CONTENT='null'/>
+<link href="/css/_cm_tefont.css" rel="stylesheet" type="text/css"/>
+<link href="/css/_cm_te.css" rel="stylesheet" type="text/css"/>
+<link href="/css/_cm_fzfont.css" rel="stylesheet" type="text/css"/>
+<link href="/css/_cm_fz.css" rel="stylesheet" type="text/css"/>
+<link href="/css/_cm_nav.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="/js/fzcomment.js"></script>
+<script type="text/javascript" src="/js/tecomment.js"></script>
+<script src="/js/user.js" type=text/javascript></script>
+<script type="text/javascript">
+function GetXmlHttp3(url){//获取xmlHttp
+var agt = navigator.userAgent.toLowerCase();
+var is_opera = (agt.indexOf("opera") != -1);
+var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_opera;
+var is_ie5 = (agt.indexOf("msie 5") != -1) && document.all;
+var xmlhttp;
+if (is_ie) {
+var control = (is_ie5) ? "Microsoft.XMLHTTP" : "Msxml2.XMLHTTP";
+try {
+xmlhttp = new ActiveXObject(control);
+} catch(e) {
+listener.innerHTML = "<font color='green'>1";
+return false;
+}
+} else {
+xmlhttp = new XMLHttpRequest();
+}
+//xmlhttp.onreadystatechange = processRequestChange;
+try{
+xmlhttp.open("GET", url, false);
+xmlhttp.send(null);
+}catch(e){
+return false;
+}
+if (xmlhttp.readyState == 4){
+if (xmlhttp.status == 200){
+ return xmlhttp.responseXML;
+}else{
+return false;
+}
+}else{
+return false;
+}
+}
+function tag(pid,pname){//收藏
+var tag=trim(document.getElementById('tag').value);//标签
+var remarks=document.getElementById('remarks').value;//说明
+var type=document.getElementById('tag_type').value;//收藏类型
+var tag_url=document.URL;//收藏地址
+var url='/collection/collection.do?method=doSave&type=1&title='+ pname +'&id='+ pid +'&url='+ tag_url +'&remark='+ remarks +'&tag='+tag;
+var Status=GetXmlHttp3(url);
+var flag=Status.getElementsByTagName("flag")[0].firstChild.data;
+var count=Status.getElementsByTagName("count")[0].firstChild.data;
+if(flag==1){//成功
+//document.getElementById('newDiv').innerHTML="<br><br><br><div align='center'><b>收藏成功！</b><br><br> <a href='#'>查看我的收藏</a> <br><br><input type='button' value=' 关 闭 ' onClick=document.body.removeChild(document.getElementById('newDiv'))></div>";
+document.getElementById('newDiv').innerHTML="<br><div align='center'><img src='/images/collection_right.gif'> &nbsp; <b>收藏成功！</b><br> 已有<font style='text-decoration:underline;font-family:Verdana, Arial, Helvetica, sans-serif' size=12 color='#298AFF'>"+ count +"</font>人收藏 <a target='_blank' href='/main.jsp?page=c:1'>查看我的收藏</a> <br><br><input type='button' value=' 关 闭 ' onClick=document.body.removeChild(document.getElementById('newFrame'));document.body.removeChild(document.getElementById('newDiv'))></div>";
+}else{//重复
+document.getElementById('newDiv').innerHTML="<br><div align='center'><img src='/images/collection_error.gif'> &nbsp;<b>您已经收藏过了</b><br> 已有<font style='text-decoration:underline;font-family:Verdana, Arial, Helvetica, sans-serif' size=12 color='#298AFF'>"+ count +"</font>人收藏 <a target='_blank' href='/main.jsp?page=c:1'>查看我的收藏</a> <br><br><input type='button' value=' 关 闭 ' onClick=document.body.removeChild(document.getElementById('newFrame'));document.body.removeChild(document.getElementById('newDiv'))></div>";
+}
+}
+function KeyDown(btnname){//收藏登陆
+if (event.keyCode == 13) {
+event.returnValue=false;
+event.cancel = true;
+eval(btnname+'.click()');
+}
+}
+function login_col(pid,pname){
+var username=document.all.user.value;
+var password=document.all.psw.value;
+if( username ==""){
+alert("请输入用户名！");
+document.all.user.focus();
+return;
+}
+if( password ==""){
+alert("请输入密码！");
+document.all.psw.focus();
+return ;
+}
+document.all.user.disabled=true;
+document.all.psw.disabled=true;
+document.all.loading2.innerHTML="&nbsp;&nbsp;<img src=/images/info_wait.gif align='top'>  登陆中…"
+var url="/logon.do?username="+ username +"&password="+ password +"&rememberMe=true";
+var Status=GetXmlHttp3(url);
+var flag=Status.getElementsByTagName("flag")[0].firstChild.data;
+if(flag==1){
+document.getElementById('newDiv').innerHTML="<div align='right'><input type='image' src='/images/close2.gif' onClick=document.body.removeChild(document.getElementById('newFrame'));document.body.removeChild(document.getElementById('newDiv')) /></div> <span class='fzH2c'>填写收藏信息</span><span class='fzH1'>(选填，可帮助您分类、查找。)</span><br><br><span id=loading>&nbsp;<span class='fzH1c'>标签：<input name='tag' id='tag' type='text' size='30' maxlength='30' class='flatinput' \/><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>我最常用的</b>： <br>&nbsp;说明：<textarea name='remarks' id='remarks' cols='40' rows='2' class='flatinput' id='remark'></textarea>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' checked='true'/><span class='fzH1'>公开此收藏</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name='' type='button' onclick='tag("+ pid +",\""+ pname +"\");' align='absmiddle' value='确　定'/><input type='hidden' value='1' id='tag_type' name='tag_type'/></span>";
+}else{
+alert('密码错误！');
+document.getElementById('newDiv').innerHTML="<div align='right'><input type='image' src='/images/close2.gif' onClick=document.body.removeChild(document.getElementById('newFrame'));document.body.removeChild(document.getElementById('newDiv')) /></div><b>请登录</b><br><span id=loading2 /><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id=loading>用户名&nbsp;<input onkeydown=KeyDown('document.all.Button1'); name='user' id='user' type='text' size='20' maxlength='20' class='flatinput' \/><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码&nbsp;&nbsp;<input onkeydown=KeyDown('document.all.Button1'); name='psw' id='psw' type='password' size='20' class='flatinput'/>&nbsp;<a href='/logon/fillname.jsp' target='_blank'>忘记密码?</a>&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name='' type='image' id=Button1 name=Button1 src='/images/login_btn.gif' onclick='login_col("+ pid +",\""+ pname +"\");' align='absmiddle'/>&nbsp;<a href='/register/register.html' target='_blank'>免费注册</a>&nbsp;</span>";
+}
+}
+</script>
+<script language="javascript">
+var docEle = function() {
+return document.getElementById(arguments[0]) || false;
+}
+function openNewDiv(f_id,_id,pid,pname) {
+var m = "mask";
+//if (docEle(_id)) document.removeChild(docEle(_id));
+//if (docEle(m)) document.removeChild(docEle(m));
+// 新激活图层
+var newFrame=document.createElement("iframe");
+newFrame.id = f_id;
+newFrame.style.position="absolute";
+//newFrame.style.z-index="9";
+newFrame.style.width = "450px";
+newFrame.style.height = "200px";
+newFrame.style.top=(document.getElementById('collection').offsetTop+180)+"px";
+newFrame.style.left=(document.getElementById('collection').offsetLeft+150)+"px";
+document.body.appendChild(newFrame);
+var newDiv = document.createElement("div");
+//设置属性
+newDiv.id = _id;
+newDiv.style.position = "absolute";
+newDiv.style.zIndex = "9999";
+newDiv.style.width = "450px";
+newDiv.style.height = "200px";
+//newDiv.style.top = "50px";
+newDiv.style.top=(document.getElementById('collection').offsetTop+180)+"px";
+newDiv.style.left=(document.getElementById('collection').offsetLeft+150)+"px";
+//newDiv.style.left = (parseInt(document.body.scrollWidth) - 300) / 2 + "px"; // 屏幕居中
+newDiv.style.background = "#EEF3F6";
+newDiv.style.border = "2px solid #3CA1DD";
+newDiv.style.padding = "5px";
+//newDiv.innerHTML = "<img src='login_key.gif'> <b>请登录</b><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id=loading>用户名&nbsp;<input name='user' id='user' type='text' size='20' maxlength='20' class='flatinput' \/><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码&nbsp;&nbsp;<input name='psw' id='psw' type='password' size='20' class='flatinput'/>&nbsp;<a href=''>忘记密码?</a>&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name='' type='image' src='login_btn.gif' onclick='Users.Login();' align='absmiddle'/>&nbsp;<a href=''>免费注册</a>&nbsp;</span>";
+//根据cookies的情况判别页面的显示
+var cookieValue = Cookies.Get("SSOUserId");
+var cookieID=0;
+if(cookieValue!=null){
+cookieID = cookieValue.split(":")[0];
+}
+if(cookieID != 0 && cookieValue!=null){
+//alert('Cookies存在，填写收藏信息!');
+newDiv.innerHTML="<div align='right'><input type='image' src='/images/close2.gif' onClick=document.body.removeChild(document.getElementById('newFrame'));document.body.removeChild(document.getElementById('newDiv')) /></div> <span class='fzH2c'>填写收藏信息</span><span class='fzH1'>(选填，可帮助您分类、查找。)</span><br><br><span id=loading>&nbsp;<span class='fzH1c'>标签：<input name='tag' id='tag' type='text' size='30' maxlength='30' class='flatinput' \/><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>我最常用的</b>： <br>&nbsp;说明：<textarea name='remarks' id='remarks' cols='40' rows='2' class='flatinput' id='remark'></textarea>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' checked='true'/><span class='fzH1'>公开此收藏</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name='' type='button' onclick='tag("+ pid +",\""+ pname +"\");' align='absmiddle' value='确　定'/><input type='hidden' value='1' id='tag_type' name='tag_type'/></span>";
+}else{
+//alert('Cookies不存在，请登陆');
+newDiv.innerHTML = "<div align='right'><input type='image' src='/images/close2.gif' onClick=document.body.removeChild(document.getElementById('newFrame'));document.body.removeChild(document.getElementById('newDiv')) /></div><b>请登录</b><br><span id=loading2 /><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id=loading>用户名&nbsp;<input onkeydown=KeyDown('document.all.Button1'); name='user' id='user' type='text' size='20' maxlength='20' class='flatinput' \/><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码&nbsp;&nbsp;<input onkeydown=KeyDown('document.all.Button1'); name='psw' id='psw' type='password' size='20' class='flatinput'/>&nbsp;<a href='/logon/fillname.jsp' target='_blank'>忘记密码?</a>&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name='' type='image' id=Button1 name=Button1 src='/images/login_btn.gif' onclick='login_col("+ pid +",\""+ pname +"\");' align='absmiddle'/>&nbsp;<a href='/register/register.html' target='_blank'>免费注册</a>&nbsp;</span>";
+}
+document.body.appendChild(newDiv);
+// mask图层
+var newMask = document.createElement("div");
+newMask.id = m;
+newMask.style.position = "absolute";
+newMask.style.zIndex = "1";
+newMask.style.width = document.body.scrollWidth + "px";
+newMask.style.height = document.body.scrollHeight + "px";
+newMask.style.top = "0px";
+newMask.style.left = "0px";
+//newMask.style.background = "#000";
+newMask.style.filter = "alpha(opacity=40)";
+newMask.style.opacity = "0.40";
+document.body.appendChild(newMask);
+// 关闭mask和新图层
+var newA = document.createElement("a");
+newA.href = "#";
+newA.innerHTML = "";
+newA.onclick = function() {
+ document.body.removeChild(docEle(_id));
+ document.body.removeChild(docEle(m));
+ return false;
+}
+newDiv.appendChild(newA);
+}
+</script>
+<style type="text/css">
+<!--
+.input11 {font-family:verdana;background-color:#EEEEEE;border-bottom:#FFFFFF 1px solid;border-left:#CCCCCC 1px solid;border-right:#FFFFFF 1px solid;border-top:#CCCCCC 1px solid;font-size:12px;}
+.input11 {font-family:verdana;background-color:#EEEEEE;border-bottom:#FFFFFF 1px solid;border-left:#CCCCCC 1px solid;border-right:#FFFFFF 1px solid;border-top:#CCCCCC 1px solid;font-size:12px;}
+.input111 {font-family:verdana;background-color:#EEEEEE;border-bottom:#FFFFFF 1px solid;border-left:#CCCCCC 1px solid;border-right:#FFFFFF 1px solid;border-top:#CCCCCC 1px solid;font-size:12px;}
+.input111 {font-family:verdana;background-color:#EEEEEE;border-bottom:#FFFFFF 1px solid;border-left:#CCCCCC 1px solid;border-right:#FFFFFF 1px solid;border-top:#CCCCCC 1px solid;font-size:12px;}
+-->
+</style>
+</head>
+<body>
+<center>
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link href="/css/tefont.css" rel="stylesheet" type="text/css">
+    <link href="/css/te.css" rel="stylesheet" type="text/css">
+    <link href="/css/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/tecomment.js"></script>
+    <script type="text/javascript" src="../js/public.js"></script>
+    <script type="text/javascript" src="../js/CityList.js"></script>
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_callJS(jsStr) { //v2.0
+  return eval(jsStr)
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</SCRIPT>
+</head>
+
+<body>
+<center>
+
+<script>
+var url=document.location+"";
+if(url.indexOf('local')>-1){
+document.write('<iframe name="ding9topIframe" src="http://www.ding9.local/inc/top----,'+10000007+'.html" frameborder="0" width="100%" marginwidth="0" marginheight="0" height="130" scrolling="no"></iframe>');
+}else{
+document.write('<iframe name="ding9topIframe" src="http://guide.ding9.com/inc/top----,'+10000007+'.html" frameborder="0" width="100%" marginwidth="0" marginheight="0" height="130" scrolling="no"></iframe>');
+}
+</script>
+<div id="menu">
+<div id="menu_l"><img src="/images/menu001.gif" width="8" height="26"></div>
+<div id='menu_m'><a href="http://guide.ding9.com" class="teH1" >首   页</a></div>
+<div id='menu_2'><a href="http://mobile.ding9.com" class="teH1">手机通信</a></div>
+<div id='menu_3'><a href="http://digital.ding9.com" class="teH1">数码电子</a></div>
+<div id='menu_4'><a href="http://computer.ding9.com" class="teH1">电脑网络</a></div>
+<div id='menu_5'><a href="http://office.ding9.com" class="teH1">办公用品</a></div>
+<div id='menu_6'><a href="http://hea.ding9.com" class="teH1">家用电器</a></div>
+<div id='menu_7'><a href="http://beauty.ding9.com" class="teH1">美容美体</a></div>
+<div id="menu_8"><a href="http://coupon.ding9.com" class="teH1">优惠券</a></div>
+<div id='menu_9'><a href="http://clothing.ding9.com" class="teH1">服装服饰</a></div>
+<div id='menu_10'><a href="http://jingpin.ding9.com" class="teH1">精品饰品</a></div>
+<div id="menu_12"><a href="http://search.ding9.com" class="H2"><img src="/teimages/gj.gif" width="50" height="18" border="0"></a></div>
+<div id="menu_11"><a href="http://gz.shoplocal.ding9.com" class="teH1">我爱逛街</a></div>
+<div id="menu_13" onMouseOver="MM_showHideLayers('Layer2','','show')" onmouseout="MM_showHideLayers('Layer2','','hide')" vAlign="center" align="middle" width="72"><a class="teH1">更多 </a><img src="/images/arrow_022.gif" width="8" height="8" border="0"/></div>
+<div id="menu_r"><img src="/images/menu004.gif" width="8" height="26"/></div>
+</div><!--menu-->
+<DIV id="Layer1" style="Z-INDEX:1;WIDTH:72px;POSITION:absolute;HEIGHT:23px;">
+<DIV id=Layer2 onMouseOver="MM_showHideLayers('Layer2','','show')" style="Z-INDEX:1;LEFT:828px;VISIBILITY:hidden;WIDTH:72px;POSITION:absolute;TOP:-2px;HEIGHT:61px" onmouseout="MM_showHideLayers('Layer2','','hide')">
+<TABLE width="100%" cellPadding="0" cellSpacing="1" bgColor="#CCCCCC">
+<TBODY>
+<TR><TD height="25" class="service" onMouseOver="this.className='service-blank'" onmouseout="this.className='service'" bgColor="#F7FBFD"><A href="http://promotion.ding9.com" class="teH1">&nbsp;促销折扣</A></TD></TR>
+<TR><TD height="25" class="service" onMouseOver="this.className='service-blank'" onmouseout="this.className='service'" bgColor="#F7FBFD"><A href="http://merchant.ding9.com" class="teH1">&nbsp;顶九商家</A></TD></TR>
+<TR><TD height="25" class="service" onMouseOver="this.className='service-blank'" onmouseout="this.className='service'" bgColor="#F7FBFD"><A href="http://www.5ucom.com" class="teH1">&nbsp;管理资料</A></TD></TR>
+</TBODY></TABLE></DIV></DIV><!--c02-->
+<div id="c03">
+<!--c03_l-->
+<!--c03_r-->
+</div>
+</center>
+
+<div id="fz001">
+<div id="fz001_l">
+
+
+
+  <span class="fzH1"><a href="http://guide.ding9.com" class="fzH1">首页</a>
+
+ &gt; <a href="" class="fzH1">汽车/用品</a>
+ &gt; <a href="/Car-2/category/Vehicle_Model-1770/" class="fzH1">汽车模型</a></span>
+
+<div id="fz009">
+<div id="fz009_l"><img src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=160&h=160&url=http://guide.ding9.com/Updata/Shoppic/want.gif" border="0"><br>
+
+<div id="collection">
+<img src="/images/fz/4_20.gif" width="24" height="25"/>
+<A target="_blank" href="http://d9sense.ding9.com/DwindlePicCtl.jpg?t=1&url=http://guide.ding9.com/Updata/Shoppic/want.gif" class="fzH5c">放大</A> <img src="/images/collection.gif" width="18" height="18"> <a class="fzH5c" href="#" onclick="openNewDiv('newFrame','newDiv',1568575,'宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰');">收藏</a></div>
+</div><!--fz009_l-->
+<div id="fz009_r">
+<div class="fz100_12"><span class="fzH1">宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰</span></div>
+<div id="fz010">
+<div id="fz010_l">
+<div class="fzd005">
+<ul>
+<Li class="fzH1"><span class="fzH1c">品&nbsp;&nbsp;&nbsp;&nbsp;牌：</span><br/></Li>
+
+<li class="fzH1"><span class="fzH1c">价格范围：</span><span class="H6">￥260.0</span> 元起，来自 <span class="H6">1</span> 个商家 <br />
+</li>
+<li class="fzH1"><span class="fzH1c">产品描述：</span>
+
+
+
+&nbsp;&nbsp;
+
+<a href="/Car-2/prod-1568575-ppara.htm#remark" class="fzH6">更多...</a>
+</li>
+</ul>
+</div>
+</div><!--fz010_l-->
+<div id="fz010_r"><span class="fzH1">产品星级：<img src="/images/ss/stars_10.gif" width="65" height="12"/><br/>
+
+<br/>用户评论（<a href="/Car-2/prod-1568575-comment.htm#viewc" class="fzH6">0</a>）<br/><br/>
+
+<a href="/Car-2/prod-1568575-comment.htm#AddContent" class="fzH8c">发表评论</a>
+</span></div><!--fz010_r-->
+</div><!--fz010-->
+</div><!--fz009_r-->
+</div><!--fz009-->
+<div class="fz100_4">
+<table height="23" border="0" cellpadding="0" cellspacing="0" id="fzsecTable">
+<tr>
+<td width="80" height="23" align="center" valign="middle" class="fz1">
+
+<a href="/Car-2/prod-1568575-merchant.htm" class="fzH1">国内商家</a>
+</td>
+<td width="80" align="center" valign="middle" class="fz2">
+
+<a href="/Car-2/prod-1568575-ppara.htm" class="fzH1">产品详情</a>
+</td>
+<td width="80" align="center" class="fz1">
+
+<a href="/Car-2/prod-1568575-comment.htm" class="fzH1">产品点评</a>
+</td>
+<td width="80" align="center" class="fz1">
+
+<a href="/Car-2/prod-1568575-promotion.htm" class="fzH1">促销信息</a>
+</td>
+</tr>
+</table>
+</div>
+<!--fz100_4-->
+
+
+
+
+
+
+
+<!--fz100_4-->
+<a name="remark"></a>
+
+
+<div class="fz100_14"><span class="fzH5c">【产品描述】</span></div>
+<div class="fz100"><a class="fzH1"> </a></div>
+
+
+
+
+
+<div></div>
+
+
+
+
+
+<div class="fz100_16"><span class="fzH1c">竞 争 商 品</span></div>
+<div class="fz100_17">
+<div class="fzd009">
+<ul>
+
+<li>
+<div class="fz80">
+
+<a href="/Car-2/prod-351305.htm">
+<img alt="标致 20.." src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=80&h=80&url=http://img.ding9.com//photo/crawl/8/2/8/4ca2b69239bc29c718c2ac03afafd148_0_200.gif" border="0"/>
+</a>
+</div>
+
+<a href="/Car-2/prod-351305.htm" class="fzH1" title="标致 206CC">
+标致 206CC
+</a><br/>
+<span class="fzH6">260.0元起</span></li>
+
+<li>
+<div class="fz80">
+
+<a href="/Car-2/prod-1568601.htm">
+<img alt="宝马645.." src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=80&h=80&url=http://img.ding9.com//photo/crawl/3/3/4/aacb4535d40781978464e7228b811623_0_200.gif" border="0"/>
+</a>
+</div>
+
+<a href="/Car-2/prod-1568601.htm" class="fzH1" title="宝马645CI开蓬跑( 威力蓝 )">
+宝马645CI开蓬跑( ...
+</a><br/>
+<span class="fzH6">258.0元起</span></li>
+
+<li>
+<div class="fz80">
+
+<a href="/Car-2/prod-1568678.htm">
+<img alt="福特 GT.." src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=80&h=80&url=http://img.ding9.com//photo/crawl/0/6/2/e4a01cddf1722e224938970d1d472569_0_200.gif" border="0"/>
+</a>
+</div>
+
+<a href="/Car-2/prod-1568678.htm" class="fzH1" title="福特 GT90 白色">
+福特 GT90 白色
+</a><br/>
+<span class="fzH6">258.0元起</span></li>
+
+<li>
+<div class="fz80">
+
+<a href="/Car-2/prod-1568587.htm">
+<img alt="宝马745.." src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=80&h=80&url=http://img.ding9.com//photo/crawl/6/7/3/94abf9e2409fdcfef9809f2da48bf477_0_200.gif" border="0"/>
+</a>
+</div>
+
+<a href="/Car-2/prod-1568587.htm" class="fzH1" title="宝马745I 黑色">
+宝马745I 黑色
+</a><br/>
+<span class="fzH6">258.0元起</span></li>
+
+<li>
+<div class="fz80">
+
+<a href="/Car-2/prod-1568689.htm">
+<img alt="福特 T .." src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=80&h=80&url=http://img.ding9.com//photo/crawl/0/1/7/2132a6797929446f021647ff7a45063b_0_200.gif" border="0"/>
+</a>
+</div>
+
+<a href="/Car-2/prod-1568689.htm" class="fzH1" title="福特 T 雪糕车">
+福特 T 雪糕车
+</a><br/>
+<span class="fzH6">258.0元起</span></li>
+
+<li>
+<div class="fz80">
+
+<a href="/Car-2/prod-320392.htm">
+<img alt="标致 20.." src="http://d9sense.ding9.com/DwindlePicCtl.jpg?w=80&h=80&url=http://img.ding9.com//ProductPic/Images_20061027053427_377/Pic_20061029111010_138/ODY3NjY=_289.jpg" border="0"/>
+</a>
+</div>
+
+<a href="/Car-2/prod-320392.htm" class="fzH1" title="标致 206CC 汽车模型">
+标致 206CC 汽车模型
+</a><br/>
+<span class="fzH6">260.0元起</span></li>
+
+</ul>
+</div><!--fzd009-->
+</div><!--fz100_17-->
+
+
+
+
+
+
+
+<div id="fz015">
+<div id="fz015_l">
+<div class="fz100_16"><span class="fzH1c">导 购 信 息</span></div>
+<div class="fz100_18">
+<div class="fzd008">
+<ul>
+
+
+<li><span class="fzH1">很抱歉，暂时没有相关专 业 导 购信息！</span></li>
+
+</ul>
+</div>
+</div><!--fz100_18--></div><!--fz015_l-->
+<div id="fz015_r">
+<div class="fz100_16"><span class="fzH1c">产 品 测 评</span></div>
+<div class="fz100_18">
+<div class="fzd008">
+<ul>
+
+
+<li><span class="fzH1">很抱歉，暂时没有相关产 品 测 评信息！</span></li>
+
+</ul>
+</div>
+</div><!--fz100_18-->
+</div><!--fz015_r-->
+</div><!--fz015-->
+
+
+
+</div><!--fz001_l-->
+<div id="fz001_r">
+<div>
+<div>
+<script type="text/javascript" src="http://d9sense.ding9.com/keyword.do?type=0&word=宝马 Z4 
+
+产品名称： 
+宝马Z4 BMWZ4 蓝 
+汽车品牌：玛莎图 
+比例(SCALE)：1：18 
+颜色(COLOR)：蓝 / 红 /银灰"></script>
+</div><!--d9d003-->
+</div><!--d9d002-->
+</div><!--fz001_r-->
+
+</div><!--fz001-->
+
+<iframe name="ding9bottomIframe"  src="http://beauty.ding9.com/inc/bottom.jsp" frameborder="0" width="100%"  marginwidth="0" marginheight="0" height="130"  scrolling="no" ></iframe>
+</center>
+<script language="javascript" src="http://count47.51yes.com/click.aspx?id=476604651&logo=1"></script>
+</body>
+</html>

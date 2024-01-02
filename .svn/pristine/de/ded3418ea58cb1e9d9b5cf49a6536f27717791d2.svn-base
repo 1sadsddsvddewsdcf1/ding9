@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.h1 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.h2 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.h3 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+}
+a:hover {
+	color: #CC3366;
+	text-decoration: none;
+}
+a:link {
+	text-decoration: none;
+}
+
+TD {FONT-SIZE: 12px;}
+.STYLE2 {
+	font-size: 12px;
+	color: #6666ff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.STYLE3 {
+	color: #FF6600;
+	font-weight: bold;
+	text-decoration: none;
+}
+.STYLE4 {
+	color: #66cc00;
+	text-decoration: none;
+}
+.STYLE6 {color: #ffcc00}
+.STYLE7 {color: #6600cc}
+.STYLE8 {color: #33cccc}
+.STYLE9 {color: #FF0000}
+.STYLE10 {color: #00ff00}
+-->
+</style>
+</head>
+
+<body>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<form onsubmit="if(this.key.value==''){alert('请输入查询关键字');return false;}" target="_blank" name="form1" method="post" action="http://search.ding9.com/search.do" target="ding9_window">
+  <tr>
+    <td width="120" height="26"><SCRIPT language=JavaScript1.2>
+<!-- Begin
+function initArray() {
+this.length = initArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+var ctext = "购物搜索 一个顶九";
+var speed = 2000;
+var x = 0;
+var color = new initArray(
+"#ffcc00", 
+"#ff0000", 
+"#ff00ff",
+"#0000ff",
+
+"#000000",
+"#FF6600",
+"#33cccc",
+"#66cc00"
+);
+if(navigator.appName == "Netscape") {
+document.write('<layer id="c"><center>'+ctext+'</center></layer><br>');
+}
+if (navigator.appVersion.indexOf("MSIE") != -1){
+document.write('<div id="c"><center><b>'+ctext+'</b></center></div>');
+}
+function chcolor(){ 
+if(navigator.appName == "Netscape") {
+document.c.document.write('<center><font color="'+color[x]);
+document.c.document.write('">'+ctext+'</font></center>');
+document.c.document.close();
+}
+else if (navigator.appVersion.indexOf("MSIE") != -1){
+document.all.c.style.color = color[x];
+}
+(x < color.length-1) ? x++ : x = 0;
+}
+setInterval("chcolor()",1000);
+// End -->
+</SCRIPT>
+</td>
+    <td width="357"><input name="key"  type="text" class="h1" value="搜索性价比最好的宝贝" size="20" />
+      <span class="h1">在</span>
+      <select name="select" class="h1">
+        <option>&lt;- 所有类别 -&gt;</option>
+        <option>数码/电子</option>
+        <option>汽车/用品</option>
+        <option>成人用品</option>
+        <option>手机/通讯</option>
+        <option>电脑/网络</option>
+        <option>美容美体</option>
+        <option>家用电器</option>
+        <option>办公用品</option>
+      </select>
+      <input name="Submit" type="submit" class="h1" value="购物搜索" /></td>
+    <td width="283" align="right"><marquee scrollAmount=2 width=260>
+      <a href="http://guide.ding9.com/" target="_blank" class="STYLE2"><span class="STYLE2">索尼电视 </span><span class="STYLE3"><span class="STYLE4">海尔</span></span><span class="h3">空调</span> <span class="STYLE3">东芝</span> 松下 <span class="STYLE6">飞利浦</span>  日立 <span c??敮?楆敬搨捯????ùlass="STYLE8">电吹风</span> <span class="STYLE7">剃须刀</span> <span class="h3">音响</span> <span class="STYLE9">碟机</span></a>
+    </marquee></td>
+  </tr>
+ </form>
+</table>
+</body>
+</html>

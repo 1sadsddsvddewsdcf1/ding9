@@ -1,0 +1,359 @@
+<head>
+<title>顶九网: 购物搜索,一个顶九! 顶九购物搜索信息平台  guide.ding9.com</title> <META NAME="description" CONTENT="首页关键内容中国最好、最强、产品最多的比较购物平台，让您享受省时、省力、省钱、省心的购物环境，真正做到货比多家，购买到最好、最便宜的商品，体验比较购物的无限乐趣。"> <META NAME="keywords" CONTENT="首页关键词比较 购物 网站 价格 商家 商品 产品 品牌 购物网站 比较购物 在线购物 比较价格 商家比较  产品评价 商家评价 ding9.com 计算机 数码电子 办公设备 通讯 汽车 成人用品 家用电器 化妆品 音像"><META NAME="Author" CONTENT="顶九网"> <META NAME="Subject" CONTENT="顶九网 ding9网 ding9 顶九 ding9wang  比较 购物 省钱 便宜 商家 指南"><META NAME="Robots" CONTENT="all"><META NAME="copyright" CONTENT="ding9.com">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css3.0/tefont.css" rel="stylesheet" type="text/css">
+<link href="css3.0/te.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/tecomment.js"></script>
+<script type="text/javascript">
+<!--
+function btmsearchformover_onsubmit() 
+{
+	if(document.btmsearchFormover.key.value=='' || document.btmsearchFormover.key.value=="输入关键字进行搜索"){
+		alert('请输入查询关键字');
+		return false;
+	}
+	
+	var btm_sel_prso_id_one = document.btmsearchFormover.btm_sel_prso_id_one.value;
+	if (btm_sel_prso_id_one == "") {	//所有类别
+		document.btmsearchFormover.action="http://search.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "1") {	//数码电子
+		document.btmsearchFormover.action="http://digital.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "4") {	//成人用品
+		document.btmsearchFormover.action="http://love.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "6") {	//手机/通讯
+		document.btmsearchFormover.action="http://mobile.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "7") {	//电脑/网络
+		document.btmsearchFormover.action="http://computer.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "8") {	//美容美体
+		document.btmsearchFormover.action="http://beauty.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "12") {	//家用电器
+		document.btmsearchFormover.action="http://hea.ding9.com/search.do";
+	}
+	if (btm_sel_prso_id_one == "15") {	//办公用品
+		document.btmsearchFormover.action="http://office.ding9.com/search.do";
+	}
+	return true;
+}
+
+function btmsearchmerchant_onsubmit() {
+	if(btmtrim(document.btmsearchFormover.makey.value)=='' || document.btmsearchFormover.makey.value=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+
+	document.btmsearchFormover.action="http://merchant.ding9.com/member/merchant-list.do?key=" + document.btmsearchFormover.makey.value + "&selectc=" + document.btmsearchFormover.btmselectc.value + "&selectp=" + document.btmsearchFormover.btmselectp.value;
+	return true;
+}
+
+function btmother(obj,strtype)
+{
+	//alert(btmtrim(document.all(strtype).value));
+	if(btmtrim(document.all(strtype).value)=='' || document.all(strtype).value=='输入关键字进行搜索'){
+		alert('请输入查询关键字');
+		return false;
+	}
+	
+	obj.action="http://search.ding9.com/" + strtype + ".do?q=" + document.all(strtype).value;
+	return true;
+}
+
+
+
+function searchall(obj)
+{
+	var strtype = document.all.searchtype.value;
+	
+	if(strtype == 'pro')
+	 return	btmsearchformover_onsubmit();
+	else if(strtype == 'merchant')
+	 return	btmsearchmerchant_onsubmit();
+	//else if(strtype == 'comment')
+	 //return btmcomment(obj,strtype);
+	else
+	 return	btmother(obj,strtype);
+}
+
+var btmshow_word="输入关键字进行搜索";
+function btmshowSearch(obj,type){
+	if(type){
+		if(obj.value=="")
+			obj.value=btmshow_word;
+		obj.style.color='gray';
+	}else{		
+		if(obj.value==btmshow_word)
+			obj.value="";
+		obj.style.color='#000000';
+	}
+}
+
+function btmtrim(str){
+ return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+//-->
+</script>
+<center>
+<FORM id=btmsearchForm name=btmsearchFormover method=post onsubmit="return searchall(this)" target=_blank>    
+<INPUT id=searchtype type=hidden value="pro" />
+<div id="end001">
+ <SELECT name=relationType class="teH1" onchange=javascript:chgrelType(this.options[selectedIndex].value)> 
+					<OPTION value=0>商品搜索</OPTION> 
+                    <OPTION value=1>商家搜索</OPTION>
+                    <option value=2>优惠搜索</option>
+                    <option value=3>促销搜索</option>
+                    <option value=4>资讯搜索</option>
+                    <option value=5>评论搜索</option>
+	</SELECT>
+	<a id=pro style="DISPLAY: ">
+    <INPUT class="teH4" size="54" type="text" id=key onblur=btmshowSearch(this,1) onfocus=btmshowSearch(this) value=输入关键字进行搜索 name=key>
+		
+			
+			 <select name="btm_sel_prso_id_one" class="teH1">
+												
+                                                  <option selected> 所有类别</option>
+			                                       <option value="1" >数码/电子</option>			                                          
+			                                               <option value="4">成人用品</option>
+			                                            <option value="6"  >手机/通讯</option>
+			                                            <option value="7" >电脑/网络</option>
+			                                                <option value="8">美容美体</option>
+			                                     <option value="12">家用电器</option>
+			                                     <option value="15">办公用品</option>
+											</select>
+			
+			</a>
+			
+			<a id=reltype style="DISPLAY: none">
+				<input name="makey" type="text" class="teH4" onblur=btmshowSearch(this,1) onfocus=btmshowSearch(this) value="输入关键字进行搜索" size="40">
+								<input type="hidden" name="btmselectp">
+              <select name="btmprovince"  onChange="Javascript:BTM_FUN_PROVINCE_CITY(this.value);" class=teH1>
+										<option value="0" selected>所在省份</option>
+										
+											<option value="01|0101-东城区,0102-西城区,0103-崇文区,0104-宣武区,0105-朝阳区,0106-海淀区,0107-丰台区,0108-石景山," >
+												北京
+											</option>
+										
+											<option value="02|0201-罗湖,0202-福田,0203-南山,0204-盐田,0205-宝安,0206-龙岗," >
+												深圳
+											</option>
+										
+											<option value="03|0301-宝山,0302-金山,0303-南市,0304-长宁,0305-静安,0306-青浦,0307-崇明,0308-卢湾,0309-松江,0310-奉贤,0311-浦东,0312-杨浦,0313-虹口,0314-普陀,0315-闸北,0316-黄浦,0317-闵行,0318-徐汇,0319-嘉定,0320-南汇," >
+												上海
+											</option>
+										
+											<option value="04|0401-渝中,0402-江北,0403-沙坪坝,0404-南岸,0405-九龙坡,0406-大渡口," >
+												重庆
+											</option>
+										
+											<option value="05|0501-和平,0502-河北,0503-河西,0504-河东,0505-南开,0506-红桥,0507-塘沽,0508-汉沽,0509-大港,0510-东丽,0511-西青,0512-津南,0513-北辰,0514-武清,0515-滨海," >
+												天津
+											</option>
+										
+											<option value="06|0601-广州,0602-珠海,0603-中山,0604-佛山,0605-东莞,0606-清远,0607-肇庆,0608-阳江,0609-湛江,0610-韶关,0611-惠州,0612-河源,0613-汕尾,0614-汕头,0615-梅州," >
+												广东
+											</option>
+										
+											<option value="07|0701-石家庄,0702-唐山,0703-秦皇岛,0704-邯郸,0705-邢台,0706-张家口,0707-承德,0708-廊坊,0709-沧州,0710-保定,0711-衡水," >
+												河北
+											</option>
+										
+											<option value="08|0801-太原,0802-大同,0803-阳泉,0804-朔州,0805-长治,0806-临汾,0807-晋城," >
+												山西
+											</option>
+										
+											<option value="09|0901-呼和浩特,0902-包头,0903-乌海,0904-临河,0905-东胜,0906-集宁,0907-锡林浩特,0908-通辽,0909-赤峰,0910-海拉尔,0911-乌兰浩特," >
+												内蒙古
+											</option>
+										
+											<option value="10|1001-沈阳,1002-大连,1003-鞍山,1004-锦州,1005-丹东,1006-盘锦,1007-铁岭,1008-抚顺,1009-营口,1010-辽阳,1011-阜新,1012-本溪,1013-朝阳,1014-葫芦岛," >
+												辽宁
+											</option>
+										
+											<option value="11|1101-长春,1102-吉林,1103-四平,1104-辽源,1105-通化,1106-白山,1107-松原,1108-白城,1109-延边," >
+												吉林
+											</option>
+										
+											<option value="12|1201-哈尔滨,1202-齐齐哈尔,1203-牡丹江,1204-佳木斯,1205-大庆,1206-伊春,1207-黑河,1208-鸡西,1209-鹤岗,1210-双鸭山,1211-七台河,1212-绥化,1213-大兴安岭," >
+												黑龙江
+											</option>
+										
+											<option value="13|1301-南京,1302-苏州,1303-无锡,1304-常州,1305-镇江,1306-连云港,1307-扬州,1308-徐州,1309-南通,1310-盐城,1311-淮阴,1312-泰州,1313-宿迁," >
+												江苏
+											</option>
+										
+											<option value="14|1401-杭州,1402-湖州,1403-丽水,1404-温州,1405-绍兴,1406-舟山,1407-嘉兴,1408-金华,1409-台州,1410-衢州,1411-宁波," >
+												浙江
+											</option>
+										
+											<option value="15|1501-合肥,1502-芜湖,1503-蚌埠,1504-滁州,1505-安庆,1506-六安,1507-黄山,1508-宣城,1509-淮南,1510-宿州,1511-马鞍山,1512-铜陵,1513-淮北,1514-阜阳,1515-池州,1516-巢湖,1517-亳州," >
+												安徽
+											</option>
+										
+											<option value="16|1601-福州,1602-厦门,1603-泉州,1604-漳州,1605-龙岩,1606-南平,1607-宁德,1608-莆田,1609-三明," >
+												福建
+											</option>
+										
+											<option value="17|1701-南昌,1702-景德镇,1703-九江,1704-萍乡,1705-新余,1706-鹰潭,1707-赣州,1708-宜春,1709-吉安,1710-上饶,1711-抚州," >
+												江西
+											</option>
+										
+											<option value="18|1801-济南,1802-青岛,1803-淄博,1804-德州,1805-烟台,1806-潍坊,1807-济宁,1808-泰安,1809-临沂,1810-菏泽,1811-威海,1812-枣庄,1813-日照,1814-莱芜,1815-聊城,1816-滨州,1817-东营," >
+												山东
+											</option>
+										
+											<option value="19|1901-郑州,1902-开封,1903-洛阳,1904-平顶山,1905-安阳,1906-鹤壁,1907-新乡,1908-焦作,1909-濮阳,1910-许昌,1911-漯河,1912-三门峡,1913-南阳,1914-商丘,1915-周口,1916-驻马店,1917-信阳,1918-济源," >
+												河南
+											</option>
+										
+											<option value="20|2001-武汉,2002-黄石,2003-十堰,2004-荆州,2005-宜昌,2006-襄樊,2007-鄂州,2008-荆门,2009-孝感,2010-黄冈,2011-咸宁,2012-恩施,2013-随州,2014-仙桃,2015-天门,2016-潜江,2017-神农架," >
+												湖北
+											</option>
+										
+											<option value="21|2101-长沙,2102-株州,2103-湘潭,2104-衡阳,2105-邵阳,2106-岳阳,2107-常德,2108-郴州,2109-益阳,2110-永州,2111-怀化,2112-娄底,2113-湘西," >
+												湖南
+											</option>
+										
+											<option value="22|2201-南宁,2202-柳州,2203-桂林,2204-梧州,2205-北海,2206-防城港,2207-钦州,2208-贵港,2209-玉林,2210-贺州,2211-百色,2212-河池," >
+												广西
+											</option>
+										
+											<option value="23|2301-海口,2302-三亚,2303-通什,2304-琼海,2305-琼山,2306-文昌,2307-万宁,2308-东方,2309-儋州," >
+												海南
+											</option>
+										
+											<option value="24|2401-成都,2402-自贡,2403-攀枝花,2404-泸州,2405-德阳,2406-绵阳,2407-广元,2408-遂宁,2409-内江,2410-乐山,2411-南充,2412-宜宾,2413-广安,2414-达川,2415-巴中,2416-雅安,2417-眉山,2418-阿坝,2419-甘孜,2420-凉山," >
+												四川
+											</option>
+										
+											<option value="25|2501-贵阳,2502-六盘水,2503-遵义,2504-铜仁,2505-毕节,2506-安顺,2507-黔西南,2508-黔东南,2509-黔南," >
+												贵州
+											</option>
+										
+											<option value="26|2601-昆明,2602-东川,2603-曲靖,2604-玉溪,2605-昭通,2606-思茅,2607-临沧,2608-保山,2609-丽江,2610-文山,2611-红河,2612-西双版纳,2613-楚雄,2614-大理,2615-德宏,2616-怒江,2617-迪庆," >
+												云南
+											</option>
+										
+											<option value="27|2701-拉萨,2702-那曲,2703-昌都,2704-山南,2705-日喀则,2706-阿里,2707-林芝," >
+												西藏
+											</option>
+										
+											<option value="28|2801-西安,2802-铜川,2803-宝鸡,2804-咸阳,2805-渭南,2806-延安,2807-汉中,2808-榆林,2809-商洛,2810-安康," >
+												陕西
+											</option>
+										
+											<option value="29|2901-兰州,2902-金昌,2903-白银,2904-天水,2905-嘉峪关,2906-定西,2907-平凉,2908-庆阳,2909-陇南,2910-武威,2911-张掖,2912-酒泉,2913-甘南,2914-临夏," >
+												甘肃
+											</option>
+										
+											<option value="30|3001-西宁,3002-海东,3003-海北,3004-黄南,3005-海南,3006-果洛,3007-玉树,3008-海西," >
+												青海
+											</option>
+										
+											<option value="31|3101-银川,3102-石嘴山,3103-银南,3104-固原," >
+												宁夏
+											</option>
+										
+											<option value="32|3201-乌鲁木齐,3202-克拉玛依,3203-石河子,3204-吐鲁番,3205-哈密,3206-和田,3207-阿克苏,3208-喀什,3209-克孜勒苏,3210-巴音郭楞,3211-昌吉,3212-博尔塔拉,3213-伊犁," >
+												新疆
+											</option>
+										
+											<option value="33|" >
+												香港
+											</option>
+										
+											<option value="34|" >
+												澳门
+											</option>
+										
+											<option value="35|" >
+												台湾
+											</option>
+										
+									</select>
+              <select name="btmselectc" class=teH1>
+									</select>
+									<SCRIPT LANGUAGE="JAVASCRIPT">
+									BTM_FUN_PROVINCE_CITY(document.all.btmprovince.value);
+									</SCRIPT>
+              </a>
+			  
+              <a id=pro2 style="DISPLAY: none"> <input name="cheapcard" type="text" class="teH4" value="输入关键字进行搜索" size="54" onblur=btmshowSearch(this,1) onfocus=btmshowSearch(this)>
+              </a>
+
+              <a id=pro3 style="DISPLAY: none"> <input name="promotion" type="text" class="teH4" value="输入关键字进行搜索" size="54" onblur=btmshowSearch(this,1) onfocus=btmshowSearch(this)>
+              </a>
+
+              <a id=pro4 style="DISPLAY: none"> <input name="article" type="text" class="teH4" value="输入关键字进行搜索" size="54" onblur=btmshowSearch(this,1) onfocus=btmshowSearch(this)>
+              </a>
+			  
+			  <a id=pro5 style="DISPLAY: none"> <input name="comment" type="text" class="teH4" value="输入关键字进行搜索" size="54" onblur=btmshowSearch(this,1) onfocus=btmshowSearch(this)>
+              <select name="select" class="teH1">
+             		<option selected>所有类别</option>
+                    <option value="1" >数码/电子</option>
+                    <option value="4">成人用品</option>
+                    <option value="6">手机/通讯</option>
+                    <option value="7" >电脑/网络</option>
+                    <option value="8">美容美体</option>
+                    <option value="12">家用电器</option>
+                    <option value="15">办公用品</option>
+               </select>
+                 </a>
+                 
+		<label>		 
+			<input name="Submit" type="submit" class="teH1" value="搜 索">
+  </label>
+</div>
+
+<!--c04-->
+<div class="con900_2">
+
+<div class="teH1c">
+<a href="http://guide.ding9.com/switch----,resume.htm" target="_blank" class="teH1c">关于我们</a> | 
+		<a href="http://guide.ding9.com/switch----,help.htm" target="_blank" class="teH1c">使用帮助</a> | 
+		<a href="http://guide.ding9.com/switch----,service.htm" target="_blank" class="teH1c">服务条款</a> | 
+		<a href="http://guide.ding9.com/switch----,technique.htm" target="_blank" class="teH1c">招贤纳士</a> | 
+		<a href="http://guide.ding9.com/switch----,contact.htm" target="_blank" class="teH1c">联系我们</a> | 
+		<a href="http://guide.ding9.com/switch----,merchant.htm" target="_blank" class="teH1c">商家加盟</a> | 
+		<a href="http://guide.ding9.com/switch----,comethod.htm" target="_blank" class="teH1c">网站合作</a> | 
+		<a href="http://guide.ding9.com/switch----,search.htm" target="_blank" class="teH1c">搜索竞价</a>
+</div>
+</div>
+<div id="end002">
+<div id="end002_l"></div>
+<div id="end002_m">
+  <DIV align="left" class="teH1">顶九网是购物搜索引擎，从互联网搜索商家、商品、资讯、促销等信息，为用户提供全方位导购服务，所有信息以来源网站为准。<BR>
+    Copyright &copy; 2005-2007 版权所有 <a href="http://guide.ding9.com/" class="teH1c" target="_blank">Ding9.com</a> <a href="http://www.miibeian.gov.cn/" target="_blank" class="teH1">粤ICP备06067490号</a> </DIV>
+</div>
+<div id="end002_r"><a href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318" target="_blank"><img src="http://union.ding9.com/cooperate/coopjs/teimages/jing.gif" width="40" height="53" border="0"></a></div>
+
+</div>
+</center>
+ <SCRIPT language=javascript>
+		<!--//		
+		window.focus();		
+		function add_Move(){
+			var children = document.getElementsByTagName('a') || document.all;
+			for(i = 0; i < children.length; i++)
+			{
+				if(children[i].id=='nowrap')
+				{
+					if(document.all){
+						children[i].attachEvent ('onmouseover', doMove);
+					}
+					else{
+						children[i].addEventListener('mouseover', doMove, false);
+					}
+				}
+			}
+		}
+		add_Move();
+		//-->
+		</SCRIPT>
+ 
+ 
+</body>
+</html>
